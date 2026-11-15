@@ -422,6 +422,189 @@
     return false;
   }
 
+  /* ---------- Animer : guides des séances que je donne ---------- */
+  var ANIMATIONS = window.ANIMATIONS || [];
+  function findSeance(id) {
+    for (var i = 0; i < ANIMATIONS.length; i++) if (ANIMATIONS[i].id === id) return ANIMATIONS[i];
+    return null;
+  }
+  function hm(s) { var p = s.split(":"); return parseInt(p[0], 10) * 60 + parseInt(p[1], 10); }
+  function fmtHm(min) { return Math.floor(min / 60) + " h " + String(min % 60).padStart(2, "0"); }
+  function store(key, val) {
+    try { if (val === undefined) return localStorage.getItem(key); localStorage.setItem(key, val); } catch (e) { return null; }
+  }
+  function copyText(text, btn) {
+    function done() { var t = btn.textContent; btn.textContent = "Copié"; setTimeout(function () { btn.textContent = t; }, 1200); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () { fallback(); });
+    } else fallback();
+    function fallback() {
+      var ta = document.createElement("textarea"); ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); done(); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+  }
+
+  function viewAnimer() {
+    setNav("animer");
+    document.title = "Animer — Veille IA";
+    main.innerHTML =
+      '<section class="hero"><h1>Formations que j\'anime</h1><p>Un guide par séance, à ouvrir sur un second écran pendant la projection : étape en cours, minutage, prompts des démos à copier, questions probables et plan B.</p></section>' +
+      (ANIMATIONS.length ? '<ul class="vlist">' + ANIMATIONS.map(function (s) {
+        return '<li class="card vmini"><a href="#/animer/' + esc(s.id) + '">' + esc(s.titre) + "</a>" +
+          '<span class="vmeta">' + esc(formatDate(s.date)) + " · " + esc(s.debut.replace(":", " h ")) + " – " + esc(s.fin.replace(":", " h ")) + " · " + s.etapes.length + " étapes · " + s.diapos + " diapos</span>" +
+          "<p>" + esc(s.sousTitre) + "</p></li>";
+      }).join("") + "</ul>" : '<p class="empty">Aucune séance pour le moment.</p>');
+  }
+
+  var clockTimer = null;
+  function viewSeance(id, tab) {
+    var s = findSeance(id);
+    if (!s) return viewNotFound();
+    setNav("animer");
+    document.title = s.titre + " — Animer";
+    var key = "seance:" + s.id;
+    var cur = parseInt(store(key) || "0", 10);
+    if (!(cur >= 0 && cur < s.etapes.length)) cur = 0;
+    var big = store("seance:big") === "1";
+    var tabs = [["deroule", "Déroulé"], ["questions", "Questions (" + s.questions.length + ")"], ["mots", "Définitions"], ["planb", "Plan B"], ["avant", "Avant / après"]];
+    if (!tabs.some(function (t) { return t[0] === tab; })) tab = "deroule";
+
+    function demoHtml(d, i) {
+      var prompts = [d.prompt].concat(d.suite || []);
+      return '<div class="demo"><h4>' + esc(d.nom) + ' <span class="vmeta">' + d.duree + " min</span></h4>" +
+        prompts.map(function (p, j) {
+          return '<div class="prompt"><p>' + esc(p) + '</p><button class="chip copy" data-copy="' + i + "-" + j + '">Copier</button></div>';
+        }).join("") +
+        '<p class="observe"><strong>On observe :</strong> ' + esc(d.observer) + "</p></div>";
+    }
+    function stepHtml(e, n) {
+      return '<p class="step-meta">Étape ' + (n + 1) + " / " + s.etapes.length + " · prévue à " + esc(e.heure.replace(":", " h ")) + " · " + e.duree + " min · diapos " + esc(e.diapos) + "</p>" +
+        "<h2>" + esc(e.titre) + "</h2>" +
+        '<p class="key">' + esc(e.message) + "</p>" +
+        list(e.points) +
+        (e.demos || []).map(demoHtml).join("");
+    }
+    function panel() {
+      if (tab === "deroule") {
+        return '<div class="guide">' +
+          '<nav class="steps" aria-label="Étapes">' + s.etapes.map(function (e, n) {
+            return '<button class="stepbtn' + (n === cur ? " on" : "") + '" data-step="' + n + '"><b>' + esc(e.heure.replace(":", " h ")) + "</b> " + esc(e.titre) + "</button>";
+          }).join("") + "</nav>" +
+          '<article class="card step prose" aria-live="polite">' + stepHtml(s.etapes[cur], cur) +
+          '<div class="stepnav"><button class="chip" data-move="-1"' + (cur === 0 ? " disabled" : "") + '>← Précédente</button>' +
+          '<button class="chip" data-move="1"' + (cur === s.etapes.length - 1 ? " disabled" : "") + '>Suivante →</button></div>' +
+          (s.etapes[cur + 1] ? '<p class="next">Ensuite, à ' + esc(s.etapes[cur + 1].heure.replace(":", " h ")) + " : " + esc(s.etapes[cur + 1].titre) + "</p>" : "") +
+          "</article></div>";
+      }
+      if (tab === "questions") {
+        var themes = [];
+        s.questions.forEach(function (q) { if (themes.indexOf(q.theme) === -1) themes.push(q.theme); });
+        return '<input class="search" type="search" placeholder="Chercher une question…" aria-label="Chercher une question">' +
+          themes.map(function (t) {
+            return '<section class="qtheme"><h3>' + esc(t) + "</h3>" + s.questions.filter(function (q) { return q.theme === t; }).map(function (q) {
+              return '<details class="card qa"><summary>' + esc(q.q) + "</summary><p>" + esc(q.r) + "</p></details>";
+            }).join("") + "</section>";
+          }).join("") +
+          '<div class="callout">Si je ne sais pas : « Je vérifie et je vous réponds. » Noter la question, répondre par mail ou en début de séance suivante.</div>';
+      }
+      if (tab === "mots") {
+        return '<dl class="glossary">' + s.definitions.map(function (d) { return "<div><dt>" + esc(d[0]) + "</dt><dd>" + esc(d[1]) + "</dd></div>"; }).join("") + "</dl>";
+      }
+      if (tab === "planb") {
+        return '<div class="callout"><strong>À ne jamais couper :</strong> ' + esc(s.intouchables) + "</div>" +
+          "<h3>Si je suis en retard, je raccourcis dans cet ordre</h3><ol>" + s.coupes.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("") + "</ol>" +
+          "<h3>Si une démo plante</h3>" + s.incidents.map(function (q) {
+            return '<details class="card qa"><summary>' + esc(q.q) + "</summary><p>" + esc(q.r) + "</p></details>";
+          }).join("");
+      }
+      return "<h3>Règles de la séance</h3><ol>" + s.regles.map(function (r) { return "<li>" + esc(r) + "</li>"; }).join("") + "</ol>" +
+        "<h3>Avant</h3><ul class=\"checks\">" + s.avant.map(function (a) { return "<li><label><input type=\"checkbox\"> " + esc(a) + "</label></li>"; }).join("") + "</ul>" +
+        "<h3>Après</h3><ul class=\"checks\">" + s.apres.map(function (a) { return "<li><label><input type=\"checkbox\"> " + esc(a) + "</label></li>"; }).join("") + "</ul>";
+    }
+
+    function render() {
+      main.classList.toggle("big", big);
+      main.innerHTML =
+        '<a class="back" href="#/animer">← Toutes les séances</a>' +
+        '<header class="seance-head"><div><h1>' + esc(s.titre) + "</h1>" +
+        '<p class="vmeta">' + esc(formatDate(s.date)) + " · " + esc(s.debut.replace(":", " h ")) + " – " + esc(s.fin.replace(":", " h ")) + " · " + esc(s.public) + "</p></div>" +
+        '<div class="clock"><span id="clk"></span><span id="drift" class="vmeta"></span>' +
+        '<button class="chip" id="bigbtn" aria-pressed="' + big + '">Grand texte</button></div></header>' +
+        '<div class="tabs" role="tablist">' + tabs.map(function (t) {
+          return '<button role="tab" aria-selected="' + (t[0] === tab) + '" data-stab="' + t[0] + '">' + esc(t[1]) + "</button>";
+        }).join("") + "</div>" +
+        '<section role="tabpanel">' + panel() + "</section>";
+      bind();
+      tick();
+    }
+    function go(n) {
+      cur = Math.max(0, Math.min(s.etapes.length - 1, n));
+      store(key, String(cur));
+      render();
+    }
+    function bind() {
+      main.querySelectorAll("[data-stab]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          tab = b.getAttribute("data-stab");
+          history.replaceState(null, "", "#/animer/" + s.id + "/" + tab);
+          render();
+        });
+      });
+      main.querySelectorAll("[data-step]").forEach(function (b) {
+        b.addEventListener("click", function () { go(parseInt(b.getAttribute("data-step"), 10)); });
+      });
+      main.querySelectorAll("[data-move]").forEach(function (b) {
+        b.addEventListener("click", function () { go(cur + parseInt(b.getAttribute("data-move"), 10)); });
+      });
+      main.querySelectorAll("[data-copy]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var ij = b.getAttribute("data-copy").split("-"), d = s.etapes[cur].demos[parseInt(ij[0], 10)];
+          copyText([d.prompt].concat(d.suite || [])[parseInt(ij[1], 10)], b);
+        });
+      });
+      document.getElementById("bigbtn").addEventListener("click", function () {
+        big = !big; store("seance:big", big ? "1" : "0"); render();
+      });
+      var q = main.querySelector(".search");
+      if (q) q.addEventListener("input", function () {
+        var v = norm(q.value);
+        main.querySelectorAll(".qa").forEach(function (d) {
+          var hit = !v || norm(d.textContent).indexOf(v) !== -1;
+          d.hidden = !hit; if (v && hit) d.open = true;
+        });
+      });
+    }
+    // Horloge + écart avec le minutage, seulement le jour de la séance
+    function tick() {
+      var clk = document.getElementById("clk"), drift = document.getElementById("drift");
+      if (!clk) return;
+      var now = new Date();
+      clk.textContent = fmtHm(now.getHours() * 60 + now.getMinutes());
+      var today = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
+      if (today !== s.date || tab !== "deroule") { drift.textContent = ""; return; }
+      var e = s.etapes[cur], m = now.getHours() * 60 + now.getMinutes(), start = hm(e.heure), end = start + e.duree;
+      var txt, cls;
+      if (m < start) { txt = "en avance de " + (start - m) + " min"; cls = "ok"; }
+      else if (m <= end) { txt = "il reste " + (end - m) + " min pour cette étape"; cls = end - m <= 2 ? "warn" : "ok"; }
+      else { txt = "en retard de " + (m - end) + " min : voir le plan B"; cls = "late"; }
+      drift.textContent = txt; drift.className = "vmeta drift " + cls;
+    }
+    if (clockTimer) clearInterval(clockTimer);
+    clockTimer = setInterval(function () {
+      if (!document.getElementById("clk")) { clearInterval(clockTimer); clockTimer = null; return; }
+      tick();
+    }, 15000);
+    document.onkeydown = function (ev) {
+      if (!document.getElementById("clk") || tab !== "deroule") return;
+      if (/input|textarea/i.test(ev.target.tagName)) return;
+      if (ev.key === "ArrowRight" || ev.key === "PageDown") { ev.preventDefault(); go(cur + 1); }
+      if (ev.key === "ArrowLeft" || ev.key === "PageUp") { ev.preventDefault(); go(cur - 1); }
+    };
+    render();
+  }
+
   /* ---------- Méthode ---------- */
   function viewMethode() {
     setNav("methode");
@@ -440,10 +623,13 @@
   function route() {
     var parts = (location.hash.replace(/^#\/?/, "") || "").split("/");
     var anchor = null, scrolled = false;
+    main.classList.remove("big");
+    document.onkeydown = null;
     if (parts[0] === "") viewAccueil();
     else if (parts[0] === "veille") scrolled = viewVeille(parts[1]);
     else if (parts[0] === "outils") scrolled = viewOutils(parts[1]);
     else if (parts[0] === "methode") viewMethode();
+    else if (parts[0] === "animer") { if (parts[1]) viewSeance(parts[1], parts[2]); else viewAnimer(); }
     else if (parts[0] === "formation") { viewFormation(parts[1], parts[2]); anchor = parts[3]; }
     else viewNotFound();
 
@@ -468,6 +654,22 @@
   });
   lastView = location.hash.split("/").slice(0, 4).join("/");
   route();
+
+  /* ---------- Onglet Animer : visible seulement sur les navigateurs déverrouillés ----------
+     Triple-clic sur le logo « IA » : affiche ou masque l'onglet sur ce navigateur.
+     Ce n'est pas une protection (l'adresse #/animer reste accessible), juste de la discrétion. */
+  var animerLink = document.querySelector('[data-nav="animer"]');
+  function showAnimer(on) { if (animerLink) animerLink.hidden = !on; }
+  showAnimer(store("animer:on") === "1");
+  var mark = document.querySelector(".brand-mark");
+  if (mark) mark.addEventListener("click", function (ev) {
+    if (ev.detail !== 3) return;
+    ev.preventDefault();
+    var on = store("animer:on") !== "1";
+    store("animer:on", on ? "1" : "0");
+    showAnimer(on);
+    if (on) location.hash = "#/animer";
+  });
 
   /* ---------- Thème clair / sombre ---------- */
   var root = document.documentElement;
