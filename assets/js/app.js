@@ -655,6 +655,22 @@
   lastView = location.hash.split("/").slice(0, 4).join("/");
   route();
 
+  /* ---------- Onglet Animer : visible seulement sur les navigateurs déverrouillés ----------
+     Triple-clic sur le logo « IA » : affiche ou masque l'onglet sur ce navigateur.
+     Ce n'est pas une protection (l'adresse #/animer reste accessible), juste de la discrétion. */
+  var animerLink = document.querySelector('[data-nav="animer"]');
+  function showAnimer(on) { if (animerLink) animerLink.hidden = !on; }
+  showAnimer(store("animer:on") === "1");
+  var mark = document.querySelector(".brand-mark");
+  if (mark) mark.addEventListener("click", function (ev) {
+    if (ev.detail !== 3) return;
+    ev.preventDefault();
+    var on = store("animer:on") !== "1";
+    store("animer:on", on ? "1" : "0");
+    showAnimer(on);
+    if (on) location.hash = "#/animer";
+  });
+
   /* ---------- Thème clair / sombre ---------- */
   var root = document.documentElement;
   try { var saved = localStorage.getItem("theme"); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}

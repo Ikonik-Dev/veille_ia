@@ -18,7 +18,7 @@ data/veille.js          → les fiches vidéo, leurs outils, la synthèse et la 
 data/animations.js      → les guides des séances que j'anime (onglet Animer)
 ```
 
-Pages : `#/` (accueil), `#/animer` et `#/animer/<id-séance>` (guide à ouvrir sur un second écran pendant la projection ; flèches ← → pour changer d'étape), `#/veille`, `#/veille/<id-vidéo>`, `#/outils`, `#/outils/<nom>`, `#/methode`, `#/formation/<id>`.
+Pages : `#/` (accueil), `#/animer` et `#/animer/<id-séance>` (guide à ouvrir sur un second écran pendant la projection ; flèches ← → pour changer d’étape ; l’onglet n’apparaît dans le menu qu’après un triple-clic sur le logo « IA », mémorisé par le navigateur — discrétion, pas protection), `#/veille`, `#/veille/<id-vidéo>`, `#/outils`, `#/outils/<nom>`, `#/methode`, `#/formation/<id>`.
 
 ## Voir le site en local
 

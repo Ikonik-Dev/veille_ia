@@ -293,3 +293,5 @@ main { padding-block: 32px 64px; min-height: 60vh; outline: none; }
 main.big { font-size: 1.22rem; }
 main.big .step .key { font-size: 1.45rem; }
 @media (max-width: 760px) { .guide { grid-template-columns: 1fr; } .steps { position: static; flex-direction: row; overflow-x: auto; } .stepbtn { white-space: nowrap; } .clock { align-items: flex-start; } }
+
+.brand-mark { user-select: none; -webkit-user-select: none; }
