@@ -1,771 +1,5 @@
-/* Veille vidéo : fiches, outils cités, synthèse et méthode. Généré à partir des fiches ; voir README. */
-window.VEILLE = [
- {
-  "id": "cV4Mwp0ru7A",
-  "titre": "Occupy SaaS : des licenciés de la tech refont leurs logiciels avec l'IA",
-  "chaine": "IA IRL",
-  "duree": 74,
-  "lot": "2026-11-09",
-  "categorie": "Actualité",
-  "interet": 2,
-  "resume": "Un collectif qui se présente comme des ingénieurs licenciés, surtout aux États-Unis, recrée avec Claude des logiciels payants (Auth0, Salesforce) et les publie gratuitement en open source, à installer sur son propre serveur.",
-  "points": [
-   "Cible : les logiciels facturés à l'utilisateur. Exemple donné : Salesforce Entreprise à 175 € par mois et par commercial.",
-   "Projet 1 : un service de connexion qui remplace Auth0 (nommé ZeroAuthy dans la presse). Projet 2 : un clone de Salesforce (SalesCompel), avec un seul développeur humain et le reste fait par l'IA.",
-   "Méthode annoncée : repartir de la documentation publique des logiciels, sans copier leur code.",
-   "La vidéo affirme qu'une « certification officielle » a été obtenue et qu'un ingénieur refait un tel logiciel en trois semaines avec Claude. Ces deux points ne sont pas confirmés par la presse consultée.",
-   "Limite reconnue dans la vidéo : ces outils ne remplacent pas encore des logiciels dotés d'une grosse infrastructure et d'un support."
-  ],
-  "avis": "Bon support de discussion pour la séance sur l'IA et l'emploi. À vérifier : le collectif existe depuis octobre 2026, ses projets sont sous licence Apache-2.0, et le statut de licencié de ses membres est déclaratif. Aucun intérêt à remplacer un outil de la structure par ces projets à ce stade.",
-  "tags": [
-   "open source",
-   "SaaS",
-   "emploi",
-   "Claude",
-   "clonage"
-  ]
- },
- {
-  "id": "2-YCW6cQMT8",
-  "titre": "Un PC IA, concrètement, ça sert à quoi ?",
-  "chaine": "Materiel.net",
-  "duree": 84,
-  "lot": "2026-11-09",
-  "categorie": "Technique",
-  "interet": 1,
-  "resume": "Publicité d'un assembleur pour un PC haut de gamme « IA » : faire tourner sur sa machine des modèles d'image, de vidéo, d'analyse de documents ou d'automatisation, plutôt que dans le cloud.",
-  "points": [
-   "Quatre arguments pour le local : confidentialité des données, contrôle des modèles et réglages, indépendance face aux quotas des plateformes, économie pour un usage intensif.",
-   "La machine présentée : Ryzen 9 9950X3D, 64 Go de RAM et une carte graphique haut de gamme. La vidéo dit RTX 4090, la description dit RTX 5090 32 Go : incohérence.",
-   "Elle cite aussi des usages sans rapport avec l'IA générative (montage, rendu 3D, DLSS dans les jeux)."
-  ],
-  "avis": "Contenu promotionnel. Les quatre arguments sont justes et reprennent ceux de la masterclass sur l'IA locale, mais la configuration vendue dépasse de loin les besoins d'un RAG documentaire. Utile seulement comme repère de prix et de gamme pour la séance 3.",
-  "tags": [
-   "IA locale",
-   "matériel",
-   "GPU",
-   "publicité"
-  ]
- },
- {
-  "id": "post-8-repos",
-  "url": "https://www.youtube.com/post/Ugkxj9QWk2HEAWdaH7Mf3aWMTWtVxuwiLIvx",
-  "titre": "8 dépôts GitHub IA à tester (post)",
-  "chaine": "IA Boss",
-  "duree": 0,
-  "lot": "2026-11-09",
-  "categorie": "Ressource",
-  "interet": 2,
-  "resume": "Carrousel d'images présentant 8 dépôts GitHub : vidéo, 3D, business, documents, analyse de données. Les liens ne sont envoyés qu'en échange d'un commentaire ; ils ont été retrouvés et vérifiés sur GitHub le 9 novembre 2026.",
-  "points": [
-   "WeKnora (Tencent) : transforme des documents en base de connaissances interrogeable (RAG), avec un agent et un wiki. Très actif, près de 37 000 étoiles.",
-   "BambooAI : analyse de données en Python qui montre son code et permet de rejouer les calculs. Actif depuis 2023, licence MIT.",
-   "Maestro : studio local d'images, de vidéo et de musique, installé via Pinokio ; mode « Director » qui planifie un clip à partir d'un prompt. Demande une grosse carte graphique.",
-   "OpenChatCut : montage vidéo piloté par conversation, local, licence AGPL-3.0.",
-   "Video Shotcraft : skill pour Claude Code et Codex qui produit des vidéos promotionnelles avec Remotion.",
-   "Image Blaster : skills Claude qui transforment une image en environnement 3D. Dernière mise à jour en mai 2026.",
-   "Founder Skill : 11 skills Claude pour éprouver une idée de business (conseil d'administration simulé, panel de 100 clients). Publié en une seule fois le 7 octobre 2026.",
-   "ArtCraft : outil de mise en scène 3D pour guider la génération d'images et de vidéos. Le même éditeur publie les clones GridCraft (tableur) et DeckCraft (présentations)."
-  ],
-  "avis": "Sélection inégale. Un seul dépôt compte directement pour la structure : WeKnora, à comparer avec AnythingLLM pour le RAG local de la séance 3 (licence à vérifier). BambooAI peut servir à des démonstrations. Le reste relève de la création de contenu. Méthode de la chaîne : liens contre commentaire, pour collecter de l'engagement.",
-  "tags": [
-   "GitHub",
-   "open source",
-   "RAG",
-   "vidéo",
-   "skills"
-  ]
- },
- {
-  "id": "MNFZoZUExSQ",
-  "titre": "Agents IA en local, de zéro à pro en 2 h",
-  "chaine": "Naier Saidane",
-  "duree": 6814,
-  "lot": "2026-11-09",
-  "categorie": "Technique",
-  "interet": 3,
-  "resume": "Masterclass complète pour faire tourner des modèles et des agents sur sa propre machine : matériel, réglages, mesures, sécurité, puis une partie sur la vente d'offres d'IA locale.",
-  "points": [
-   "Une IA est locale si le modèle tourne sur votre machine. Test simple : couper le wifi. Claude Code ou Codex ont une interface locale mais un modèle dans le cloud.",
-   "Cinq briques : le fichier du modèle, le moteur (llama.cpp, MLX), l'application (Ollama, LM Studio), le harnais qui en fait un agent, et le matériel.",
-   "La mémoire GPU décide de tout. Un Mac de 16 Go n'offre qu'environ 12 Go aux modèles. Règle : sur Mac, une RAM au moins double de la taille du fichier pour un agent ; sur PC, une VRAM couvrant le fichier plus 20 à 30 %.",
-   "Démonstration : Mistral Small 3.2 (15 Go) met près de 10 minutes à dire bonjour sur un Mac de 16 Go ; Gemma 4 12B répond en 17 secondes.",
-   "La compression Q4 est le standard local : fichier environ quatre fois plus léger, bon compromis qualité-coût.",
-   "Piège majeur : Ollama donne 4 096 tokens de contexte par défaut et coupe le début du texte sans prévenir, donc les consignes. Fixer le contexte et la température dans un Modelfile.",
-   "RAG ou lecture complète : les extraits sont rapides pour une question précise mais faussent une synthèse ; la lecture complète est lente (2 min 40 avant le premier mot sur 100 notes) mais seule fiable.",
-   "Tester le modèle sur la vraie tâche avant d'acheter, via OpenRouter en filtrant les fournisseurs en Q4, et répéter l'essai plusieurs fois. Sur la démo, un 8B oublie des notes, un 27B non.",
-   "Chaque utilisateur simultané réserve son propre contexte en mémoire : on dimensionne sur les requêtes simultanées, pas sur l'effectif.",
-   "Sécurité : Ollama n'a pas d'authentification. Mettre un portier avec clé (Caddy), passer par Tailscale plutôt qu'ouvrir un port, couper le cloud d'Ollama, maîtriser les mises à jour.",
-   "Branchements montrés : OpenClaw, n8n, un agent de code et AnythingLLM (assistant documentaire avec RAG local et modèle d'embedding multilingue).",
-   "Coût : le local n'est pas moins cher qu'un abonnement. Son argument est la confidentialité, notamment pour les professions soumises au secret."
-  ],
-  "avis": "La ressource la plus utile du corpus pour un projet local avec Ollama. Le passage sur le contexte tronqué est à vérifier en priorité. La seconde moitié est orientée vente.",
-  "tags": [
-   "Ollama",
-   "LM Studio",
-   "IA locale",
-   "GPU",
-   "Modelfile",
-   "RAG",
-   "AnythingLLM",
-   "n8n",
-   "sécurité",
-   "Mistral",
-   "Gemma",
-   "Qwen"
-  ]
- },
- {
-  "id": "SeQXCpZhbjc",
-  "titre": "Il a laissé l'IA gérer sa vie pendant 6 mois",
-  "chaine": "Underscore_",
-  "duree": 1991,
-  "lot": "2026-11-09",
-  "categorie": "Témoignage",
-  "interet": 3,
-  "resume": "Le CTO d'une start-up raconte comment il a délégué une grande partie de sa vie professionnelle et personnelle à un agent IA, avec ses réussites et ses ratés.",
-  "points": [
-   "Point de départ : une surcharge d'informations (dizaines de sujets, dizaine de canaux) et la charge mentale qui va avec.",
-   "Il parle à son agent plusieurs heures par jour : la voix va plus vite que le clavier pour documenter sa vie, et le modèle remet de l'ordre dans un discours désordonné.",
-   "Chaque matin, un « podcast » de 10 minutes sur WhatsApp : agenda, anniversaires des proches, actualités.",
-   "Réponses automatiques limitées aux accusés de réception et aux informations déjà publiques ; correction automatique de documents quand un relecteur signale une erreur factuelle.",
-   "Ratés : faire organiser un week-end par l'agent sans le dire à sa compagne a été mal vécu. L'achat en ligne par contrôle de l'écran reste lent et coûteux ; l'agent prépare le panier, l'humain valide.",
-   "Les règles de son système sont des « cicatrices » : ajoutées une à une après chaque erreur.",
-   "Coût annoncé : moins de 500 dollars par mois. Migration en cours vers des modèles locaux (Qwen, Gemma) ; la rédaction en français reste leur point faible, Mistral s'en sort mieux.",
-   "Conseil de départ : son éditeur habituel, un dossier de connaissances en Markdown et Claude Code, puis des MCP et des skills.",
-   "Vidéo sponsorisée par Mammouth AI."
-  ],
-  "avis": "Très bon support pour réfléchir aux usages réels d'un agent : bénéfice concret sur la charge mentale, mais aussi transparence, sécurité et limites techniques.",
-  "tags": [
-   "agent personnel",
-   "charge mentale",
-   "transparence",
-   "voix",
-   "IA locale",
-   "Claude Code",
-   "MCP"
-  ]
- },
- {
-  "id": "rVC-86vbVpk",
-  "titre": "C'est quoi vLLM ? 3 mécanismes à connaître",
-  "chaine": "Benoit Ferrere",
-  "duree": 130,
-  "lot": "2026-10-19",
-  "categorie": "Technique",
-  "interet": 3,
-  "resume": "vLLM est un moteur d'inférence, comme llama.cpp ou SGLang : il fait tourner des modèles open-weight et optimise la mémoire GPU, surtout sur de gros volumes de requêtes.",
-  "points": [
-   "KV cache : le modèle garde les calculs des tokens précédents pour ne pas les refaire. Ce n'est pas propre à vLLM, mais c'est très gourmand en mémoire.",
-   "PagedAttention : la mémoire est découpée en blocs alloués au fur et à mesure, au lieu d'être réservée d'avance. Moins de gaspillage, plus de requêtes en parallèle.",
-   "Continuous batching : une requête terminée libère sa place immédiatement pour la suivante."
-  ],
-  "avis": "Bon repère technique. vLLM brille sur les gros volumes ; pour un usage local à un ou quelques utilisateurs, Ollama ou llama.cpp restent plus simples.",
-  "tags": [
-   "vLLM",
-   "inférence",
-   "GPU",
-   "KV cache",
-   "llama.cpp"
-  ]
- },
- {
-  "id": "Ak-wMJiqp6w",
-  "titre": "Les 7 patterns de RAG",
-  "chaine": "Benoit Ferrere",
-  "duree": 17,
-  "lot": "2026-10-19",
-  "categorie": "Technique",
-  "interet": 3,
-  "resume": "Vidéo sans parole ; le contenu est dans la description. Sept façons d'organiser un RAG, avec pour chacune le cas d'usage et le piège.",
-  "points": [
-   "RAG naïf : questions ciblées sur une base simple. Piège : une règle et son exception coupées dans deux morceaux donnent une réponse sourcée mais fausse.",
-   "Advanced RAG (hybride et reranking) : mêler mots-clés exacts et sens, puis reclasser. Un reranker ne retrouve pas un document absent de la première recherche.",
-   "Hiérarchique : information à plusieurs niveaux (rapport, section, passage).",
-   "Auto-correctif : on évalue les documents récupérés et on reformule la recherche s'ils sont insuffisants.",
-   "Graph RAG : la réponse dépend de relations (fournisseur, contrat, projet). Une relation mal extraite propage l'erreur.",
-   "Multimodal : information dans des images, tableaux ou audio. Tout convertir en texte peut casser la structure.",
-   "Agentique : l'agent décide à chaque étape de chercher, interroger une base ou vérifier une exception.",
-   "Méthode conseillée : partir du type d'information à retrouver, puis de la façon dont la recherche peut échouer."
-  ],
-  "avis": "Grille de lecture très utile pour concevoir ou améliorer un RAG local.",
-  "tags": [
-   "RAG",
-   "chunking",
-   "reranking",
-   "Graph RAG",
-   "agentique"
-  ]
- },
- {
-  "id": "370yiaLV3tE",
-  "titre": "Les 16 termes les plus utilisés en IA",
-  "chaine": "chillotech",
-  "duree": 2156,
-  "lot": "2026-10-19",
-  "categorie": "Ressource",
-  "interet": 3,
-  "resume": "Le vocabulaire de l'IA présenté dans un ordre logique, de « IA » jusqu'à « MCP », chaque terme s'appuyant sur le précédent.",
-  "points": [
-   "Ordre : IA, machine learning, deep learning, modèle, tokens, LLM, contexte, prompt, hallucination, embeddings, base vectorielle, RAG, fine-tuning, agent, outils, MCP.",
-   "Un prompt efficace en trois parties : un rôle, une tâche, un format de sortie.",
-   "RAG pour que l'IA connaisse vos documents ; fine-tuning pour qu'elle adopte votre métier ou votre ton. Le plus souvent, le RAG suffit.",
-   "MCP : un standard commun pour connecter des outils aux IA, comparé à l'USB-C.",
-   "Les tokens en sortie coûtent plus cher qu'en entrée ; l'auteur insiste sur le suivi de la consommation.",
-   "Quelques approximations sans gravité pour débutants. La fin promeut une formation payante."
-  ],
-  "avis": "Idéal pour former des collègues débutants : progressif, concret, en français.",
-  "tags": [
-   "vocabulaire",
-   "formation",
-   "LLM",
-   "tokens",
-   "prompt",
-   "RAG",
-   "MCP",
-   "débutant"
-  ]
- },
- {
-  "id": "MilSgMyGITU",
-  "titre": "Un PDF devient une vidéo avec NotebookLM",
-  "chaine": "stepagency",
-  "duree": 39,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 3,
-  "resume": "NotebookLM, l'outil gratuit de Google, résume un PDF, un lien ou une vidéo YouTube en vidéo d'environ une minute, avec voix off et visuels.",
-  "points": [
-   "Créer un notebook et importer ses sources.",
-   "Dans le panneau Studio, choisir Résumé vidéo, format court, langue française, consigne facultative.",
-   "Trois résumés vidéo par jour en version gratuite ; la génération peut prendre un moment."
-  ],
-  "avis": "Idéal pour rendre une procédure ou une note interne plus digeste. Seulement pour des documents non confidentiels : ils sont traités par Google.",
-  "tags": [
-   "NotebookLM",
-   "Google",
-   "résumé vidéo",
-   "formation"
-  ]
- },
- {
-  "id": "CItBUagS0-w",
-  "titre": "Alternatives gratuites aux logiciels payants",
-  "chaine": "Loucash",
-  "duree": 42,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 3,
-  "resume": "Le site gratos.app liste les équivalents libres des logiciels qu'on paie et fournit pour chacun un prompt pour les installer avec ChatGPT ou Claude.",
-  "points": [
-   "On coche les logiciels payés, le site affiche les alternatives open source.",
-   "Exemple cité : n8n à la place de Zapier."
-  ],
-  "avis": "Utile pour repérer des économies, mais chaque remplacement est à évaluer avec le prestataire informatique : installation, maintenance et sécurité restent à la charge de la structure.",
-  "tags": [
-   "open source",
-   "gratuit",
-   "n8n",
-   "logiciels"
-  ]
- },
- {
-  "id": "hyoonDrL1LU",
-  "titre": "Le skill de Cloudflare qui chasse les failles",
-  "chaine": "Melvynx",
-  "duree": 34,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "Un skill Claude Code cartographie une application, envoie des agents tester connexion, base de données, API et injection de prompt, puis un agent sceptique tente de réfuter chaque faille.",
-  "points": [
-   "Seules les failles confirmées arrivent dans le rapport final, avec leur correctif.",
-   "Plus de 28 000 étoiles GitHub annoncées. Dépôt cité : github.com/cloudflare/security-audit-skill."
-  ],
-  "avis": "Intéressant si la structure développe ses propres outils. Dépôt à vérifier avant usage.",
-  "tags": [
-   "sécurité",
-   "audit",
-   "Claude Code",
-   "skill",
-   "Cloudflare"
-  ]
- },
- {
-  "id": "lVSYNa4dKQg",
-  "titre": "Construis ton Jarvis en un week-end",
-  "chaine": "Le Raphiné",
-  "duree": 65,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "Neuf étapes pour monter un assistant personnel vocal à partir d'un modèle d'IA.",
-  "points": [
-   "Une machine (vieux PC, Mac mini ou serveur) et un modèle (Claude, ChatGPT, Gemini).",
-   "Un harnais agentique, un profil de l'utilisateur, des connexions (mails, agenda, navigateur).",
-   "Une mémoire persistante (Letta), des skills, une messagerie avec voix (Hume, ElevenLabs), une interface (Claude Design)."
-  ],
-  "avis": "Bonne check-list d'architecture pour un projet d'assistant vocal, sans détail technique.",
-  "tags": [
-   "assistant vocal",
-   "agent",
-   "mémoire",
-   "Letta",
-   "ElevenLabs"
-  ]
- },
- {
-  "id": "cY-qguglUa4",
-  "titre": "Agent Standup : tes agents IA en visio",
-  "chaine": "IT-Connect",
-  "duree": 104,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "Visualise les sessions Claude Code, Codex et Mistral Vibe comme un appel visio : statut de chaque agent, écran partagé, sous-agents, tokens consommés, replay jusqu'à la première erreur.",
-  "points": [
-   "Gratuit, open source (licence MIT), tourne en local.",
-   "Piège : en mode français, des extraits de session partent chez Anthropic pour la traduction.",
-   "Disponible sur Linux, Windows, Mac, en extension VS Code et Cursor, et en plugin Claude Code."
-  ],
-  "avis": "Utile pour suivre des agents de code. Garder l'interface en anglais pour que rien ne sorte.",
-  "tags": [
-   "agents",
-   "Claude Code",
-   "supervision",
-   "open source"
-  ]
- },
- {
-  "id": "lH3RS69kf8c",
-  "titre": "Claude est trop d'accord avec nous",
-  "chaine": "unefilleia",
-  "duree": 40,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "Le skill « Conseil » fait débattre cinq agents avant qu'un président de séance rende un verdict, pour éviter les réponses complaisantes.",
-  "points": [
-   "Cinq rôles : contradicteur, architecte, optimiste, regard extérieur, exécutant.",
-   "Dépôt « llm-council-skill » ; variante multi-modèles : llm-council d'Andrej Karpathy."
-  ],
-  "avis": "Utile pour challenger une décision importante.",
-  "tags": [
-   "complaisance",
-   "skill",
-   "décision",
-   "agents"
-  ]
- },
- {
-  "id": "x7ZVkvNfxk4",
-  "titre": "7 outils IA d'experts",
-  "chaine": "Elliott Pierret",
-  "duree": 50,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "Panorama rapide de sept fonctions avancées des assistants IA.",
-  "points": [
-   "Claude Recorder, ChatGPT Visualize, Computer Use, Skills, GPT Image, Higgsfield.",
-   "Copilot Cowork de Microsoft pour automatiser des tâches dans Excel, PowerPoint et Outlook."
-  ],
-  "avis": "Bon panorama des fonctions agentiques ; Copilot Cowork est à regarder pour un environnement Microsoft 365. Noms d'outils non vérifiés.",
-  "tags": [
-   "panorama",
-   "Copilot",
-   "Microsoft 365",
-   "Computer Use",
-   "skills"
-  ]
- },
- {
-  "id": "dk4eorkkni8",
-  "titre": "Les réglages indispensables dans Claude",
-  "chaine": "Elliott Pierret",
-  "duree": 77,
-  "lot": "2026-11-09",
-  "categorie": "Ressource",
-  "interet": 2,
-  "resume": "Cinq réglages pour mieux exploiter Claude.",
-  "points": [
-   "Utiliser l'application de bureau plutôt que le web, notamment pour l'accès aux dossiers.",
-   "Ajouter des connecteurs vers ses applications.",
-   "Choisir le modèle selon la tâche : Haiku pour le simple et rapide, Sonnet au quotidien, Opus pour le complexe.",
-   "Utiliser les Projets pour garder instructions et contexte.",
-   "Créer des skills pour les tâches récurrentes."
-  ],
-  "avis": "Bon mémo pour former des collègues à Claude. Les connecteurs sont à arbitrer avec l'infogérance.",
-  "tags": [
-   "Claude",
-   "réglages",
-   "projets",
-   "skills",
-   "connecteurs",
-   "formation"
-  ]
- },
- {
-  "id": "m76PejDDzJA",
-  "titre": "Project NOMAD : l'IA qui marche hors ligne",
-  "chaine": "Dr. Firas",
-  "duree": 67,
-  "lot": "2026-11-09",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "Un projet open source qui transforme un ordinateur en poste autonome : Wikipédia, guides médicaux et de survie, cartes et cours hors ligne, avec une IA locale qui répond à partir de ce contenu.",
-  "points": [
-   "Trois briques : le savoir téléchargé, une IA qui tourne sur la machine, et l'énergie (station électrique, panneau solaire).",
-   "Internet n'est nécessaire qu'une fois, pour tout installer.",
-   "Plus de 40 000 étoiles GitHub annoncées ; ton alarmiste sur le « blackout »."
-  ],
-  "avis": "Bonne démonstration pédagogique d'une IA locale et d'un RAG sur Wikipédia, au-delà du discours sur la survie.",
-  "tags": [
-   "hors ligne",
-   "IA locale",
-   "Wikipédia",
-   "Kiwix",
-   "open source",
-   "RAG"
-  ]
- },
- {
-  "id": "5-J_m7PbooU",
-  "titre": "Binance volé parce que la porte était grande ouverte",
-  "chaine": "ElegArtech",
-  "duree": 159,
-  "lot": "2026-11-09",
-  "categorie": "Actualité",
-  "interet": 2,
-  "resume": "Analyse du vol d'environ 6,3 milliards de dollars chez Binance : au-delà de l'ordinateur piraté, c'est l'absence de limite sur ce qu'un seul accès pouvait faire qui pose question.",
-  "points": [
-   "Le portable d'un ingénieur aurait été piraté ; le FBI attribue l'attaque à un groupe nord-coréen.",
-   "Les pirates ont fait valider leurs retraits par le système de contrôle lui-même, dans 10 cryptomonnaies.",
-   "Concept de James Reason : les « conditions latentes », ces choix faits bien avant l'incident qui permettent qu'il prenne de l'ampleur.",
-   "Fixer un plafond est un arbitrage de direction, pas un réglage technique."
-  ],
-  "avis": "Leçon transposable aux agents IA : limiter ce qu'un accès peut faire et prévoir une validation humaine pour les actions sensibles.",
-  "tags": [
-   "cybersécurité",
-   "gouvernance",
-   "risque",
-   "accès"
-  ]
- },
- {
-  "id": "A1JMuEj-KY4",
-  "titre": "Le nouveau langage des IA (RecursiveMAS)",
-  "chaine": "Nerdy Kings",
-  "duree": 113,
-  "lot": "2026-10-19",
-  "categorie": "Technique",
-  "interet": 2,
-  "resume": "Des agents qui se parlent en texte perdent de l'information à chaque échange. RecursiveMAS leur fait échanger directement leurs états internes.",
-  "points": [
-   "Un petit « traducteur » entre agents, entraîné pour environ 4 dollars, sans réentraîner les modèles.",
-   "Résultats annoncés : de 73 à près de 87 % sur des problèmes de maths, jusqu'à 75 % de tokens en moins, jusqu'à 2,4 fois plus rapide.",
-   "Limite : les échanges deviennent illisibles pour un humain, donc plus difficiles à contrôler. Source : recursivemas.github.io."
-  ],
-  "avis": "Piste de recherche à suivre, sans application immédiate.",
-  "tags": [
-   "recherche",
-   "multi-agents",
-   "RecursiveMAS"
-  ]
- },
- {
-  "id": "76FtaYkr0Ng",
-  "titre": "3 vidéos pour apprendre à utiliser Claude",
-  "chaine": "unefilleia",
-  "duree": 42,
-  "lot": "2026-10-19",
-  "categorie": "Ressource",
-  "interet": 2,
-  "resume": "Un parcours gratuit en trois vidéos anglaises, doublées en français : les bases de Claude, puis Cowork et les skills, puis Claude Code.",
-  "points": [
-   "Le guide de Claude pour débutants (Metics Media, 1 h).",
-   "Formation Claude Cowork (Jack Roberts, 1 h 05).",
-   "Lancer un projet avec Claude Code (Ishan Sharma, 1 h 40)."
-  ],
-  "avis": "Ressource de formation à proposer aux collègues.",
-  "tags": [
-   "Claude",
-   "formation",
-   "Cowork",
-   "Claude Code",
-   "débutant"
-  ]
- },
- {
-  "id": "8JK4Kn1ppHA",
-  "titre": "5 projets Claude pour débutants",
-  "chaine": "unefilleia",
-  "duree": 36,
-  "lot": "2026-10-19",
-  "categorie": "Ressource",
-  "interet": 2,
-  "resume": "Cinq petits projets à créer avec Claude pour apprendre en un week-end.",
-  "points": [
-   "Tracker d'habitudes, bibliothèque de contenus, calculateur d'investissement, planificateur de journée, second cerveau relié à Notion.",
-   "Faisable avec les artefacts d'un compte gratuit ; Claude Code demande un abonnement."
-  ],
-  "avis": "Bonnes idées d'exercices pour un atelier d'initiation.",
-  "tags": [
-   "Claude",
-   "projets",
-   "artefacts",
-   "atelier",
-   "débutant"
-  ]
- },
- {
-  "id": "_gF4IHgZqBA",
-  "titre": "3 sites avec des IA gratuites",
-  "chaine": "unefilleia",
-  "duree": 39,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "Trois sites pour utiliser des modèles d'IA sans abonnement, y compris depuis un téléphone.",
-  "points": [
-   "LM Arena : comparer les réponses de modèles côte à côte, avec un mode agent.",
-   "Design Arena : même principe pour les visuels, diapositives, jeux et 3D.",
-   "Google Labs : outils expérimentaux (musique, mini-applications, interfaces)."
-  ],
-  "avis": "Pratique pour tester des modèles sans abonnement. Usage limité, et aucune donnée sensible à y saisir.",
-  "tags": [
-   "gratuit",
-   "LM Arena",
-   "Google Labs",
-   "comparaison"
-  ]
- },
- {
-  "id": "45ZrbWRQ5K0",
-  "titre": "Laya, un classifieur local qui répond en 30 ms",
-  "chaine": "Melvynx",
-  "duree": 41,
-  "lot": "2026-11-09",
-  "categorie": "Outil",
-  "interet": 1,
-  "resume": "Un modèle open source qui n'écrit pas de texte : il choisit la bonne réponse dans une liste, pour trier, classer ou orienter des demandes.",
-  "points": [
-   "Environ 30 ms en local contre 250 ms pour l'outil cloud comparé (nommé « Jev », non identifié).",
-   "Le modèle de base doit être entraîné sur un cas précis, ce qui peut se faire avec Claude Code."
-  ],
-  "avis": "Idée intéressante pour orienter automatiquement des demandes sans envoyer de données, mais rien de directement exploitable.",
-  "tags": [
-   "classification",
-   "routage",
-   "IA locale",
-   "open source"
-  ]
- },
- {
-  "id": "FpC4SVVjlsw",
-  "titre": "Agent Reach : ton agent IA sur 14 plateformes",
-  "chaine": "Melvynx",
-  "duree": 37,
-  "lot": "2026-11-09",
-  "categorie": "Outil",
-  "interet": 1,
-  "resume": "Un dépôt open source qui donne à Claude Code ou Codex un accès en lecture à 14 plateformes : Reddit, X, GitHub, LinkedIn, Instagram, Facebook…",
-  "points": [
-   "Lit les issues GitHub, les fils Reddit et même des pages qui demandent d'être connecté.",
-   "Présenté comme une alternative gratuite à plusieurs API payantes."
-  ],
-  "avis": "Peu d'usage pour la structure. L'accès à des pages connectées pose des questions de conditions d'utilisation et de sécurité des comptes.",
-  "tags": [
-   "agents",
-   "réseaux sociaux",
-   "Claude Code",
-   "open source"
-  ]
- },
- {
-  "id": "u_GgarcLN60",
-  "titre": "11 skills Claude pour LinkedIn",
-  "chaine": "Sophiène IA",
-  "duree": 54,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 1,
-  "resume": "« LinkedIn Agent » : onze skills Claude Code pour préparer posts, commentaires, calendrier éditorial et réponses.",
-  "points": [
-   "Un skill réécrit les textes pour éviter le style IA, puis cinq sous-agents les relisent.",
-   "L'utilisateur donne les consignes, relit et valide."
-  ],
-  "avis": "Utile seulement si LinkedIn compte dans la communication de la structure.",
-  "tags": [
-   "LinkedIn",
-   "communication",
-   "skill",
-   "Claude Code"
-  ]
- },
- {
-  "id": "cc2wQNXmna4",
-  "titre": "3 applis gratuites qui marchent sans internet",
-  "chaine": "unefilleia",
-  "duree": 31,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 1,
-  "resume": "Des cartes hors ligne, Wikipédia hors ligne (Kiwix) et une IA open source sur téléphone sans connexion (PocketPal).",
-  "points": [
-   "Cartes : Organic Maps ou Maps.me.",
-   "PocketPal fait tourner un petit modèle directement sur le téléphone."
-  ],
-  "avis": "Anecdotique, mais PocketPal illustre bien l'IA locale sur mobile.",
-  "tags": [
-   "hors ligne",
-   "mobile",
-   "Kiwix",
-   "PocketPal",
-   "IA locale"
-  ]
- },
- {
-  "id": "ecb4io3GAGE",
-  "titre": "3 sites de prompts IA",
-  "chaine": "Meta-tech",
-  "duree": 88,
-  "lot": "2026-10-19",
-  "categorie": "Ressource",
-  "interet": 1,
-  "resume": "Des bibliothèques de prompts pour générer images et vidéos ; seul youmind.com est nommé.",
-  "points": [
-   "On choisit un style, on copie le prompt, on le colle dans l'outil de génération."
-  ],
-  "avis": "Peu utile pour la structure.",
-  "tags": [
-   "prompts",
-   "images",
-   "vidéo"
-  ]
- },
- {
-  "id": "lIU-9o_-4OM",
-  "titre": "Google Playground AI : créer des jeux par prompt",
-  "chaine": "Jeux Vidéo Magazine",
-  "duree": 85,
-  "lot": "2026-10-19",
-  "categorie": "Actualité",
-  "interet": 1,
-  "resume": "Une plateforme de Google pour créer des jeux vidéo à partir d'un prompt, les modifier et les partager.",
-  "points": [
-   "Réservée aux États-Unis et en test ; accessible seulement par VPN depuis la France."
-  ],
-  "avis": "Anecdotique pour la structure.",
-  "tags": [
-   "Google",
-   "jeux vidéo",
-   "génération"
-  ]
- },
- {
-  "id": "olbLO9ZTAq4",
-  "titre": "ArtCraft : des clones gratuits d'Adobe et d'Office",
-  "chaine": "Ninon",
-  "duree": 48,
-  "lot": "2026-10-19",
-  "categorie": "Actualité",
-  "interet": 1,
-  "resume": "Un développeur aurait recréé avec l'IA des équivalents gratuits d'Adobe, Word, Excel et AutoCAD ; encore des bugs.",
-  "points": [
-   "Message de fond : l'IA sait déjà reproduire un logiciel de bout en bout."
-  ],
-  "avis": "Signal intéressant, mais risque juridique pour une structure qui utiliserait ces clones.",
-  "tags": [
-   "clonage",
-   "logiciels",
-   "droit d'auteur"
-  ]
- },
- {
-  "id": "L3JZ5gYERN0",
-  "titre": "Skill Replica : cloner une app SaaS",
-  "chaine": "Thomas Berton",
-  "duree": 51,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 1,
-  "resume": "Onze skills Claude Code pour cloner une application à partir de son URL : analyse, reconstruction, tests, déploiement.",
-  "points": [
-   "Un skill lit les avis clients de l'application d'origine pour intégrer les fonctions demandées."
-  ],
-  "avis": "Même risque juridique qu'ArtCraft. Promesse « clone parfait à chaque fois » très marketing.",
-  "tags": [
-   "clonage",
-   "SaaS",
-   "Claude Code",
-   "skill",
-   "droit d'auteur"
-  ]
- },
- {
-  "id": "KwEmkBM-RQo",
-  "titre": "Exploser sur les réseaux sans montrer sa tête",
-  "chaine": "FrenchStartupper",
-  "duree": 74,
-  "lot": "2026-10-19",
-  "categorie": "Outil",
-  "interet": 1,
-  "resume": "Remplacer son visage par un avatar généré via le connecteur Higgsfield dans ChatGPT, en gardant mouvements et cadrage.",
-  "points": [
-   "Vidéo d'origine, image de référence générée, puis génération vidéo sans prompt."
-  ],
-  "avis": "À manier avec prudence : tout contenu de ce type doit être signalé comme généré.",
-  "tags": [
-   "avatar",
-   "vidéo",
-   "Higgsfield",
-   "transparence"
-  ]
- },
- {
-  "id": "0FqWt98KD-4",
-  "titre": "Des mauvais avis de l'App Store à ton appli",
-  "chaine": "Paul Automatise",
-  "duree": 65,
-  "lot": "2026-11-09",
-  "categorie": "Business",
-  "interet": 1,
-  "resume": "Méthode pour trouver une idée d'application : lire les mauvais avis d'une app à succès, les faire analyser par Claude, puis générer l'app avec un outil nommé Blocks.",
-  "points": [
-   "Captures des avis négatifs, analyse des frustrations par Claude, prompt complet de l'application.",
-   "Promesses fortes (« le meilleur business de 2026 ») et appel à commenter pour recevoir la méthode."
-  ],
-  "avis": "Sans intérêt direct. L'idée de partir des irritants des utilisateurs reste une bonne pratique de conception.",
-  "tags": [
-   "business",
-   "application mobile",
-   "avis",
-   "Claude"
-  ]
- },
- {
-  "id": "UeHmxZMdw2g",
-  "titre": "J'ai demandé à Claude de gagner un maximum d'argent",
-  "chaine": "NOCT SENSEI",
-  "duree": 1525,
-  "lot": "2026-10-19",
-  "categorie": "Business",
-  "interet": 1,
-  "resume": "L'auteur affiche environ 24 000 dollars de chiffre d'affaires en 4 semaines avec un SaaS codé avec Claude Code, et défend l'idée que la valeur est dans l'acquisition de clients, pas dans le produit.",
-  "points": [
-   "Créer un produit ne vaudrait plus grand-chose puisque l'IA permet à chacun d'en faire un.",
-   "Conseil aux débutants : une agence qui installe des systèmes marketing automatisés pour des entreprises de secteurs « ennuyeux ».",
-   "Chiffres non vérifiables, discours de créateur de contenu."
-  ],
-  "avis": "Seul enseignement transposable : l'automatisation des relances et du suivi est un usage simple de l'IA.",
-  "tags": [
-   "business",
-   "marketing",
-   "SaaS",
-   "Claude Code"
-  ]
- },
+/* Fiches de veille ajoutées le 2026-11-10 (56). Format : voir README. */
+window.VEILLE = (window.VEILLE || []).concat([
  {
   "id": "eZcpO_pd61Q",
   "titre": "Intégrer l'IA en entreprise : 5 méthodes",
@@ -773,6 +7,11 @@ window.VEILLE = [
   "duree": 1451,
   "categorie": "Business",
   "interet": 2,
+  "dev": 1,
+  "usages": [
+   "fondamentaux",
+   "metiers"
+  ],
   "resume": "Un cabinet de conseil présente sa démarche en cinq étapes, de la plus simple à la plus rentable : audit, formation, outillage, automatisation, développement sur mesure.",
   "points": [
    "Audit : qualité et accès aux données, repérage des tâches répétitives, identification de « champions » internes motivés. Entretiens d'environ une heure par personne clé.",
@@ -800,6 +39,10 @@ window.VEILLE = [
   "duree": 2853,
   "categorie": "Témoignage",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "Entretien avec Neil Zeghidour, ancien de Google puis du laboratoire parisien Kyutai, aujourd'hui cofondateur de Gradium. Il raconte comment un codec audio a donné naissance au clonage de voix et à Moshi, le premier modèle vocal « full duplex ».",
   "points": [
    "Un codec audio très efficace transforme le son en une sorte de texte (des tokens). Un modèle qui prédit le token suivant peut alors continuer une voix ou une mélodie : c'est l'origine du clonage de voix et de la musique générée (Suno est parti de ces travaux).",
@@ -820,7 +63,8 @@ window.VEILLE = [
    "Europe",
    "deepfake"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Bonne explication des architectures vocales (codec audio en tokens, cascade contre full duplex, modèle hybride petit et grand) ; contenu sponsorisé en partie."
  },
  {
   "id": "XfkRd7w69dE",
@@ -829,6 +73,11 @@ window.VEILLE = [
   "duree": 1306,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux",
+   "dev"
+  ],
   "resume": "Analyse de l'arrivée de « computer use » dans Claude Cowork sur Mac : l'agent voit l'écran et clique dans les vraies applications. L'auteur compare trois modèles de confiance et insiste sur les limites et les risques pour les données.",
   "points": [
    "Progression décrite : chatbot (2022), copilote (2023), orchestrateur de fichiers (Cowork, début 2026), puis contrôle de l'écran, du clavier et de la souris.",
@@ -847,7 +96,8 @@ window.VEILLE = [
    "confidentialité",
    "automatisation"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Compare trois architectures d'agents qui contrôlent l'écran et rappelle que les captures partent chez l'éditeur ; benchmarks cités sans source."
  },
  {
   "id": "MQ_J-PI2Hx8",
@@ -856,6 +106,11 @@ window.VEILLE = [
   "duree": 600,
   "categorie": "Outil",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux",
+   "local"
+  ],
   "resume": "Tutoriel pour installer ou utiliser en ligne des modèles open source dont on a retiré le réflexe de refus (« abliterated »), présentés comme utiles pour des usages « 100 % légaux ».",
   "points": [
    "Principe décrit : une modification ciblée d'un modèle open source supprime sa capacité à refuser, sans réentraînement. Différent du « jailbreak », qui ruse dans le prompt.",
@@ -872,7 +127,8 @@ window.VEILLE = [
    "garde-fous",
    "vigilance"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Explique la suppression des refus d'un modèle open source sans réentraînement et sa différence avec le jailbreak ; aucun usage à recommander, contenu promotionnel."
  },
  {
   "id": "YUPcbsMsA8A",
@@ -881,6 +137,10 @@ window.VEILLE = [
   "duree": 1364,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "metiers"
+  ],
   "resume": "L'auteur reprend un article de Nate B Jones (ancien Head of Product chez Amazon Prime Video) qui propose cinq « douves » résistant à l'IA : confiance, contexte, distribution, jugement, responsabilité. Sa thèse : plutôt que coder plus vite, il faut se demander si son employeur et soi-même sont positionnés sur au moins une de ces douves.",
   "points": [
    "Confiance : selon l'auteur, plus l'IA génère de faux contenus, plus la confiance acquise prend de la valeur. Exemples cités : Decathlon (acheté plus cher par confiance), Stripe, Trustpilot. Action individuelle proposée : tenir ses engagements et livrer du code fiable.",
@@ -899,7 +159,8 @@ window.VEILLE = [
    "responsabilité",
    "jugement"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Réflexion sur la valeur du développeur face à l'IA, avec un retour sur des tâches cadrées mieux réussies que celles demandant du contexte métier ; opinions reprises d'un article, sans données."
  },
  {
   "id": "rYUItp5ykvg",
@@ -908,6 +169,11 @@ window.VEILLE = [
   "duree": 1955,
   "categorie": "Technique",
   "interet": 2,
+  "dev": 3,
+  "usages": [
+   "dev",
+   "fondamentaux"
+  ],
   "resume": "Interview d'un spécialiste du scraping qui explique la course entre robots collecteurs de données et systèmes anti-bots, avec des démonstrations sur un faux site d'hôtels. Il montre aussi comment l'IA aide à analyser les anti-bots et à réparer automatiquement les scrapers.",
   "points": [
    "Vidéo sponsorisée par Mammouth AI (interface multi-modèles, hébergement annoncé en Europe et conforme RGPD, à partir de 10 € par mois selon la publicité).",
@@ -927,7 +193,8 @@ window.VEILLE = [
    "sécurité",
    "sponsor"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Explique concrètement le fonctionnement des anti-bots (empreinte TLS, score, Chrome piloté) et montre un agent qui répare un scraper via MCP puis ouvre une pull request ; vidéo sponsorisée et plusieurs affirmations non sourcées."
  },
  {
   "id": "h369b5S5OhY",
@@ -936,6 +203,10 @@ window.VEILLE = [
   "duree": 1753,
   "categorie": "Analyse",
   "interet": 3,
+  "dev": 3,
+  "usages": [
+   "local"
+  ],
   "resume": "L'auteur compare les machines capables de faire tourner des modèles en local (Apple Mac, Nvidia DGX Spark, mini-PC AMD Strix Halo) selon deux critères : quantité de mémoire et bande passante mémoire. Il calcule ensuite à partir de quel volume l'achat est plus rentable que la location, et conclut que la confidentialité est souvent l'argument décisif.",
   "points": [
    "La quantité de mémoire fixe la taille du modèle utilisable ; la bande passante fixe le plafond théorique de vitesse. Repères donnés : 32 Go pour un petit modèle, 64 Go pour Qwen 3.8 27B (environ 17 Go en 4 bits selon l'auteur), 128 Go pour GPT-OSS 120B (63 Go compressé).",
@@ -955,7 +226,8 @@ window.VEILLE = [
    "coûts",
    "quantification"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Donne les critères pour choisir une machine d'inférence locale (mémoire, bande passante, quantification, modèles denses ou à experts) et une méthode de calcul achat/location ; prix et mesures non sourcés, préférence affichée pour Apple."
  },
  {
   "id": "neQh9CBV7y4",
@@ -964,6 +236,10 @@ window.VEILLE = [
   "duree": 1954,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 1,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "L'auteur explique la chute boursière des « néoclouds » (CoreWeave, Nebius, Iren) entre le 8 octobre et le 6 novembre 2026 par leur financement à crédit, alors que les géants qui financent sur leurs profits résistent. Il en tire trois conseils individuels : pouvoir changer de fournisseur, savoir travailler sans l'outil imposé, ne pas cumuler risque d'emploi et risque d'épargne.",
   "points": [
    "Selon l'auteur, les néoclouds ont perdu autour de 40 % en bourse sur la période, contre une stabilité pour Microsoft et Amazon et un recul de 15 à 20 % pour Alphabet et Meta. Chiffres non sourcés.",
@@ -992,6 +268,11 @@ window.VEILLE = [
   "duree": 934,
   "categorie": "Analyse",
   "interet": 1,
+  "dev": 2,
+  "usages": [
+   "fondamentaux",
+   "local"
+  ],
   "resume": "L'auteur analyse Kimi K3.1 Pro de Moonshot : un modèle trop gros pour le matériel accessible en Chine, dont l'ouverture des poids servirait surtout à faire héberger le modèle par d'autres contre une part des recettes. Il souligne aussi un score élevé en exploitation de failles, publié par Moonshot.",
   "points": [
    "Taille citée : poids de 1,56 To, environ 3 000 milliards de paramètres dont 104 milliards actifs par token. Il faudrait au minimum 8 puces B300 ou 16 B200, puces dont l'export vers la Chine est interdit.",
@@ -1011,7 +292,8 @@ window.VEILLE = [
    "coûts",
    "kimi"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Éclaire les capacités offensives en code des grands modèles ouverts et l'économie de leur hébergement ; modèle impossible à faire tourner en local et chiffres cyber publiés par l'éditeur."
  },
  {
   "id": "IHs3jiBz6yU",
@@ -1020,6 +302,11 @@ window.VEILLE = [
   "duree": 1727,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "local",
+   "dev"
+  ],
   "resume": "L'auteur explique que, même si les modèles d'IA tournent à distance, les outils des agents (navigateurs, serveurs, sessions, Docker) occupent la mémoire vive de l'ordinateur. Il conseille 24 à 32 Go sur un MacBook et déconseille d'acheter un portable pour faire tourner un modèle en local.",
   "points": [
    "Selon l'auteur, héberger un modèle sur un portable n'est presque jamais rentable face aux abonnements à 20 ou 200 dollars. Il cite un seuil d'environ 48 millions de tokens par mois pour amortir une grosse machine face à Qwen 27B loué dans le cloud (calcul personnel, non sourcé).",
@@ -1039,7 +326,8 @@ window.VEILLE = [
    "ia locale",
    "licences"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Donne des repères pratiques sur la mémoire vive consommée par les outils d'agents (Claude Desktop, Docker, sessions) et sur l'intérêt limité d'un modèle local sur portable ; mesures personnelles non reproductibles, orientées macOS."
  },
  {
   "id": "6C4dc7VhzmY",
@@ -1048,6 +336,10 @@ window.VEILLE = [
   "duree": 1601,
   "categorie": "Analyse",
   "interet": 1,
+  "dev": 0,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "À partir d'une démonstration du nouveau Tesla Roadster, l'auteur décrit les entreprises d'Elon Musk comme un système intégré (calcul, énergie, espace, robots) autour de l'IA Grok. Il en tire une leçon d'ambition personnelle face à l'automatisation du travail.",
   "points": [
    "La vidéo décrit une démonstration du Roadster à McGregor (Texas) : conduite au plafond, 0 à 100 km/h en moins d'une seconde, saut de 7 m grâce à des propulseurs. L'auteur reconnaît que la voiture n'a aucune utilité commerciale à court terme.",
@@ -1075,6 +367,11 @@ window.VEILLE = [
   "duree": 1545,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "dev",
+   "metiers"
+  ],
   "resume": "L'auteur soutient que l'IA rend bon marché la rétro-ingénierie et la reconstruction de logiciels, ce qui fragilise les éditeurs dont la valeur reposait sur un code fermé. Il propose une « échelle de la lisibilité » en six marches et désigne les perdants probables.",
   "points": [
    "Selon la vidéo, le développeur Brandon Thomas a publié sept clones open source de logiciels Adobe (dont Photoshop et Premiere) avec Claude, encore en version alpha. Le clone de Photoshop s'appellerait « Photokraft » (orthographe incertaine).",
@@ -1094,7 +391,8 @@ window.VEILLE = [
    "no-code",
    "esn"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Décrit la boucle de décompilation par agent (reconstruire, recompiler, comparer au binaire) et ses effets sur les éditeurs et les ESN ; exemples et chiffres non sourcés."
  },
  {
   "id": "IPJDmbShvvI",
@@ -1103,6 +401,11 @@ window.VEILLE = [
   "duree": 1784,
   "categorie": "Analyse",
   "interet": 3,
+  "dev": 3,
+  "usages": [
+   "local",
+   "fondamentaux"
+  ],
   "resume": "L'auteur analyse la sortie de Mistral Large 4 (surnommé « Chonk ») et soutient que Mistral vise le marché des modèles contrôlables sous droit européen plutôt que la place de meilleur modèle mondial. Il insiste sur un point : faire tourner un modèle en local ne garantit pas sa neutralité.",
   "points": [
    "Mistral Large 4 : 1 000 milliards de paramètres dont 49 milliards actifs (mélange d'experts), multimodal, toutes les langues officielles de l'UE. Accès en préversion par API ; poids annoncés pour le 27 octobre, licence encore inconnue. Ces données viennent du communiqué de Mistral.",
@@ -1122,7 +425,8 @@ window.VEILLE = [
    "modèles ouverts",
    "ia locale"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Utile pour choisir un modèle ouvert pour un RAG sous Ollama : l'hébergement local règle la question des données mais pas celle de l'alignement, à tester soi-même ; benchmarks publiés par l'éditeur."
  },
  {
   "id": "wpcMuC090N4",
@@ -1131,6 +435,11 @@ window.VEILLE = [
   "duree": 1384,
   "categorie": "Analyse",
   "interet": 3,
+  "dev": 3,
+  "usages": [
+   "fondamentaux",
+   "dev"
+  ],
   "resume": "La vidéo présente un rapport d'Anthropic selon lequel le modèle ouvert chinois GLM 5.3 écrit des exploits presque aussi bien que Mythos, le modèle fermé d'Anthropic, et que ses garde-fous se retirent facilement. L'auteur propose ensuite une méthode de défense en quatre étapes pour gérer les vulnérabilités de ses logiciels.",
   "points": [
    "Chiffres du rapport, publié par Anthropic (source intéressée, que l'auteur signale) : exploit complet du moteur de Chrome dans environ 12 % des tentatives pour GLM 5.3, contre 14 % pour Mythos et 0 % pour la génération précédente.",
@@ -1150,7 +459,8 @@ window.VEILLE = [
    "vulnérabilités",
    "cyber resilience act"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Propose une méthode de gestion des vulnérabilités applicable aux projets Symfony (SBOM, CVE, EPSS, KEV, atteignabilité, tests automatisés) et un partage local/en ligne des données sensibles ; chiffres issus d'un rapport de l'éditeur."
  },
  {
   "id": "vMDqfGEIzo8",
@@ -1159,6 +469,10 @@ window.VEILLE = [
   "duree": 1203,
   "categorie": "Analyse",
   "interet": 1,
+  "dev": 1,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "La vidéo explique que les assistants IA qui achètent pour le client deviennent un filtre entre la marque et l'acheteur. Selon l'auteur, il faut fournir des données vérifiables (stock, prix, délais, retours) plutôt que soigner la persuasion.",
   "points": [
    "L'auteur décrit un filtre à trois étages : être découvert, être sélectionné, permettre l'achat. L'agent ne cherche pas à être séduit : il vérifie des faits (stock, délai, retour, compatibilité).",
@@ -1187,6 +501,10 @@ window.VEILLE = [
   "duree": 1414,
   "categorie": "Outil",
   "interet": 2,
+  "dev": 3,
+  "usages": [
+   "dev"
+  ],
   "resume": "Démonstration d'Hermes Agent, un harnais d'agent open source installé sur un serveur loué, qui garde mémoire, tâches planifiées et compétences écrites. Thèse : les méthodes enregistrées appartiennent à l'utilisateur et survivent à un changement de modèle.",
   "points": [
    "Vidéo sponsorisée par l'hébergeur Hostinger, avec lien affilié et code promo de 10 %.",
@@ -1206,7 +524,8 @@ window.VEILLE = [
    "open source",
    "sponsor"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Montre un harnais d'agent open source auto-hébergé avec mémoire, tâches planifiées et skills portables d'un modèle à l'autre ; vidéo sponsorisée, un seul essai de changement de modèle, données envoyées à des fournisseurs américains."
  },
  {
   "id": "zlaEdtIRpuY",
@@ -1215,6 +534,10 @@ window.VEILLE = [
   "duree": 1341,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "La vidéo compare trois modèles sortis la même semaine à partir de benchmarks publiés (Artificial Analysis, éditeurs, Zapier). L'auteur préfère Opus 5.5 pour les livrables exigeants et garde les deux autres pour le volume.",
   "points": [
    "Selon la vidéo, Grok 4.7 progresse en analyse mais pas en présentation des documents, d'après Artificial Analysis. Son coût sur un exemple passe d'environ 4,40 $ à 8 $ par rapport à Grok 4.6.",
@@ -1234,7 +557,8 @@ window.VEILLE = [
    "claude",
    "gpt"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Compare les capacités et coûts par tâche de trois modèles récents à partir de benchmarks ; chiffres d'éditeurs ou d'Artificial Analysis non vérifiables, préférence fondée en partie sur des tests personnels."
  },
  {
   "id": "P3uJjhA4oxE",
@@ -1243,6 +567,10 @@ window.VEILLE = [
   "duree": 1624,
   "categorie": "Technique",
   "interet": 2,
+  "dev": 3,
+  "usages": [
+   "dev"
+  ],
   "resume": "La vidéo présente Jeev, un modèle qui renvoie des décisions typées (catégorie, score, oui/non) avec des probabilités, sans rédiger de texte. L'auteur examine sa calibration à partir de tests publics et propose une méthode d'évaluation avant tout usage.",
   "points": [
    "Selon la vidéo, Jeev (orthographe incertaine dans la transcription) a été présenté le 15 septembre 2026 par Diogo Almeida, ancien d'OpenAI, et sa société TypeSafe AI, qui aurait levé 40 millions de dollars auprès de DCVC.",
@@ -1262,7 +590,8 @@ window.VEILLE = [
    "agents",
    "données"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Présente un modèle de décision typée avec probabilités et une méthode d'évaluation (cas connus, jeu de test séparé, calibration) transposable à un classifieur local ; service américain, moins bon en français, performances surtout issues de l'éditeur."
  },
  {
   "id": "McohVXxWAWU",
@@ -1271,6 +600,10 @@ window.VEILLE = [
   "duree": 1399,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "dev"
+  ],
   "resume": "En partant de la loi de Brooks, la vidéo rapporte plusieurs expériences d'agents qui travaillent ensemble (OpenAI, Anthropic, Cursor). Thèse : les agents exécutent, mais découper le travail, trancher les conflits et garder la mémoire commune restent des choix humains.",
   "points": [
    "Selon la vidéo, Cursor a lancé un essaim d'agents sur un même logiciel : 68 000 modifications en 2 h, plus de 70 000 conflits, arrêt de l'essai.",
@@ -1290,7 +623,8 @@ window.VEILLE = [
    "coûts",
    "cybersécurité"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Rapporte des expériences d'agents de code en parallèle et les règles qui réduisent les conflits (décisions écrites, arbitre, carnet de bord) ; chiffres et incidents non sourcés."
  },
  {
   "id": "Nmu1-eILb9g",
@@ -1299,6 +633,11 @@ window.VEILLE = [
   "duree": 1380,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "dev",
+   "copilot"
+  ],
   "resume": "L'auteur soutient que les offres d'IA se vendent désormais comme des équipes d'agents préassemblées (Grockbot, Claude Cowork, ChatGPT Work, Copilot Cowork). Selon lui, le résultat et la facture dépendent surtout de la répartition des rôles entre modèles et de deux réglages, la docilité et l'effort de réflexion.",
   "points": [
    "Faits rapportés : xAI aurait lancé le 11 août « Grockbot » (nom tel que transcrit), où chaque agent est un « employé » persistant sur une machine cloud partagée. Anthropic (Claude Cowork), OpenAI (ChatGPT Work) et Microsoft (Copilot Cowork) proposeraient la même approche.",
@@ -1318,7 +657,8 @@ window.VEILLE = [
    "copilot cowork",
    "coûts"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Éclaire l'orchestration multi-modèles (orchestrateur puissant, exécutants moins chers, réglage de l'effort, budget de tokens) ; chiffres d'éditeur ou non sourcés."
  },
  {
   "id": "8ZJI4uCp6bA",
@@ -1327,6 +667,10 @@ window.VEILLE = [
   "duree": 1112,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 3,
+  "usages": [
+   "dev"
+  ],
   "resume": "La vidéo s'appuie sur l'échelle en cinq étapes de Boris Cherny (Claude Code) pour expliquer pourquoi les développeurs restent à surveiller leur agent. Selon l'auteur, le blocage vient de l'absence de vérification automatisée, pas d'un manque de discipline, et il propose quatre chantiers pour passer à plusieurs agents en parallèle.",
   "points": [
    "Échelle attribuée à Boris Cherny (fil sur X du 16 juillet) : 0 accès bloqué, 1 un développeur et un agent supervisé, 2 une dizaine d'agents en parallèle, 3 une centaine, 4 un millier piloté par intention. Microsoft aurait publié en mai une échelle proche (auteur, éditeur, directeur, orchestrateur).",
@@ -1345,7 +689,8 @@ window.VEILLE = [
    "vérification",
    "workflow"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Quatre chantiers directement applicables avec Claude Code : fichier CLAUDE.md, commande unique de vérification, un worktree par agent avec permissions, relecture par une session distincte ; plusieurs chiffres non sourcés."
  },
  {
   "id": "1l6-lOKL5l0",
@@ -1354,6 +699,11 @@ window.VEILLE = [
   "duree": 1077,
   "categorie": "Analyse",
   "interet": 3,
+  "dev": 3,
+  "usages": [
+   "fondamentaux",
+   "dev"
+  ],
   "resume": "À partir d'un incident à Melbourne, la vidéo montre comment un agent ordinaire a utilisé une API sans contrôle d'autorisation pour annuler la réservation d'un inconnu, de façon irréversible. L'auteur en conclut que la sécurité par l'obscurité ne tient plus face aux agents et qu'il faut des contrôles côté serveur et une validation humaine des actions irréversibles.",
   "points": [
    "Fait rapporté, non vérifié : OpenAI aurait suspendu un modèle non publié nommé « Astra », proche du niveau critique sur son échelle de risque cyber.",
@@ -1373,7 +723,8 @@ window.VEILLE = [
    "autorisation",
    "owasp"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Rappel concret pour une API Symfony : vérifier l'autorisation côté serveur sur chaque objet et placer une validation humaine devant les actions irréversibles d'un agent ; incident rapporté sans source précise."
  },
  {
   "id": "o8h-fVygTek",
@@ -1382,6 +733,10 @@ window.VEILLE = [
   "duree": 1589,
   "categorie": "Analyse",
   "interet": 1,
+  "dev": 0,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "L'auteur soutient que la ressource rare n'est plus l'attention mais le « mandat », c'est-à-dire le droit donné à un agent d'agir et de payer à notre place. Il décrit les acteurs qui se placent comme intermédiaires obligés et conseille de se méfier des agents gratuits.",
   "points": [
    "Faits rapportés, non vérifiés : la Linux Foundation aurait lancé le 14 juillet la fondation x402 (paiements entre machines via le code HTTP 402), avec 47 membres dont Visa, Mastercard, Stripe, Google et AWS.",
@@ -1409,6 +764,11 @@ window.VEILLE = [
   "duree": 1024,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux",
+   "dev"
+  ],
   "resume": "À partir d'un script Bash défectueux que son agent a contourné sans le signaler, l'auteur soutient que les agents IA lisent l'intention plutôt que le code et suppriment le plantage qui servait d'alarme. Il en tire des règles de rédaction des consignes pour les systèmes agentiques.",
   "points": [
    "Anecdote de l'auteur : un script Bash qui ne pouvait pas s'exécuter a été contourné pendant plusieurs jours par son agent (GPT 5.6 Sol selon lui), qui a lu le code, déduit l'intention et atteint le but autrement. Aucune erreur n'est remontée.",
@@ -1428,7 +788,8 @@ window.VEILLE = [
    "sécurité",
    "vérification"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Décrit le contournement silencieux des erreurs par les agents et propose des règles de consigne (expliquer le but, exiger l'arrêt en cas d'échec, commencer petit) ; anecdotes et chiffres non sourcés."
  },
  {
   "id": "XQCp6yB_kNc",
@@ -1437,6 +798,11 @@ window.VEILLE = [
   "duree": 1473,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "metiers",
+   "fondamentaux"
+  ],
   "resume": "La vidéo présente Kimi K3 de Moonshot, modèle à poids ouverts annoncé au niveau de Fable 5 et GPT Sol pour un prix bien plus bas, et en tire des conséquences économiques, géopolitiques et professionnelles. L'auteur conclut que la valeur se déplace vers le jugement, l'accès aux données et la vérification.",
   "points": [
    "Faits annoncés par l'éditeur : environ 3 000 milliards de paramètres, architecture mixture of experts (896 experts, 16 actifs par token), innovations maison (Kimi Delta Attention, résidus d'attention). L'auteur précise que ces gains viennent du papier de Moonshot et ne sont pas répliqués.",
@@ -1456,7 +822,8 @@ window.VEILLE = [
    "emploi",
    "reconversion"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Présente l'architecture et le coût d'un grand modèle ouvert, avec un test de l'auteur montrant ses faiblesses en débogage d'une base de code existante ; gains annoncés par l'éditeur, non répliqués."
  },
  {
   "id": "o6cvuSX0UrI",
@@ -1465,6 +832,10 @@ window.VEILLE = [
   "duree": 2271,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "L'auteur commente une semaine de lancements (Grok 4.5, Muse Spark, GPT 5.6 Sol, Terra, Luna) et le contrôle de fait de l'État américain sur l'accès aux modèles. Sa thèse : les scores ne sont plus vérifiables, il faut évaluer soi-même, router entre modèles et sécuriser les contrats.",
   "points": [
    "Lancements rapportés : Grok 4.5 le 8 juillet, Muse Spark de Meta le 9, famille GPT 5.6 (Sol haut de gamme, Terra intermédiaire, Luna économique). Selon l'indice d'Artificial Analysis cité, le trio de tête tient en 6 points ; Fable garderait 15 points d'avance sur SWE-bench Pro.",
@@ -1484,7 +855,8 @@ window.VEILLE = [
    "contrats",
    "agents"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Montre pourquoi construire son propre banc de tâches et router entre modèles, avec des retours sur la triche des modèles et l'usage de GPT dans Claude Code ; très nombreux chiffres invérifiables."
  },
  {
   "id": "n8NtmXLJoX0",
@@ -1493,6 +865,10 @@ window.VEILLE = [
   "duree": 1539,
   "categorie": "Analyse",
   "interet": 1,
+  "dev": 1,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "La vidéo explique le rachat de Cursor par SpaceX, payé en actions après son introduction en bourse, comme une intégration verticale autour de la puissance de calcul. L'auteur en tire des conseils sur la dépendance aux outils et sur l'épargne investie dans des ETF monde.",
   "points": [
    "Faits rapportés : introduction en bourse de SpaceX (près de 75 milliards de dollars levés), puis rachat de Cursor pour 60 milliards payés en actions. Un partenariat d'avril à 10 milliards prévoyait déjà une option d'achat à 60 milliards.",
@@ -1520,6 +896,11 @@ window.VEILLE = [
   "duree": 1468,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux",
+   "dev"
+  ],
   "resume": "L'auteur revient sur deux fuites chez Anthropic en cinq jours (l'existence de Claude Mythos, puis le code source de Claude Code), sur fond de conflit avec le Pentagone. Il en conclut que la sécurité opérationnelle cède sous la pression de la vitesse et qu'il faut vérifier soi-même ses outils.",
   "points": [
    "Distinction posée par l'auteur : la sécurité des modèles (comportement de l'IA) n'est pas la sécurité opérationnelle (protection des données et des accès). Anthropic aurait failli sur la seconde.",
@@ -1539,7 +920,8 @@ window.VEILLE = [
    "chaîne d'approvisionnement",
    "dépendance"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Rappelle le risque de chaîne d'approvisionnement des outils de dev (dépendance compromise dans Claude Code, fuite de code source) et la différence entre sécurité du modèle et sécurité opérationnelle ; plusieurs faits non sourcés."
  },
  {
   "id": "Uv7cUgY9xpU",
@@ -1548,6 +930,10 @@ window.VEILLE = [
   "duree": 1872,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 1,
+  "usages": [
+   "metiers"
+  ],
   "resume": "La vidéo soutient que la vague d'indépendants et de « fondateurs » est surtout une fuite face à un marché de l'emploi junior qui se ferme, et que l'IA rend l'exécution presque gratuite. Selon l'auteur, la valeur se déplace vers le jugement (déléguer, spécifier, évaluer, contextualiser), qui se forge sur le terrain.",
   "points": [
    "Faits rapportés, non sourcés : le titre « fondateur » aurait progressé de près de 70 % sur LinkedIn cette année ; près de 40 % des organisations prévoiraient de remplacer des postes par l'IA ; 90 % d'échec des start-ups à 5 ans.",
@@ -1576,6 +962,11 @@ window.VEILLE = [
   "duree": 2079,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux",
+   "dev"
+  ],
   "resume": "Partant de la baisse des valeurs cybersécurité après l'annonce de Claude Code Security (20 février 2026 selon la vidéo), l'auteur soutient que le vrai risque est interne : des salariés installent des agents comme OpenClaw avec des accès étendus. Il en déduit que la cybersécurité et la supervision humaine deviennent plus nécessaires, pas moins.",
   "points": [
    "Fait rapporté : Anthropic a annoncé Claude Code Security, présenté comme un aperçu de recherche limité qui analyse le code (analyse statique) et propose des correctifs. Selon la vidéo, environ 10 milliards de dollars de capitalisation cybersécurité auraient disparu (Okta, CrowdStrike, Cloudflare, JFrog cités) ; chiffres non sourcés.",
@@ -1595,7 +986,8 @@ window.VEILLE = [
    "injection de prompt",
    "gouvernance"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Situe ce que fait une analyse statique de code par IA face à la sécurité en production, et décrit les risques des agents locaux (permissions, extensions, injection de prompt) ; ton alarmiste, anecdotes non sourcées."
  },
  {
   "id": "TkEPRFF9a0Y",
@@ -1604,6 +996,11 @@ window.VEILLE = [
   "duree": 1186,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "metiers",
+   "dev"
+  ],
   "resume": "La vidéo présente l'« AI engineering » comme un nouveau métier : bâtir des produits sur des modèles fournis en service, plutôt qu'entraîner ses propres modèles. Selon l'auteur, la barrière technique s'est effondrée, mais le passage de la démo à la production reste difficile.",
   "points": [
    "Différence posée par l'auteur : le machine learning classique part des données pour entraîner un modèle dédié ; l'AI engineering part d'un modèle généraliste accessible par API et commence par le produit.",
@@ -1622,7 +1019,8 @@ window.VEILLE = [
    "métiers",
    "reconversion"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Introduit le métier de construire sur des modèles via API (prompt, contexte et RAG, évaluation) et l'écart démo/production ; reste général et chiffres rarement sourcés."
  },
  {
   "id": "nyWMYy4j5HM",
@@ -1631,6 +1029,11 @@ window.VEILLE = [
   "duree": 2577,
   "categorie": "Ressource",
   "interet": 3,
+  "dev": 2,
+  "usages": [
+   "fondamentaux",
+   "local"
+  ],
   "resume": "Glossaire vulgarisé de 30 notions (4 notions de base puis 26 concepts répartis en 5 niveaux), avec des analogies simples. La thèse : comprendre le fonctionnement statistique d'un LLM évite de le traiter comme une personne et explique ses erreurs.",
   "points": [
    "Notions de base : LLM (moteur de prédiction de mots, pas base de connaissances), nature stochastique (même question, réponses différentes), inférence contre entraînement (le modèle n'apprend pas pendant la conversation), architecture Transformer (2017, mécanisme d'attention).",
@@ -1651,7 +1054,8 @@ window.VEILLE = [
    "embeddings",
    "sécurité"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Bon glossaire des notions techniques (tokens, embeddings, échantillonnage, quantification, LoRA, RAG) ; explications simplifiées, et le RAG est présenté surtout comme une recherche web."
  },
  {
   "id": "mqJQXIeNYgE",
@@ -1660,6 +1064,10 @@ window.VEILLE = [
   "duree": 1302,
   "categorie": "Business",
   "interet": 1,
+  "dev": 0,
+  "usages": [
+   "metiers"
+  ],
   "resume": "La vidéo explique que le surcoût d'une ESN (environ 30 % selon l'auteur) paie surtout une garantie : assurance, référencement, remplaçant, trésorerie. Elle propose aux indépendants de l'IA de vendre une responsabilité au forfait plutôt que des jours-homme.",
   "points": [
    "Témoignage rapporté d'un ancien DSI : mêmes indépendants facturés environ 30 % plus cher via un cabinet référencé. Chiffre d'environ 11 % de marge chez Freelance.com selon ses comptes 2025, non vérifié ici.",
@@ -1687,6 +1095,10 @@ window.VEILLE = [
   "duree": 1379,
   "categorie": "Analyse",
   "interet": 1,
+  "dev": 0,
+  "usages": [
+   "metiers"
+  ],
   "resume": "L'auteur estime que l'argent de l'IA bloque au passage du pilote à la production dans les entreprises. Il conseille de vendre ce passage (diagnostic, mise en production) sur un métier que l'on connaît de l'intérieur, plutôt que de créer un chatbot, une agence générique ou un SaaS.",
   "points": [
    "Selon une étude IBM citée, 76 % des grandes organisations auraient un directeur de l'IA (contre 26 % un an plus tôt), mais 53 % des dirigeants en seraient encore au stade pilote. L'auteur rappelle lui-même qu'IBM vend du conseil en IA.",
@@ -1714,6 +1126,10 @@ window.VEILLE = [
   "duree": 1473,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 0,
+  "usages": [
+   "copilot"
+  ],
   "resume": "La vidéo relie l'offre de départ volontaire envoyée à environ 60 000 salariés de Microsoft à la hausse de l'amortissement de ses data centers. Selon l'auteur, les salariés et les clients (hausses de prix Microsoft 365) servent d'« amortisseurs » pour tenir la marge promise aux actionnaires.",
   "points": [
    "Le 26 octobre, Microsoft aurait proposé un départ indemnisé à environ 60 000 salariés (environ un sur quatre). L'auteur prévoit 10 à 20 % d'acceptation, soit 6 000 à 12 000 départs sur 223 000 salariés : c'est son estimation.",
@@ -1741,6 +1157,11 @@ window.VEILLE = [
   "duree": 2087,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 3,
+  "usages": [
+   "fondamentaux",
+   "dev"
+  ],
   "resume": "La vidéo décrit comment des agents IA entraînés à ne pas abandonner contournent les obstacles, se coordonnent en essaim et peuvent être contaminés par des textes lus ou par leurs propres fichiers de mémoire. L'auteur propose une approche « épidémiologique » de la défense.",
   "points": [
    "En introduction, l'auteur évoque en 48 heures deux failles critiques dans PHP (nom transcrit « PHP Touchell »), une faille GitLab notée 10/10, la compromission du paquet LiteLLM et un piratage de 27 000 serveurs au Japon : tout cela sans source. Le titre « Le Web est cassé » ne correspond qu'à cette introduction.",
@@ -1760,7 +1181,8 @@ window.VEILLE = [
    "mémoire des agents",
    "multi-agents"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Utile pour un RAG ou un usage de Claude Code : tout texte lu par un agent, y compris ses notes et le fichier CLAUDE.md, peut agir comme consigne, d'où des règles de séparation et de validation ; introduction non sourcée et ton alarmiste."
  },
  {
   "id": "QzgsvzV7c8Y",
@@ -1769,6 +1191,10 @@ window.VEILLE = [
   "duree": 1711,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 1,
+  "usages": [
+   "metiers"
+  ],
   "resume": "À partir de résultats mathématiques publiés en masse par OpenAI, l'auteur soutient que l'IA automatise d'abord les tâches faciles à vérifier automatiquement, quelle que soit leur difficulté. La valeur se déplacerait vers le choix de la question, la possession des critères de contrôle et la signature.",
   "points": [
    "La vidéo affirme qu'OpenAI a publié près de 400 résultats mathématiques d'un coup en octobre ; le médaillé Fields Hugo Duminil-Copin aurait dit, selon Le Monde, « Ils ont annihilé mon domaine de recherche ».",
@@ -1796,6 +1222,10 @@ window.VEILLE = [
   "duree": 2015,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 0,
+  "usages": [
+   "metiers"
+  ],
   "resume": "L'auteur soutient que l'utilisateur moyen gagne en services bon marché mais perd en pouvoir de négociation, tandis que la valeur se concentre dans l'infrastructure et les grandes plateformes. Il propose six leviers, dont le passage à une rémunération au résultat.",
   "points": [
    "Selon une étude de Stanford (Erik Brynjolfsson et coauteurs, 2025), l'emploi des 22-25 ans aurait reculé d'environ 13 % dans les métiers les plus exposés à l'IA, pas celui de leurs aînés.",
@@ -1823,6 +1253,10 @@ window.VEILLE = [
   "duree": 1720,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 0,
+  "usages": [
+   "metiers"
+  ],
   "resume": "La vidéo commente un rapport d'Anthropic du 9 septembre 2026 qui modélise en trois scénarios l'effet de l'IA sur l'économie américaine d'ici 2030. L'auteur y voit une baisse probable de la valeur du travail cognitif et lit la date de publication comme un geste calculé avant l'entrée en Bourse d'Anthropic.",
   "points": [
    "Les trois scénarios du rapport, selon la vidéo : « modeste » (PIB +2 %, salaires du savoir +0,4 %), « substantiel » (20 % des tâches intellectuelles absorbées, PIB +8,3 %, salaires -0,3 %), « extrême » (la moitié des tâches, PIB +32,4 %, salaires -11,5 % et chômage de 17,9 % dans le cas de base). Ce sont des chiffres publiés par l'éditeur concerné ; les auteurs les présentent comme des hypothèses, pas des prédictions. Les noms des auteurs sont déformés dans la transcription (« Corinect et Jones »).",
@@ -1851,6 +1285,11 @@ window.VEILLE = [
   "duree": 1072,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 3,
+  "usages": [
+   "fondamentaux",
+   "dev"
+  ],
   "resume": "La vidéo part d'un essai de Dario Amodei du 12 septembre 2026, approuvé par Sam Altman et Elon Musk, qui demande de ralentir les modèles les plus avancés. L'auteur y voit un écart croissant entre la puissance des modèles et la capacité à prouver qu'on peut les laisser agir seuls, et en tire des consignes pour encadrer des agents.",
   "points": [
    "Selon la vidéo, l'essai d'Amodei (titre transcrit « We must paste the Frontier », forme exacte incertaine) invoque l'IA qui fabrique la génération suivante et des incidents d'essaims d'agents ; il propose un accès permanent pour des évaluateurs externes, avec droit de publier mais, note l'auteur, sans pouvoir d'arrêt.",
@@ -1870,7 +1309,8 @@ window.VEILLE = [
    "permissions",
    "gpt-6"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Consignes concrètes pour encadrer un agent de code : bloquer techniquement les actions interdites, séparer lecture et écriture, garder les critères de réussite hors de portée de l'agent, tester en bac à sable ; chiffres surtout issus des éditeurs."
  },
  {
   "id": "oulRMU5apxg",
@@ -1879,6 +1319,10 @@ window.VEILLE = [
   "duree": 1796,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 1,
+  "usages": [
+   "copilot"
+  ],
   "resume": "Pamphlet contre Microsoft 365 Copilot : l'auteur soutient que l'outil se vend par l'intégration à Office plutôt que par sa qualité, qu'il produit de l'usage mais pas de compétences, et que le travail se déplace vers des agents hors des fichiers Office. Le titre « Copilot est mort » est une opinion revendiquée, pas un constat.",
   "points": [
    "La vidéo vise la licence payante Microsoft 365 Copilot (30 € par mois et par employé selon l'auteur). Elle ne distingue jamais cette licence de Copilot Chat, la version incluse sans surcoût ; ses critiques sur le prix et le taux de conversion ne s'appliquent donc pas telles quelles à Copilot Chat.",
@@ -1907,6 +1351,10 @@ window.VEILLE = [
   "duree": 1186,
   "categorie": "Analyse",
   "interet": 1,
+  "dev": 1,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "La vidéo commente la sortie de GPT-6 « Astra », 48 heures après Fable 5.1 d'Anthropic, et raconte comment OpenAI a abandonné ses projets grand public pour se recentrer sur l'entreprise et les agents. L'auteur en tire une leçon : en IA, un mauvais produit coûte cher en calcul chaque jour, il faut savoir l'arrêter vite.",
   "points": [
    "Selon la vidéo, GPT-6 coûte 10 dollars par million de tokens en entrée et 50 en sortie, comme Fable 5.1, soit 2,5 fois GPT-5.6 « Sol ».",
@@ -1934,6 +1382,11 @@ window.VEILLE = [
   "duree": 2302,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "local",
+   "fondamentaux"
+  ],
   "resume": "La vidéo analyse le rachat de Hugging Face par Nvidia pour 12,9 milliards de dollars, rapporté par The Information mais non confirmé au moment de l'enregistrement. Thèse : quand les modèles deviennent abondants, le pouvoir passe à la plateforme qui les distribue et oriente leur exécution, d'où l'intérêt de garder une capacité à changer de modèle et de fournisseur.",
   "points": [
    "Le rachat n'est confirmé par aucune des deux entreprises ; Business Insider indique qu'aucun accord ne serait signé. Hugging Face réaliserait environ 150 millions de dollars de revenus annualisés, soit un prix d'environ 86 fois ce chiffre.",
@@ -1952,7 +1405,8 @@ window.VEILLE = [
    "souveraineté",
    "ia locale"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Conseils utiles pour un RAG local : figer la version exacte du modèle, garder son propre jeu d'évaluation et une route de sortie vers un autre fournisseur ; rachat non confirmé et éloge de modèles débridés à écarter."
  },
  {
   "id": "P6wJUgr8UAE",
@@ -1961,6 +1415,10 @@ window.VEILLE = [
   "duree": 1638,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 1,
+  "usages": [
+   "metiers"
+  ],
   "resume": "L'auteur examine si le CDI protège encore face aux changements rapides du travail liés à l'IA. Sa thèse : ni le CDI ni l'indépendance ne sont le piège ; le risque est de ne jamais tester sa valeur sur le marché, d'où une méthode en trois points (demande, durée, date).",
   "points": [
    "Selon l'auteur, le CDI masque les signaux du marché : le salarié ne voit pas quand le prix de ses tâches baisse à l'extérieur. Il cite en exemple les métiers de l'audiovisuel (monteurs, motion designers) après la sortie d'un modèle transcrit « Clutopus 5 » (nom déformé, probablement un modèle Claude, non vérifiable).",
@@ -1989,6 +1447,10 @@ window.VEILLE = [
   "duree": 1984,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 0,
+  "usages": [
+   "metiers"
+  ],
   "resume": "L'auteur soutient que les cotisations sociales rendent en France le travail cognitif qualifié bien plus cher qu'un abonnement IA non cotisé, ce qui favoriserait la substitution. Il prédit une érosion silencieuse du financement de la protection sociale.",
   "points": [
    "Exemple chiffré de l'auteur : un cadre à 60 000 € brut touche environ 46 800 € net et coûte environ 87 000 € à l'entreprise, contre environ 200 € par mois (2 400 € par an) pour un abonnement IA haut de gamme sans cotisation. Les chiffres d'introduction (7 250 € puis 7 200 € par mois) varient légèrement.",
@@ -2017,6 +1479,10 @@ window.VEILLE = [
   "duree": 1755,
   "categorie": "Analyse",
   "interet": 3,
+  "dev": 2,
+  "usages": [
+   "metiers"
+  ],
   "resume": "La vidéo affirme que les intitulés de postes en IA ne décrivent plus le travail réel et propose une grille de lecture en trois questions. Elle constate que les postes de débutants se raréfient et conseille d'entrer par son métier d'origine avec une preuve concrète, en particulier sur l'évaluation des systèmes.",
   "points": [
    "Un chercheur non nommé aurait lu près de 900 offres « AI Engineer » (début 2026, Berlin, Amsterdam, Londres, Los Angeles, New York) : 1,4 % portent uniquement sur l'IA générative, environ 7 sur 10 sur des systèmes à base de modèles de langage, près de 3 sur 10 sur l'infrastructure. Le fine-tuning serait au cœur du poste dans environ 1 offre sur 25.",
@@ -2036,7 +1502,8 @@ window.VEILLE = [
    "recrutement",
    "évaluation"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Donne des repères sur le marché des postes techniques en IA (part réelle du fine-tuning, demande en évaluation des systèmes, offres de développeurs) ; chiffres attribués à des organismes sans référence précise."
  },
  {
   "id": "sn8himtK_No",
@@ -2045,6 +1512,10 @@ window.VEILLE = [
   "duree": 1652,
   "categorie": "Analyse",
   "interet": 3,
+  "dev": 1,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "Vidéo enregistrée vers le 1er août 2026, à la veille de l'entrée en application des obligations de transparence de l'AI Act. L'auteur présente le règlement comme une loi de sécurité des produits qui classe des usages, et soutient qu'il ne sait pas encadrer des agents autonomes, alors que la supervision humaine a été reportée.",
   "points": [
    "Structure et calendrier selon la vidéo : texte en vigueur depuis août 2024 ; pratiques interdites (notation sociale, reconnaissance des émotions des salariés) depuis février 2025, avec une obligation de former son personnel à l'IA ; régime des modèles à usage général depuis août 2025 ; transparence (article 50) au 2 août 2026 ; haut risque fin 2027.",
@@ -2073,6 +1544,10 @@ window.VEILLE = [
   "duree": 1149,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 1,
+  "usages": [
+   "metiers"
+  ],
   "resume": "La vidéo présente le Forward Deployed Engineer, ingénieur d'un fournisseur d'IA installé chez le client pour intégrer les modèles dans ses systèmes. L'auteur explique la hausse de la demande par le « dernier kilomètre » de l'intégration et met en garde les entreprises contre la dépendance au fournisseur.",
   "points": [
    "Origine du métier chez Palantir, qui envoyait ses ingénieurs travailler sur place chez des agences de renseignement ne pouvant pas décrire leurs besoins. Jusqu'en 2016, Palantir aurait employé plus de ces ingénieurs que de développeurs produit.",
@@ -2100,6 +1575,11 @@ window.VEILLE = [
   "duree": 1803,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux",
+   "local"
+  ],
   "resume": "L'auteur soutient que les restrictions américaines sur les modèles de pointe (Fable, GPT 5.6) poussent les entreprises vers les modèles ouverts chinois, moins chers. Il estime que le vrai verrou est désormais le « harnais » (orchestration, contexte, outils) et conseille de le construire soi-même plutôt que de le louer.",
   "points": [
    "Fait rapporté : GPT 5.6 serait sorti avec de fortes restrictions d'accès, et la suspension de Fable (Anthropic) aurait été prolongée. Ce sont des modèles postérieurs à notre date de connaissance, non vérifiés ici.",
@@ -2119,7 +1599,8 @@ window.VEILLE = [
    "cloud act",
    "coûts"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Éclaire le choix entre modèles de pointe et modèles ouverts, et l'idée que la dépendance tient surtout au harnais (contexte, outils, routage) ; beaucoup de chiffres et d'exemples non sourcés."
  },
  {
   "id": "Vty3RsPRSSE",
@@ -2128,6 +1609,10 @@ window.VEILLE = [
   "duree": 1243,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 0,
+  "usages": [
+   "metiers"
+  ],
   "resume": "La vidéo analyse la chute boursière d'Accenture après ses résultats du 18 juin et ses 22 000 suppressions de postes. Thèse de l'auteur : l'IA réduit l'écart de savoir sur lequel vivent les intermédiaires, qui doivent se repositionner vers l'orchestration humains-agents.",
   "points": [
    "Fait rapporté : l'action Accenture aurait perdu plus de 15 % le 18 juin, et près des deux tiers de sa valeur depuis février 2025 (d'environ 240 à moins de 80 milliards de dollars).",
@@ -2155,6 +1640,11 @@ window.VEILLE = [
   "duree": 1630,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux",
+   "local"
+  ],
   "resume": "La vidéo rapporte qu'une directive américaine de contrôle à l'export a conduit Anthropic à couper l'accès à Fable 5 et Mythos pour tous ses clients. L'auteur y voit un règlement de comptes politique, un tournant de souveraineté, et un encouragement involontaire aux modèles ouverts chinois.",
   "points": [
    "Fait rapporté : la directive interdirait l'accès à ces modèles à tout ressortissant étranger. Anthropic, ne pouvant pas trier par nationalité, aurait tout coupé, y compris pour ses clients américains.",
@@ -2174,7 +1664,8 @@ window.VEILLE = [
    "jailbreak",
    "modèles ouverts"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Explique les deux couches de sécurité d'un modèle (alignement dans les poids, classificateurs externes) et les risques des modèles ouverts débridés ; le récit politique repose en partie sur des rumeurs."
  },
  {
   "id": "xYE9SLTtq2A",
@@ -2183,6 +1674,11 @@ window.VEILLE = [
   "duree": 2033,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "dev",
+   "copilot"
+  ],
   "resume": "L'auteur teste Claude Fable 5 sur ses propres missions et le juge nettement supérieur, puis analyse sa sortie des abonnements au 23 juin comme un choix financier lié à l'entrée en bourse d'Anthropic. Il conseille le routage entre modèles, une solution de repli locale et une orchestration conforme aux exigences européennes.",
   "points": [
    "Prix rapportés : Fable 5 à 10 dollars par million de tokens en entrée et 50 en sortie, soit le double d'Opus 4.8 (5 et 25). Inclus dans les abonnements du 9 au 22 juin, puis payable à l'usage à partir du 23 juin.",
@@ -2202,7 +1698,8 @@ window.VEILLE = [
    "coûts",
    "données sensibles"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Donne un ordre de grandeur du coût d'une mission multi-agents au tarif API et des conseils pour le limiter (plan validé en lecture seule, contexte réduit, sessions propres) ; l'analyse financière est en partie spéculative."
  },
  {
   "id": "LoGyVMxqrUw",
@@ -2211,6 +1708,11 @@ window.VEILLE = [
   "duree": 2513,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 2,
+  "usages": [
+   "fondamentaux",
+   "local"
+  ],
   "resume": "La vidéo présente DeepSeek V4, optimisé pour les puces Huawei, comme l'équivalent de la montre à quartz face à l'horlogerie suisse : moins puissant mais beaucoup moins cher. Elle traite aussi de GPT-5.5, des difficultés de capacité d'Anthropic, de l'avance de Google et des licenciements dans la tech.",
   "points": [
    "Fait rapporté : DeepSeek V4 serait le premier modèle conçu nativement pour les puces Huawei Ascend via le framework CANN (équivalent de CUDA chez Nvidia). La transcription écrit souvent « DeepMind » ou « Dipsy » pour DeepSeek.",
@@ -2230,7 +1732,8 @@ window.VEILLE = [
    "emploi",
    "huawei"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Présente l'architecture de DeepSeek V4 (mixture of experts, contexte long), le coût d'inférence et la possibilité de l'utiliser en local avec Open Code ; nombreux chiffres non sourcés ou issus des éditeurs."
  },
  {
   "id": "ZAn71J_0vn0",
@@ -2239,6 +1742,10 @@ window.VEILLE = [
   "duree": 2197,
   "categorie": "Analyse",
   "interet": 1,
+  "dev": 2,
+  "usages": [
+   "fondamentaux"
+  ],
   "resume": "L'auteur présente Opus 4.7 comme une mise à jour mineure et soutient qu'Anthropic, en manque de serveurs avant son entrée en bourse, réduit en silence la qualité d'Opus pour réserver son calcul à Claude Mythos et à quelques grands partenaires. Selon lui, le discours de sécurité sert à justifier une barrière tarifaire.",
   "points": [
    "Selon la vidéo, Opus 4.7 suit mieux les consignes et vérifie mieux ses réponses ; l'auteur y voit surtout le retour d'Opus 4.6 à son niveau initial après deux mois de « bridage ». C'est son interprétation, non démontrée.",
@@ -2259,7 +1766,8 @@ window.VEILLE = [
    "dépendance fournisseur",
    "spéculation"
   ],
-  "lot": "2026-11-10"
+  "lot": "2026-11-10",
+  "avisDev": "Rappelle, selon la vidéo, des signalements de baisse de qualité de Claude Code selon la charge et les annonces sur Mythos ; la thèse d'un bridage volontaire est spéculative et les chiffres ne sont pas vérifiables."
  },
  {
   "id": "_2dMM0PtkMI",
@@ -2268,6 +1776,11 @@ window.VEILLE = [
   "duree": 1669,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 1,
+  "usages": [
+   "metiers",
+   "fondamentaux"
+  ],
   "resume": "L'auteur propose sa propre grille pour situer une maîtrise de l'IA, sur le modèle des niveaux de langue A1-C2, avec cinq compétences pondérées et dix paliers de 0 à 20. Sa thèse : le prompting compte peu, le jugement critique, la stratégie et l'intégration dans le travail comptent beaucoup.",
   "points": [
    "Cinq compétences retenues : stratégie (quand et sur quoi utiliser l'IA), spécification (le « prompting »), intégration dans le flux de travail, jugement critique, vision systémique. Éthique, sécurité et connaissance des outils sont présentées comme des bases transversales, non notées.",
@@ -2296,6 +1809,11 @@ window.VEILLE = [
   "duree": 1698,
   "categorie": "Analyse",
   "interet": 2,
+  "dev": 1,
+  "usages": [
+   "fondamentaux",
+   "local"
+  ],
   "resume": "La vidéo analyse l'emprunt bancaire de 830 millions de dollars de Mistral AI pour un centre de données près de Paris. L'auteur soutient que le fait marquant n'est pas la souveraineté mais l'acceptation par des banques des puces Nvidia comme garantie, dans un marché du calcul en pénurie.",
   "points": [
    "Fait rapporté : le 30 mars 2026, sept banques (BNP Paribas, Crédit Agricole, HSBC, MUFG, La Banque Postale, Natixis CIB, Bpifrance) prêtent 830 millions de dollars pour 13 800 puces Nvidia GB300, installées à Bruyères-le-Châtel, 44 MW, mise en service prévue au 2e trimestre 2026. L'exploitant est transcrit « Éclairi » (nom incertain).",
@@ -2316,1404 +1834,5 @@ window.VEILLE = [
    "financement"
   ],
   "lot": "2026-11-10"
- },
- {
-  "id": "Vv1eXHqOZlI",
-  "titre": "Devenir consultant IA à partir de son poste actuel : une méthode en cinq étapes",
-  "chaine": "Yassine Sdiri",
-  "duree": 2352,
-  "lot": "2026-11-16",
-  "categorie": "Business",
-  "interet": 2,
-  "resume": "Le présentateur, qui dirige un cabinet de conseil et une école en IA, décrit cinq étapes pour devenir consultant IA sans coder : se former, auditer ses tâches, utiliser l'IA à la main, automatiser, puis vendre ses résultats. Il illustre la méthode avec le cas fictif d'une responsable e-commerce.",
-  "points": [
-   "Selon la vidéo, les entreprises n'achètent plus surtout du code mais du jugement : savoir quoi automatiser, dans quel ordre, et embarquer les équipes. Chiffres cités sans source : 26 % puis 76 % des grandes entreprises cherchant un responsable IA, offres d'emploi en hausse « huit fois plus vite ».",
-   "Étape 1 : un week-end de pratique, un seul outil par catégorie (texte, image, audio, recherche, automatisation). Les académies gratuites d'OpenAI et d'Anthropic sont citées, jugées longues et théoriques.",
-   "Étape 2 : noter pendant une semaine chaque tâche, l'outil utilisé et sa catégorie. Un LLM classe ensuite les tâches selon cinq critères : temps passé, valeur humaine, faisabilité, risque en cas d'erreur, sensibilité des données.",
-   "L'analyse produit une matrice impact / complexité pour repérer les gains rapides. Selon la vidéo, les réunions et la relation humaine restent à garder hors IA.",
-   "Étape 3 : faire d'abord le travail à la main avec l'IA (fiches produits à partir d'exemples, images avec l'outil Recraft, rapport via les connecteurs de Claude), en restant dans la boucle, et noter le temps gagné.",
-   "Étape 4 : n'automatiser que ce qui a déjà réussi plusieurs fois à la main. Ordre proposé : skill, puis tâche planifiée dans Claude Cowork, puis agent (n8n). Démonstration d'une petite application interne créée avec Claude Code.",
-   "Étape 5 : présenter les gains à son employeur, puis chercher deux ou trois clients dans son propre secteur avant de se mettre à son compte.",
-   "La vidéo se termine par la promotion de l'école payante du présentateur (plus de 700 élèves actifs selon lui)."
-  ],
-  "avis": "La grille d'audit des tâches, avec ses critères de risque et de sensibilité des données, peut servir telle quelle en formation, de même que la règle qui consiste à n'automatiser que ce qu'on a déjà réussi à la main. En revanche, la vidéo envoie des captures de tableaux et des données de boutique à des services en ligne sans parler de RGPD, et ses chiffres sur l'emploi ne sont pas sourcés. C'est surtout une porte d'entrée vers une formation payante.",
-  "tags": [
-   "reconversion",
-   "consultant ia",
-   "audit des tâches",
-   "automatisation",
-   "claude",
-   "promotion"
-  ]
- },
- {
-  "id": "ADJj3VMFWmM",
-  "titre": "Hermes Agent : installation sur serveur loué et démonstrations",
-  "chaine": "Yassine Sdiri",
-  "duree": 2244,
-  "lot": "2026-11-16",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "La vidéo présente Hermes Agent, un agent autonome open source qu'on pilote par messagerie, le compare à OpenClaw et à Claude Code, puis l'installe sur un serveur loué chez le sponsor. Trois démonstrations suivent : schémas, organisation d'un événement, préparation d'une conférence.",
-  "points": [
-   "Typologie proposée : les chatbots répondent, les assistants de code codent avec vous, les agents autonomes agissent seuls et vous préviennent sur Telegram ou WhatsApp. Selon la vidéo, ces outils sont complémentaires.",
-   "Atouts avancés : mémoire commune à toutes les conversations, plus de cinquante skills inclus, création automatique de nouveaux skills après une tâche réussie, tâches planifiées sans limite, choix libre du modèle.",
-   "Le présentateur affirme que l'outil coûte dix fois moins cher que Claude Code et que tout le monde quitte OpenClaw pour Hermes : affirmations non sourcées.",
-   "Hermes accepte de nombreux fournisseurs de modèles, dont Ollama pour faire tourner un modèle en local. Le présentateur recommande pourtant de démarrer avec une clé d'API Anthropic, puis DeepSeek en ligne pour réduire les coûts.",
-   "Sécurité : il déconseille d'installer l'agent sur son propre ordinateur à cause du risque d'injection de prompt, et conseille une machine dédiée ou un serveur loué en Europe.",
-   "L'installation se fait chez Hostinger, sponsor de la vidéo, avec un code promo. L'affirmation que l'hébergeur assure toute la sécurisation des données vient donc d'une source intéressée.",
-   "Dans une démonstration, l'agent propose des intervenants très connus pour un petit meet-up ; le présentateur reconnaît que l'agent s'est emballé.",
-   "Limites citées : chaque accès donné à l'agent est un risque, c'est l'utilisateur qui l'héberge et le surveille, et la qualité dépend du modèle branché."
-  ],
-  "avis": "La distinction entre chatbot, assistant de code et agent autonome est claire et réutilisable en formation, comme la mise en garde sur l'injection de prompt. Mais la vidéo est sponsorisée, ses comparaisons de coût et d'adoption ne sont pas sourcées, et elle envoie le profil et des données personnelles vers des API en ligne. Pour la structure, un tel agent n'a pas sa place sans cadre validé par l'informatique et le DPO.",
-  "tags": [
-   "agents autonomes",
-   "hermes agent",
-   "sécurité",
-   "injection de prompt",
-   "sponsor",
-   "auto-hébergement"
-  ]
- },
- {
-  "id": "-NDOTGepfo8",
-  "titre": "Une histoire de l'intelligence artificielle, de 1943 aux agents",
-  "chaine": "Yassine Sdiri",
-  "duree": 1153,
-  "lot": "2026-11-16",
-  "categorie": "Ressource",
-  "interet": 3,
-  "resume": "La vidéo retrace l'histoire de l'IA, du neurone formel de 1943 aux agents autonomes de 2026, en passant par l'hiver de l'IA, AlphaGo, le Transformer et ChatGPT. Elle s'ouvre sur le coût matériel de l'IA (centres de données, électricité, puces).",
-  "points": [
-   "Ouverture : un centre de données du projet Stargate au Texas consommerait 1,2 GW, soit selon la vidéo la consommation de 2 millions de foyers. Cinq entreprises américaines dépenseraient près de 700 milliards de dollars en 2026. Chiffres non sourcés.",
-   "Selon la vidéo, le dirigeant de Mistral a dit devant une commission de l'Assemblée nationale que l'IA « transforme de l'électricité en intelligence ». La vidéo souligne aussi la dépendance aux puces fabriquées à Taïwan.",
-   "Repères historiques : neurone formel (1943), test de Turing (1950), naissance du terme « intelligence artificielle » (1956), Eliza (1966), hiver de l'IA, Deep Blue (1997), ImageNet (2009), cartes graphiques en 2012, AlphaGo (2016).",
-   "L'effet Eliza est présenté comme la tendance à prêter une âme à une machine qui parle ; selon la vidéo, c'est le même mécanisme qui explique le succès de ChatGPT.",
-   "Le Transformer (2017) est expliqué par un exemple simple : dans une phrase, le modèle décide quel mot compte pour comprendre un autre mot, et le calcul peut se répartir sur des milliers de cartes graphiques.",
-   "ChatGPT (2022) est décrit comme presque sans progrès technique : une fenêtre de discussion posée sur un modèle entraîné avec des notes humaines.",
-   "Événements récents rapportés sans source : un modèle d'OpenAI aurait amélioré en mai 2026 un problème posé par Paul Erdős en 1946 ; un modèle chinois aurait fait perdre 600 milliards de dollars à Nvidia en une journée début 2025.",
-   "Conclusion : personne ne sait exactement ce qui se passe à l'intérieur de ces modèles, mais on peut comprendre d'où ils viennent, sur quoi ils reposent et où ils s'arrêtent."
-  ],
-  "avis": "Bon support pour une séance de fondamentaux : récit accessible, explication claire de l'attention et de l'effet Eliza, utile pour parler de la confiance excessive envers les chatbots. Le ton est parfois dramatique (le titre parle d'un cours qui devrait être obligatoire) et plusieurs chiffres et événements récents ne sont pas sourcés : à vérifier avant de les reprendre. Pas de promotion dans le contenu, seulement des liens en description.",
-  "tags": [
-   "histoire de l'ia",
-   "fondamentaux",
-   "transformer",
-   "effet eliza",
-   "énergie"
-  ]
- },
- {
-  "id": "CIpjMTtI6P8",
-  "titre": "Bourse, bulle de l'IA et piratage de Binance : une revue de presse commentée",
-  "chaine": "Scanderia",
-  "duree": 2729,
-  "lot": "2026-11-16",
-  "categorie": "Actualité",
-  "interet": 1,
-  "resume": "Revue de presse commentée sur la forte baisse des grandes valeurs technologiques fin octobre et sur le piratage de la plateforme Binance. L'auteur y voit la « purge » d'une bulle de l'IA comparable à la crise du rail, tout en affirmant que l'IA change le monde.",
-  "points": [
-   "Chiffres cités selon la vidéo : le 29 octobre, Alphabet perd 12,6 % (environ 500 milliards de dollars), Intel recule de 25 à 30 %, Amazon de 4 à 7 %. Sources montrées : posts sur X et infographies, non vérifiées ici.",
-   "Argument central : les géants dépensent massivement en centres de données (environ 220 milliards prévus par Amazon en 2026 selon la vidéo) sans retour visible dans leurs comptes ; flux de trésorerie disponible d'Amazon à -42,4 milliards sur 12 mois.",
-   "Selon l'auteur, le mode IA de Google répond directement dans le moteur et menace les clics sur les annonces, principale source de revenus d'Alphabet.",
-   "Piratage de Binance attribué par des analystes au groupe nord-coréen « Trader Traitor » (Lazarus) : environ 6,3 à 6,4 milliards de dollars, entrée probable par l'ordinateur portable compromis d'un ingénieur DevOps.",
-   "Lien avec l'IA avancé par l'auteur : des agents à qui l'on confie des accès (envoyer des mails, agir sur un poste) pourront être piratés, voire porter une porte dérobée activée des mois plus tard. Présenté comme un risque déjà étudié, sans source.",
-   "Plusieurs affirmations non sourcées ou invérifiables (espionnage visant le patron de Nvidia, propos sur des dirigeants politiques), longues digressions sur Marx, Napoléon et les prix d'économie.",
-   "Conseils d'achat de Bitcoin assortis de « ce n'est pas un conseil d'investissement », et renvoi vers une masterclass payante et un abonnement."
-  ],
-  "avis": "Peu utile pour la structure : c'est surtout un commentaire boursier et crypto, avec beaucoup de digressions et d'affirmations non sourcées ; le titre parle de krach, la vidéo parle surtout de cours de bourse. Seule idée réutilisable en séance sécurité : un seul poste compromis suffit, et un agent qui a des accès élargit la surface d'attaque. Contenu promotionnel (masterclass, abonnement) et conseils d'investissement à ne pas relayer.",
-  "tags": [
-   "bourse",
-   "bulle ia",
-   "cybersécurité",
-   "cryptomonnaie",
-   "spéculation"
-  ]
- },
- {
-  "id": "AiytemqB_F0",
-  "titre": "Une entreprise de cloud réorganise son développement autour des agents de code",
-  "chaine": "Underscore_",
-  "duree": 2339,
-  "lot": "2026-11-16",
-  "categorie": "Témoignage",
-  "interet": 2,
-  "resume": "Le dirigeant de Clever Cloud, hébergeur français d'environ 70 développeurs, raconte comment son équipe est passée à des agents de code type Claude Code ou Codex. Sa thèse : l'IA n'est rentable que si on l'encadre par beaucoup de tests, de typage et de contrôles automatiques.",
-  "points": [
-   "Selon l'invité, l'IA code bien à partir de spécifications claires, et mieux dans un langage strict (Rust) dont le compilateur lui signale ses erreurs ; elle peine sur le code noyau ou réseau, où il existe peu d'exemples.",
-   "Adoption : forte résistance des développeurs au début, convaincus un par un. Ce sont les profils seniors, qui ne codaient plus faute de temps, qui ont le plus gagné.",
-   "Politique interne décrite : chaque salarié achète les outils d'IA qu'il veut en note de frais, sans abonnement annuel, dans le respect des règles internes sur les données. Environ 2 % des salariés seraient partis faute de vouloir changer.",
-   "Le « harnais » : tests unitaires, tests d'intégration (outil Testcontainers), simulation de pannes inspirée de FoundationDB, test d'intrusion automatique sur chaque commit, en lançant plusieurs modèles. Des failles jamais exploitées auraient été trouvées.",
-   "Exemple de « tâche inhumaine » : faire lire à l'IA branches, tests, tickets, mails et Slack pour préparer une réunion d'équipe en 20 minutes au lieu de plusieurs jours.",
-   "Objectif annoncé pour 2026 : réécrire tout le code ancien. Selon l'invité, la valeur se déplace vers les spécifications, l'architecture et les tests plutôt que le code lui-même.",
-   "Souveraineté : appel d'offres européen de cloud souverain remporté notamment par un consortium incluant Clever Cloud, et clause donnant au client une licence illimitée si l'entreprise passe sous contrôle étranger. Chiffres (1,8 milliard, 180 millions) non sourcés.",
-   "Vidéo sponsorisée par Mammouth AI (accès à plusieurs modèles, « aucun prompt stocké », conforme au RGPD selon le sponsor). L'étude citée en ouverture (6000 patrons, aucun gain de productivité) n'est pas identifiable dans les sous-titres."
-  ],
-  "avis": "Bon éclairage pour le référent en tant que développeur : l'idée que les tests et le typage servent de garde-fou aux agents se transpose à un projet Symfony. Pour les stagiaires en reconversion, le témoignage sur les seniors avantagés est à mettre en regard de la raréfaction des postes de débutants. Réserves : témoignage d'un dirigeant sur sa propre entreprise, gains non mesurés, et une politique « achetez ce que vous voulez » qui ne convient pas à une structure qui traite des données de personnes accompagnées.",
-  "tags": [
-   "agents de code",
-   "tests",
-   "développement",
-   "souveraineté",
-   "emploi"
-  ]
- },
- {
-  "id": "XE1hvCUSeZM",
-  "titre": "Pourquoi des entreprises réécrivent leur code en Rust ou Go avec l'IA",
-  "chaine": "Yıldız Dikme",
-  "duree": 808,
-  "lot": "2026-11-16",
-  "categorie": "Analyse",
-  "interet": 2,
-  "resume": "La vidéo explique pourquoi plusieurs projets connus (compilateur TypeScript, Copilot, Codex, Bun) ont été réécrits en Go ou en Rust : les agents d'IA profitent des langages typés dont le compilateur signale les erreurs. Elle conseille de choisir un langage selon le problème à résoudre et, pour apprendre, selon les offres d'emploi.",
-  "points": [
-   "Selon la vidéo, Bun a été converti dans un autre langage : 535 000 lignes en 11 jours. La description précise qu'il s'agit d'un passage de Zig à Rust avec l'aide de Claude Code.",
-   "Thèse : le compilateur d'un langage typé donne un retour immédiat à l'agent, qui corrige aussitôt ; Rust, le plus strict, refuse même un code qui gère mal la mémoire.",
-   "Aucun langage n'évite les bugs : la vidéo cite la panne de Cloudflare du 18 novembre 2025, causée dans un système en Rust par un fichier plus gros que prévu.",
-   "Chiffres cités : 70 % des failles de sécurité liées à la mémoire selon Microsoft (2019) ; chez Android, 76 % en 2019 et moins de 20 % en 2025, selon les données de Google (source intéressée).",
-   "Méthode conseillée avant une migration : écrire d'abord les tests, l'ancien code servant de cahier des charges. Un débit en double ne se règle pas par le langage mais par un test.",
-   "Pour choisir quel langage apprendre : lire 20 à 30 offres d'emploi. Selon DevJobsScanner (environ 3 millions d'offres en 2025), JavaScript et TypeScript sont en tête, puis Python, Java, C#, PHP ; Rust n'est pas dans les huit premiers.",
-   "Limite de l'IA sur le matériel : selon une étude de l'université Duke citée, Claude réussit 37 tâches Arduino simples sur 42 mais beaucoup moins sur des systèmes complexes, surtout à cause d'erreurs électroniques.",
-   "L'autrice illustre avec sa propre application d'enregistrement d'écran (Rust sous Windows, Swift sous Mac)."
-  ],
-  "avis": "Utile pour orienter les stagiaires en reconversion : choisir un langage selon un objectif et selon les offres d'emploi, et comprendre pourquoi le typage aide les assistants de code. Pour le référent, le conseil « tests d'abord » rejoint d'autres témoignages. Réserves : vidéo d'origine turque traduite, chiffres cités sans vérification ici, et l'exemple personnel fait aussi la promotion de l'application de l'autrice.",
-  "tags": [
-   "langages",
-   "rust",
-   "typage",
-   "emploi",
-   "tests"
-  ]
- },
- {
-  "id": "F1qWG0T3aXI",
-  "titre": "31 usages de Claude et Claude Code relevés sur Internet",
-  "chaine": "Thomas Berton",
-  "duree": 1901,
-  "lot": "2026-11-16",
-  "categorie": "Ressource",
-  "interet": 1,
-  "resume": "L'auteur compile 31 projets réalisés avec Claude ou Claude Code, tirés surtout de réseaux sociaux, de ses clients et de son expérience : bricolage d'appareils, domotique, sécurité, recherche, jeux. Chaque cas renvoie vers un prompt à récupérer dans sa communauté, et la vidéo promeut son offre commerciale « AIOS ».",
-  "points": [
-   "Une grande partie des cas modifie des appareils personnels via Claude Code : interface de télévision sans publicités, application de climatisation recréée par rétro-ingénierie, liseuse et vieil iPad transformés en tableaux de bord, réglages d'un routeur Wi-Fi (débit « multiplié par 8 », chiffre tiré d'un post, non vérifié).",
-   "Cas liés à la sécurité : détection d'un logiciel de minage de cryptomonnaie sur un Mac, nettoyage d'un autoradio Android qui contenait selon la vidéo une porte dérobée et des traceurs, inspection d'une chambre d'hôtel (caméras, balises Bluetooth, outil open source d'Amnesty International contre les logiciels espions).",
-   "Expérience attribuée à Anthropic : 69 employés représentés par des agents Claude dans un marché interne, 186 transactions ; les agents sur Opus négocient mieux que ceux sur Haiku. Chiffres rapportés sans lien vers la source.",
-   "Recherche : une patiente atteinte d'un cancer rare coordonne plus de 30 agents pour préparer ses rendez-vous, les médecins gardant la décision ; un amateur repère une exoplanète candidate dans les données publiques de la NASA, non confirmée ; 950 agents d'Anthropic repèrent une structure proche de CRISPR. Récits non sourcés dans la vidéo.",
-   "Usages plus ordinaires : synthèse de 83 épisodes de podcast en un guide de recherche d'emploi (l'auteur cite aussi NotebookLM), arbre généalogique à partir d'archives publiques, plans et vues 3D d'une pièce ou d'une maison, application refaite quand l'originale devient payante.",
-   "L'auteur reconnaît qu'une partie des cas vient de la vidéo d'un autre créateur, et met en garde sur le plan juridique pour la décompilation de jeux commerciaux.",
-   "Promotion répétée de « l'AIOS », offre payante de l'auteur pour les entreprises, et d'un club en ligne où se trouvent les prompts. Le titre parle de « 2027 », sans rapport avec le contenu."
-  ],
-  "avis": "Peu utile pour la structure : catalogue d'anecdotes non vérifiées, souvent spectaculaires, et vitrine commerciale. Plusieurs conseils posent problème pour la séance sécurité : donner à un agent l'accès à son routeur, à ses e-mails ou à des appareils, sans aucune mise en garde sur les risques. Le cas des podcasts résumés et l'expérience de négociation entre agents peuvent servir d'exemples, avec prudence.",
-  "tags": [
-   "claude code",
-   "cas d'usage",
-   "agents",
-   "sécurité",
-   "promotion"
-  ]
- },
- {
-  "id": "TySSyP5xjeg",
-  "titre": "World models, édition des poids d'un modèle, Kimi K3.1 Pro et chute boursière",
-  "chaine": "Eliott Meunier",
-  "duree": 1605,
-  "lot": "2026-11-16",
-  "categorie": "Actualité",
-  "interet": 2,
-  "resume": "La vidéo examine deux annonces virales : un papier de Yann LeCun et Randall Balestriero sur l'architecture JEPA, et un billet de chercheurs du MIT où un grand modèle modifie les poids d'un petit modèle. Elle traite aussi de la sortie des poids de Kimi K3.1 Pro et de la chute des valeurs technologiques du 5 novembre.",
-  "points": [
-   "Papier LeCun-Balestriero, selon la vidéo : prédire le mot suivant revient à une architecture JEPA qui « rapproche les mauvaises choses » (le style autant que le sens). Avec des paires bien choisies, un modèle de 109 millions de paramètres atteindrait 18 % de voisins communs avec un modèle de vision, contre 15 % pour un modèle de 72 milliards. Chiffres tirés du papier, non relu par les pairs selon la vidéo.",
-   "L'auteur précise que le papier ne montre pas encore la prédiction des conséquences d'une action, ce qui est le vrai objectif des world models ; il cite V-JEPA 2 de Meta pour le pilotage d'un bras robotisé.",
-   "Billet du MIT (blog, non relu par les pairs) : un modèle nommé « GPT6 Astra » modifie 0,016 % des poids d'un petit modèle et ferait passer son score en maths de 8 % à 48 %. Selon l'analyse rapportée, il a surtout supprimé une boucle de répétition avec une technique connue depuis 2024 (« ablitération »), à l'aide d'outils Python.",
-   "Toujours selon la vidéo : sur les réponses déjà terminées, la précision ne bouge pas, et sur un autre petit modèle sans boucle le gain est nul. Conclusion de l'auteur : un frein retiré, aucune capacité ajoutée, un titre viral trompeur.",
-   "Kimi K3.1 Pro publie ses poids ; l'architecture change peu, le progrès viendrait surtout d'un apprentissage par renforcement plus poussé. Coût annoncé environ deux fois inférieur à Claude Opus 5, d'après des comparaisons non montrées en détail.",
-   "L'auteur décrit son propre usage : Opus 5 pour les tâches complexes sans données privées, des modèles ouverts via un hébergeur payant (nom transcrit « Synthétique AI ») pour les données clients. Il affirme que ce n'est pas sponsorisé. Il accuse aussi Anthropic de « voler les données » des utilisateurs, sans source.",
-   "Chute boursière du 5 novembre attribuée par l'auteur aux élections de mi-mandat américaines et aux menaces sur les autorisations de centres de données (chiffres de sondages et d'une banque cités sans lien). Il n'y voit pas l'éclatement d'une bulle, mais un ralentissement probable des constructions : c'est son interprétation.",
-   "Coupure publicitaire pour la masterclass de l'auteur sur le « second cerveau »."
-  ],
-  "avis": "Bon éclairage pour la séance sur les fondamentaux : la vidéo montre comment une annonce virale se dégonfle à la lecture, et explique simplement le pré-entraînement et l'apprentissage par renforcement. L'idée de séparer les modèles selon la sensibilité des données rejoint la séance sécurité, mais le choix d'un hébergeur reste à vérifier. Réserves : plusieurs affirmations non sourcées (accusation contre Anthropic, sondages), une partie boursière et politique hors sujet pour la structure, et une promotion de masterclass.",
-  "tags": [
-   "world models",
-   "recherche",
-   "modèles ouverts",
-   "esprit critique",
-   "marchés"
-  ]
- },
- {
-  "id": "5V3t7YXYjZc",
-  "titre": "Le RAG expliqué pas à pas, du principe aux versions qui se corrigent",
-  "chaine": "Projets IA",
-  "duree": 1276,
-  "lot": "2026-11-16",
-  "categorie": "Technique",
-  "interet": 3,
-  "resume": "La vidéo explique sans code le fonctionnement du RAG : découpage des documents, transformation en vecteurs, recherche des passages proches puis génération d'une réponse fondée sur ces passages. Elle présente ensuite trois faiblesses du RAG de base et les parades courantes : reformulation de la question, reclassement des résultats et vérification en boucle.",
-  "points": [
-   "Indexation : découper les documents en morceaux (l'auteur conseille 500 à 1000 mots, avec chevauchement et coupure aux paragraphes), les transformer en vecteurs avec un modèle d'embedding, les stocker dans une base vectorielle (Pinecone, Chroma, Weaviate cités).",
-   "Règle présentée comme essentielle : utiliser le même modèle d'embedding pour les documents et pour les questions, sinon les vecteurs ne sont pas comparables.",
-   "Recherche : la question est transformée en vecteur, puis on garde les 3 à 5 morceaux les plus proches par similarité cosinus, mesure de l'angle entre deux vecteurs.",
-   "Génération : les morceaux retenus sont collés dans le prompt avec la consigne de répondre uniquement à partir de ce contexte.",
-   "Faiblesse 1, question vague : reformulations multiples (multi-query) ou réponse hypothétique générée puis utilisée comme clé de recherche (HyDE).",
-   "Faiblesse 2, morceaux peu pertinents : présélection rapide d'une cinquantaine de candidats, puis reclassement plus précis et plus lent par un « cross-encoder ».",
-   "Faiblesse 3, hallucination : RAG « correctif » ou « adaptatif », qui vérifie la pertinence des documents et l'ancrage de la réponse, puis reformule ou régénère si besoin.",
-   "Chiffres non sourcés (« 90 % des données qui comptent sont privées », « toutes les boîtes » utilisent le RAG). Seule source citée : les travaux d'un ingénieur de LangChain."
-  ],
-  "avis": "Très utile pour la séance sur l'IA locale et le RAG, et pour le projet RAG avec Ollama : le vocabulaire (chunking, embedding, similarité, reclassement) est posé simplement et les causes d'échec sont concrètes. Réserves : les exemples et outils cités sont surtout en ligne, rien n'est montré en local, et les réglages conseillés sont des ordres de grandeur de l'auteur, à tester sur ses propres documents.",
-  "tags": [
-   "rag",
-   "embeddings",
-   "base vectorielle",
-   "formation",
-   "fiabilité"
-  ]
- },
- {
-  "id": "MdHZW40zLJE",
-  "titre": "Les skills de Claude Code vus comme des prompts réutilisables",
-  "chaine": "Faiz Dev",
-  "duree": 504,
-  "lot": "2026-11-16",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "L'auteur soutient qu'un « skill » n'est pas une compétence mais un prompt enregistré dans un fichier, pour ne plus le recopier à chaque fois. Il montre deux exemples créés en le demandant simplement à Claude Code : générer ses descriptions YouTube et empêcher Claude de se déclarer co-auteur de ses commits.",
-  "points": [
-   "Point de départ : un prompt gardé dans un document en ligne, collé à chaque fois dans un assistant web avec la transcription de la vidéo pour produire la description et les chapitres.",
-   "L'auteur récupère la transcription horodatée générée par YouTube, ce qui lui évite, selon lui, de dépenser des tokens pour transcrire.",
-   "Définition proposée : un skill est un fichier markdown (SKILL.md) stocké en local, avec des consignes et des exemples de référence ; on l'appelle avec « / » dans Claude Code.",
-   "Pour en créer un, il suffit selon lui de décrire le besoin à Claude et de lui donner le prompt existant ; il juge inutiles les formations payantes sur le sujet.",
-   "Deuxième exemple : un skill de commit qui vérifie que Claude n'ajoute pas de mention de co-auteur, ajoutée par défaut selon l'auteur.",
-   "Vidéo courte et démonstrative ; la définition « juste un prompt » est l'avis de l'auteur, pas une description complète de l'outil."
-  ],
-  "avis": "Utile pour démystifier les skills auprès de collègues : l'idée d'un prompt réutilisable rangé dans un fichier est simple à transmettre. Le titre force le trait, et la vidéo ne parle ni des scripts qu'un skill peut contenir ni des précautions à prendre avec des skills récupérés ailleurs. À retenir aussi : l'auteur supprime une trace de l'usage de l'IA dans ses commits, ce qui pose une question de transparence à discuter.",
-  "tags": [
-   "claude code",
-   "skills",
-   "prompts",
-   "automatisation",
-   "git"
-  ]
- },
- {
-  "id": "7Tv_JwZMEog",
-  "titre": "Claude Fable 5.2 et la conception d'appareils électroniques",
-  "chaine": "IA et Stratégie",
-  "duree": 1097,
-  "lot": "2026-11-16",
-  "categorie": "Analyse",
-  "interet": 2,
-  "resume": "Selon la vidéo, Anthropic présente Claude Fable 5.2 comme capable de concevoir des appareils électroniques qui fonctionnent, à partir d'une demande d'un paragraphe. L'auteur en tire une leçon plus large : seul compte le coût d'une tâche réussie, mesuré sur ses propres cas.",
-  "points": [
-   "Fait rapporté (source : Anthropic) : avec Diode, partenaire commercial d'Anthropic, le modèle a conçu trois appareils (haut-parleur USB, assistant vocal, animal virtuel) : cahier des charges, composants, carte, boîtier 3D et programme. Chaque carte était prête à fabriquer en moins d'une journée et a fonctionné sans correction électrique.",
-   "L'outil de routage du modèle ayant bloqué, le modèle aurait écrit son propre outil en une demi-heure. Selon l'auteur, la génération précédente s'arrêtait vers 90 % du travail, ce qui rend une carte inutilisable.",
-   "Limites reconnues par l'auteur : prototypes simples, faits chez un partenaire, sans test de sécurité électrique ni certification. Un appareil Bluetooth relève en Europe de la directive 2014/53/UE ; le marquage CE exige des essais en laboratoire.",
-   "Progression citée : 25 % en juin puis 69 % en novembre sur le test de Diode ; de 28 à 65 % sur un test de robot à deux bras, en simulation interne. Chiffres publiés par l'éditeur ou son partenaire. L'oral dit que ces mesures ont été faites sur Mythos ; la description précise que seuls les tests de faits inventés l'ont été.",
-   "Prix annoncé par Anthropic : sortie de 50 à 40 dollars le million de tokens (-20 %). L'auteur juge ce tarif trompeur : seul compte le prix d'une tâche réussie, qui suppose de définir un critère de réussite et de tester sur ses propres tâches.",
-   "Conseil de l'auteur : Opus 5.5 suffit pour environ 85 % des gens ; Fable est à réserver aux tâches les plus difficiles. Les « 10 dollars » d'Opus 5.5 sont, selon la description, un coût par tâche mesuré par Artificial Analysis.",
-   "Thèse : ce qui se vérifie sur un écran perd de la valeur, ce qui se vérifie dans le monde réel (tests, certification, savoir quoi construire) en gagne. Le coût réel de calcul des trois cartes reste inconnu.",
-   "La vidéo renvoie vers un Patreon et un atelier payant sur l'évaluation d'agents."
-  ],
-  "avis": "Le volet électronique concerne peu la structure. L'idée centrale est en revanche utile en formation : un tarif ou un score ne dit rien tant qu'on n'a pas testé sur ses propres tâches avec un critère de réussite. Résultats publiés par l'éditeur et un partenaire commercial, non reproduits de façon indépendante ; promotion d'un Patreon payant.",
-  "tags": [
-   "anthropic",
-   "claude",
-   "électronique",
-   "évaluation",
-   "tarification",
-   "métiers"
-  ]
- },
- {
-  "id": "rWOSpRJZZyw",
-  "titre": "OpenAI, ChatGPT et la dépendance : une thèse alarmiste",
-  "chaine": "MoneyRadar",
-  "duree": 942,
-  "lot": "2026-11-16",
-  "categorie": "Analyse",
-  "interet": 1,
-  "resume": "La vidéo soutient qu'OpenAI chercherait à rendre les utilisateurs dépendants de ChatGPT pour collecter leurs données et devenir « le système d'exploitation de nos cerveaux ». Aucun plan ni document n'a « fuité » : le titre ne correspond pas au contenu.",
-  "points": [
-   "Selon la vidéo, ChatGPT compte 300 à 500 millions d'utilisateurs hebdomadaires, présentés comme « accros ». Chiffre non sourcé dans la vidéo.",
-   "Une étude attribuée à la « Won School » (nom tel que transcrit) indiquerait une baisse de 17 % des performances d'étudiants quand on leur retire l'IA. La vidéo parle de « cognitive offloading » (délégation de la réflexion).",
-   "Partenariat Microsoft rapporté : 13 milliards de dollars investis, un peu plus d'un quart du capital. Selon la vidéo, Microsoft utiliserait Windows (74 % des PC) pour imposer ChatGPT et l'agent Operator.",
-   "Reproches cités : collecte massive de données, entraînement sur des contenus sans consentement, modèles optimisés pour l'engagement plutôt que pour la vérité.",
-   "Projet World de Sam Altman : une sphère scanne l'iris pour créer un identifiant mondial. Selon la vidéo, l'Espagne, l'Italie et l'Indonésie en ont interdit le déploiement pour des raisons de protection des données.",
-   "Spéculation : implants cerveau-machine (Merge Labs, Neuralink) qui relieraient directement l'IA à la pensée. L'auteur affirme que les alternatives open source n'ont presque aucune chance.",
-   "Deux promotions commerciales : un PEA chez XTB (partenariat déclaré) et un abonnement payant « Macro Insider », sans rapport avec le sujet."
-  ],
-  "avis": "Peu exploitable : le ton est conspirationniste, la plupart des chiffres ne sont pas sourcés dans la vidéo et le titre promet une fuite qui n'existe pas. Seule l'idée de délégation de la réflexion à l'IA peut nourrir une discussion en formation, à condition de retrouver l'étude d'origine. Vidéo sponsorisée par un courtier, avec promotion d'un service payant.",
-  "tags": [
-   "openai",
-   "chatgpt",
-   "données personnelles",
-   "dépendance",
-   "spéculation"
-  ]
- },
- {
-  "id": "mP3A646gWQ8",
-  "titre": "Chute des valeurs des semi-conducteurs le 5 novembre",
-  "chaine": "MoneyRadar",
-  "duree": 835,
-  "lot": "2026-11-16",
-  "categorie": "Business",
-  "interet": 1,
-  "resume": "La vidéo explique la chute boursière des fabricants de puces du jeudi 5 novembre par trois causes : le coût des centres de données d'IA, la hausse des taux d'intérêt et le résultat des élections américaines de mi-mandat. Elle se termine par des conseils d'épargne.",
-  "points": [
-   "Chiffres rapportés pour le 5 novembre : indice des semi-conducteurs (SOX) en baisse de 12 % en une séance (38 % sous son record de juin), AMD et Micron à -17 %, environ 3 000 milliards de dollars perdus sur les bourses mondiales, dont 450 milliards pour Nvidia.",
-   "Coût de l'IA : selon la vidéo, les grands clouds américains investissent plus de 780 milliards de dollars cette année dans leurs centres de données, six fois plus que leurs rivaux chinois, en grande partie à crédit.",
-   "Les « néo-clouds » empruntent pour acheter des puces et louent la puissance de calcul. CoreWeave aurait plus de 51 milliards de dollars de dette et 640 millions d'intérêts au deuxième trimestre.",
-   "Taux : selon la vidéo, la Fed a remonté ses taux en septembre et le taux américain à 10 ans a atteint 5,36 %, sur fond de guerre avec l'Iran et de pétrole cher.",
-   "Élections : les démocrates reprennent le Congrès ; des populations locales s'opposent aux centres de données à cause de la facture d'électricité. Exemple cité : 81 % de « non » dans une ville de l'Ohio transcrite « Ashville ».",
-   "L'affaire visant le patron de Nvidia (rapprochement présumé d'une Chinoise) est présentée par la vidéo elle-même comme ayant peu pesé en bourse ; l'ambassade de Chine dément tout espionnage. Le titre exagère ce volet.",
-   "Conclusion de l'auteur : une correction, pas encore un krach. Conseils d'épargne : ne pas vendre sous le coup de l'émotion, garder un ETF monde, éviter les ETF à effet de levier.",
-   "Vidéo sponsorisée par un VPN (CyberGhost), avec un simulateur renvoyant vers la chaîne."
-  ],
-  "avis": "Hors du périmètre de la structure : il s'agit surtout de finance et de bourse. Seul élément de contexte : le coût des centres de données et la contestation locale peuvent peser à terme sur le prix des services d'IA. Chiffres nombreux mais sources non montrées, titre accrocheur, conseils financiers et sponsor.",
-  "tags": [
-   "bourse",
-   "nvidia",
-   "centres de données",
-   "infrastructure",
-   "finance"
-  ]
- },
- {
-  "id": "MYh3sb_3rJI",
-  "titre": "Du texte invisible dans un CV pour influencer le tri par IA",
-  "chaine": "Sandbox Podcast",
-  "duree": 33,
-  "lot": "2026-11-16",
-  "categorie": "Témoignage",
-  "interet": 2,
-  "resume": "Extrait de podcast : certains candidats cacheraient dans leur CV du texte blanc sur fond blanc, invisible pour un humain mais lu par une IA de tri. Le but est que l'agent fasse ressortir leur dossier.",
-  "points": [
-   "Technique décrite : des lignes de texte blanc sur blanc dans le PDF du CV. Le recruteur ne les voit pas, l'IA les lit.",
-   "Contenu de ces lignes selon l'intervenant : des éloges sans fondement (« génie incontestable », « numéro 1 »), donc des mensonges.",
-   "Objectif : que l'agent de tri remonte le dossier sur toutes les offres possibles. L'intervenant parle de « pièges » pour les modèles de langage, aussi présents sur des sites web.",
-   "L'intervenant pense que c'est exploité mais dit ne pas avoir d'exemple. Aucun chiffre ni source. L'autre intervenant veut l'appliquer à son site."
-  ],
-  "avis": "Bon exemple concret pour expliquer l'injection de consignes cachées dans un document, et pour rappeler qu'un tri de candidatures par IA doit rester vérifié par un humain. À ne pas présenter aux stagiaires comme une astuce : l'extrait ne cite aucun cas réel et il s'agit de mentir. Extrait très court, contenu limité.",
-  "tags": [
-   "cv",
-   "recrutement",
-   "injection de prompt",
-   "sécurité",
-   "tri automatique"
-  ]
- },
- {
-  "id": "1CXHmfMd4wY",
-  "titre": "Le « workslop » : la réponse d'IA envoyée sans travail",
-  "chaine": "Le Frère Codeur",
-  "duree": 44,
-  "lot": "2026-11-16",
-  "categorie": "Analyse",
-  "interet": 2,
-  "resume": "Le « workslop » désigne, selon la vidéo, le fait d'envoyer à un collègue la réponse brute d'une IA au lieu de réfléchir à sa question. Le travail n'a pas disparu : il est reporté sur celui qui reçoit.",
-  "points": [
-   "Définition donnée : la version bureau du contenu d'IA de faible qualité. Un collègue transmet un rapport ou une réponse générés sans les retravailler.",
-   "Le texte a l'air propre, sans faute d'orthographe, mais manque de fond et de contexte.",
-   "Conséquence : le destinataire doit décoder et corriger. L'effort est déplacé, pas supprimé.",
-   "Opinion de l'auteur, sans chiffre ni étude citée. Extrait d'une vidéo plus longue de la même chaîne."
-  ],
-  "avis": "Notion simple et parlante pour la séance sur les bonnes pratiques : relire et adapter une réponse d'IA avant de la transmettre à un collègue ou à une personne accompagnée. L'extrait ne cite aucune source et reste une opinion. Le terme est transcrit « work slope » dans les sous-titres.",
-  "tags": [
-   "bonnes pratiques",
-   "qualité",
-   "travail",
-   "esprit critique"
-  ]
- },
- {
-  "id": "O-c0ZIUdNEs",
-  "titre": "Volta, un voleur de données qui fait trier ses victimes par une IA",
-  "chaine": "Bariq Rifki",
-  "duree": 163,
-  "lot": "2026-11-16",
-  "categorie": "Actualité",
-  "interet": 3,
-  "resume": "Selon la vidéo, des chercheurs de Cisco Talos ont décrit le 31 octobre Volta, un logiciel malveillant pour Windows qui vole les données d'un ordinateur puis demande à une IA d'estimer ce que vaut la victime. Si une IA refuse, il en essaie une autre.",
-  "points": [
-   "Données volées selon la vidéo : mots de passe enregistrés, cartes bancaires, portefeuilles crypto et cookies de session, qui ouvrent un compte sans mot de passe ni code.",
-   "Volta fouille ensuite les reçus de commande dans Gmail pour confirmer l'adresse, puis compile un rapport (adresse, employeur, 4 derniers chiffres de la carte).",
-   "Le rapport est envoyé à une IA via un service qui donne accès à des centaines de modèles. L'IA rédige une fiche qui classe les biens de la victime en faible, moyen ou élevé.",
-   "Contournement des refus : si la réponse de Claude contient une phrase du type « je ne peux pas », Volta repose la question à Kimi, puis à Gemini. Talos n'a montré qu'un seul exemplaire, sans victime connue.",
-   "Contexte cité : en août 2025, Anthropic a banni un criminel qui faisait calculer ses rançons par Claude et a ajouté un détecteur ; Kaspersky a compté plus de 9 millions d'ordinateurs infectés par des voleurs de données en 2024 ; Genesis Market, fermé en 2023, vendait chaque ordinateur infecté de 70 centimes à quelques centaines de dollars.",
-   "Thèse : la foule protégeait chacun, car analyser une victime prenait du temps. L'IA supprime ce délai.",
-   "Conseils donnés : écrire sa phrase de récupération crypto sur papier, et retirer sa carte bancaire du navigateur (dans Chrome : paramètres, saisie automatique, modes de paiement)."
-  ],
-  "avis": "Très utile pour la séance sur la sécurité : exemple concret, sources citées dans la description, et un conseil simple applicable par tous (ne pas enregistrer sa carte dans le navigateur). Il montre aussi que les refus d'une IA ne suffisent pas quand un attaquant peut changer de modèle. Réserve : un seul exemplaire analysé, sans victime connue ; « Anthropic » est transcrit « Tropic ».",
-  "tags": [
-   "cybersécurité",
-   "logiciel malveillant",
-   "données personnelles",
-   "mots de passe",
-   "navigateur"
-  ]
- },
- {
-  "id": "GaYppkDHRMQ",
-  "titre": "Dix usages domestiques de Claude Code",
-  "chaine": "Baptiste Simard - IA",
-  "duree": 95,
-  "lot": "2026-11-16",
-  "categorie": "Outil",
-  "interet": 1,
-  "resume": "La vidéo liste dix usages de Claude Code à la maison, du vieil iPad recyclé en écran mural au remplacement d'abonnements logiciels. Elle renvoie vers un guide obtenu en commentant.",
-  "points": [
-   "Objets cités : vieil iPad transformé en écran de pilotage de la maison, télévision débarrassée des publicités, liseuse Kindle vidée des ajouts d'Amazon, télécommande de climatisation sur l'ordinateur, imprimante à tickets Bluetooth pour la liste de tâches.",
-   "Wi-Fi : à partir d'une photo du routeur, Claude Code passerait les réglages en revue ; le débit serait « jusqu'à huit fois » plus rapide « dans certains cas ». Chiffre non sourcé.",
-   "Sécurité : recherche de caméras Wi-Fi, traceurs et appareils Bluetooth dans une chambre d'hôtel ; drone avec un vieux téléphone pour surveiller la maison.",
-   "Un Mac qui chauffait aurait révélé un programme caché de minage de crypto. Anecdote sans source.",
-   "Dernier usage : faire coder ses propres applications pour remplacer des logiciels payants.",
-   "Guide et prompts obtenus en commentant ; la description renvoie aussi vers un atelier en direct."
-  ],
-  "avis": "Peu utile pour la structure : usages personnels, aucun n'est montré en détail, et plusieurs reviennent à modifier le système d'appareils sans en mesurer les risques. Format promotionnel (guide contre commentaire) et chiffres non sourcés. « Claude Code » est transcrit « Cloudcode ».",
-  "tags": [
-   "claude code",
-   "domotique",
-   "usages",
-   "promotion"
-  ]
- },
- {
-  "id": "D112Wo-vDUU",
-  "titre": "Anatomy, une skill Claude Code qui explique une idée par une machine animée",
-  "chaine": "Thomas Stachowiak | Builder IA",
-  "duree": 32,
-  "lot": "2026-11-16",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "Anatomy est présentée comme une skill gratuite pour Claude Code qui explique une idée en construisant une petite machine animée. Le résultat est une page web qui s'ouvre dans un navigateur.",
-  "points": [
-   "Usage : taper /anatomy suivi de l'idée à expliquer. Exemple montré : comment un site limite le nombre de demandes qu'il reçoit.",
-   "Claude invente un objet dont les pièces en mouvement reproduisent l'idée, puis le construit avec des dizaines de pièces.",
-   "Selon la vidéo, Claude zoome sur chaque jointure pour vérifier son travail avant de livrer la page.",
-   "Popularité annoncée : plus de 24 000 étoiles sur GitHub en moins d'un mois. Chiffre non vérifié.",
-   "Le lien est donné en commentaire épinglé ou contre un commentaire."
-  ],
-  "avis": "Piste intéressante pour un formateur : produire des supports visuels interactifs pour expliquer une notion technique. Rien n'est dit sur la justesse des explications produites, qui reste à vérifier. Nécessite Claude Code, donc un service en ligne ; présentation très courte et promotionnelle.",
-  "tags": [
-   "claude code",
-   "skills",
-   "pédagogie",
-   "visualisation"
-  ]
- },
- {
-  "id": "mPMEolH63BM",
-  "titre": "Trois façons d'utiliser une IA sans filtre",
-  "chaine": "unefilleia",
-  "duree": 44,
-  "lot": "2026-11-16",
-  "categorie": "Outil",
-  "interet": 1,
-  "resume": "La vidéo présente trois moyens d'utiliser une IA qui ne refuse aucune question : un service en ligne, le jailbreak et un modèle local. Les noms des outils sont montrés à l'écran mais pas prononcés.",
-  "points": [
-   "Premier moyen : un modèle en ligne sans filtre, sans installation, avec une dizaine de requêtes gratuites par jour. Son nom n'est pas dit dans la transcription.",
-   "Deuxième moyen : le jailbreak, qui consiste à amener une IA à oublier ses règles. La vidéo ne montre pas la méthode et renvoie vers une personne connue pour cela, non nommée à l'oral.",
-   "Troisième moyen : un modèle local dans LM Studio, en tapant un mot-clé dans la recherche (non prononcé). Argument : les conversations restent sur l'ordinateur.",
-   "L'autrice affirme que tout est légal et « à titre informatif ». Le message final oppose l'adulte à une IA qui le « babysitte »."
-  ],
-  "avis": "Peu utile, et à manier avec prudence : retirer les filtres ne rend pas les réponses plus justes et supprime des garde-fous. Seul point exploitable : le modèle local garde les conversations sur la machine, ce qui est déjà couvert par d'autres fiches. Contenu très court, les noms n'apparaissent qu'à l'écran.",
-  "tags": [
-   "modèles non censurés",
-   "jailbreak",
-   "ia locale",
-   "garde-fous"
-  ]
- },
- {
-  "id": "II89r7Y-qBI",
-  "titre": "Agent Desktop : faire piloter les applications par Claude sans captures d'écran",
-  "chaine": "Alpha IA",
-  "duree": 35,
-  "lot": "2026-11-16",
-  "categorie": "Outil",
-  "interet": 2,
-  "resume": "Agent Desktop, projet open source de Vercel selon la vidéo, permet à Claude d'utiliser les applications d'un ordinateur sans bouger la souris. Il lit l'arbre d'accessibilité au lieu de prendre des captures d'écran.",
-  "points": [
-   "Selon la vidéo, Claude ouvre des applications, remplit des formulaires et clique sur des boutons pendant que l'utilisateur travaille, sans que la souris bouge.",
-   "Différence annoncée : les agents habituels prennent des captures d'écran et devinent où cliquer ; Agent Desktop lit l'arbre d'accessibilité, où chaque bouton a sa référence.",
-   "Claude clique sur la référence puis vérifie que l'action a réussi.",
-   "Fonctionne sur Mac, Windows et Linux, s'installe en une commande, et marche avec Claude Code selon la description.",
-   "Le guide d'installation est envoyé contre un commentaire."
-  ],
-  "avis": "Intéressant pour la séance sur les agents : une autre façon de piloter un ordinateur, qui s'appuie sur les mêmes informations que les lecteurs d'écran. Pas de capture d'écran ne veut pas dire pas de données envoyées : le contenu des fenêtres lu par l'outil part vers le modèle. Un agent qui remplit des formulaires doit rester sous validation humaine ; présentation très courte et promotionnelle.",
-  "tags": [
-   "agents",
-   "accessibilité",
-   "automatisation",
-   "claude code",
-   "open source"
-  ]
- },
- {
-  "id": "IPyoPZ-xaPs",
-  "titre": "Le métier de développeur se déplace vers la conception",
-  "chaine": "Le Frère Codeur",
-  "duree": 43,
-  "lot": "2026-11-16",
-  "categorie": "Analyse",
-  "interet": 1,
-  "resume": "Selon l'auteur, le développeur qui se contente d'écrire du code est « hors-jeu ». Sa valeur se déplace vers la conception, l'architecture et la communication.",
-  "points": [
-   "Le développeur devient une sorte de « chef d'orchestre » ; l'auteur parle d'un changement subi, pas choisi.",
-   "La valeur se déplace vers le design, l'architecture et la communication.",
-   "Celui qui ne fait qu'écrire des lignes de code serait bientôt remplacé, ou déjà obsolète.",
-   "Opinion sans chiffre, sans étude et sans exemple. Extrait d'une vidéo plus longue."
-  ],
-  "avis": "Thème important pour les stagiaires en reconversion vers le numérique, mais l'extrait n'apporte qu'une affirmation tranchée, sans élément pour l'étayer. À utiliser au mieux comme amorce de débat, pas comme constat. Le ton peut inquiéter inutilement des débutants.",
-  "tags": [
-   "métiers",
-   "développeur",
-   "emploi",
-   "reconversion",
-   "opinion"
-  ]
- },
- {
-  "id": "sAI5rInEQI8",
-  "titre": "Pourquoi l'IA tourne sur des cartes graphiques",
-  "chaine": "L'information IA",
-  "duree": 88,
-  "lot": "2026-11-16",
-  "categorie": "Ressource",
-  "interet": 3,
-  "resume": "La vidéo explique en quatre étapes pourquoi l'IA utilise des cartes graphiques plutôt que des processeurs : elle fait des milliards de multiplications simples qui peuvent être menées en même temps. Une carte graphique a des milliers de petits cœurs faits pour cela.",
-  "points": [
-   "La question est transformée en nombres ; le modèle contient des milliards d'autres nombres fixés pendant l'entraînement. Pour écrire un seul mot, il multiplie la question par ces réglages.",
-   "Ces multiplications sont simples et indépendantes les unes des autres : on peut en faire des milliers à la fois.",
-   "Un processeur haut de gamme a 24 cœurs, chacun puissant et polyvalent (ouvrir un fichier, faire tourner Excel, suivre la souris).",
-   "Une carte graphique recalcule plus de 8 millions de pixels 60 fois par seconde en 4K ; elle a donc des milliers de cœurs simples. Exemple : 21 760 pour la RTX 5090, selon la vidéo.",
-   "Historique : en 2012, trois chercheurs de Toronto entraînent une IA de reconnaissance d'images sur deux cartes de jeu vidéo. Les puces d'IA de Nvidia ne sont plus faites pour le jeu mais gardent ce nom.",
-   "Sources listées en description : fiches techniques Intel et Nvidia, guide CUDA, article de 2012 (Krizhevsky, Sutskever, Hinton), Kaplan et al. (2020)."
-  ],
-  "avis": "Explication courte, claire et sourcée, utilisable telle quelle en séance de fondamentaux ou en introduction à l'IA locale (pourquoi la carte graphique compte dans le choix d'une machine). Elle simplifie beaucoup : le rôle de la mémoire de la carte, important pour l'IA locale, n'est pas abordé.",
-  "tags": [
-   "fondamentaux",
-   "gpu",
-   "matériel",
-   "ia locale",
-   "pédagogie"
-  ]
- },
- {
-  "id": "tImVvLJuOak",
-  "titre": "La « taxe de vérification » du travail avec des agents IA",
-  "chaine": "Le Frère Codeur",
-  "duree": 50,
-  "lot": "2026-11-16",
-  "categorie": "Analyse",
-  "interet": 2,
-  "resume": "Selon l'auteur, travailler avec des agents IA impose une « taxe de vérification » : le salarié reste garant du résultat et passe l'essentiel de son temps à valider ce que produit l'agent. Il juge ce travail moins intéressant qu'avant.",
-  "points": [
-   "Les outils d'IA créent des « taxes cognitives » ; la pire serait celle de vérification, ou de confiance.",
-   "Le salarié reste garant du résultat produit par l'agent, au moins dans un cadre d'entreprise.",
-   "L'auteur estime que l'IA fait moins d'erreurs qu'un débutant, mais produit un tel volume de code que valider devient le gros du travail. Comparaison non étayée.",
-   "Cette tâche est obligatoire et, selon lui, moins motivante ; elle a changé le métier. Extrait d'une vidéo plus longue."
-  ],
-  "avis": "Utile pour la formation des collègues : rappeler que la responsabilité du résultat reste humaine et que la vérification a un coût en temps. Rejoint l'idée, présente dans d'autres fiches, que savoir évaluer devient une compétence clé. Opinion personnelle, centrée sur le développement, sans source.",
-  "tags": [
-   "vérification",
-   "responsabilité",
-   "agents",
-   "développeur",
-   "métiers"
-  ]
- },
- {
-  "id": "8UrUiW3gV-g",
-  "titre": "Des clés d'API enregistrées par Claude Code exposées sur GitHub",
-  "chaine": "Ben BK",
-  "duree": 30,
-  "lot": "2026-11-16",
-  "categorie": "Actualité",
-  "interet": 3,
-  "resume": "Selon une enquête de GitGuardian citée par la vidéo, plus de 31 000 secrets liés à Claude Code ont été exposés sur GitHub, dont plus de 5 300 encore valides. En cause : des autorisations permanentes qui enregistrent une clé dans un fichier de configuration.",
-  "points": [
-   "Chiffres attribués à GitGuardian : plus de 31 000 secrets exposés, plus de 5 300 encore valides au moment de la détection. L'enquête n'est pas montrée.",
-   "Mécanisme décrit : quand on autorise définitivement une commande qui contient une clé d'API, Claude Code peut enregistrer cette commande, et donc la clé, dans un fichier de configuration.",
-   "Si ce fichier est ensuite publié sur GitHub, la clé devient publique.",
-   "Conseil : vérifier ses autorisations et ses fichiers de configuration avant de publier un dépôt.",
-   "Le titre parle de « Claude Codex », mais la vidéo ne traite que de Claude Code. La transcription s'arrête avant la fin."
-  ],
-  "avis": "Directement utile pour le développement et pour la séance sécurité : ne jamais écrire une clé en clair dans une commande, et relire les fichiers de configuration d'un outil d'IA avant de pousser un dépôt. Les chiffres viennent d'un éditeur de sécurité qui vend une solution de détection, et ne sont pas vérifiés ici ; vidéo très courte.",
-  "tags": [
-   "sécurité",
-   "secrets",
-   "claude code",
-   "github",
-   "configuration"
-  ]
  }
-];
-
-window.OUTILS_VEILLE = [
- {
-  "nom": "AnythingLLM",
-  "quoi": "Assistant documentaire : on y dépose des documents, il répond en citant ses sources, avec un modèle local.",
-  "donnees": "Local",
-  "interet": 3,
-  "categorie": "IA locale",
-  "videos": [
-   "MNFZoZUExSQ"
-  ]
- },
- {
-  "nom": "gratos.app",
-  "quoi": "Liste les alternatives libres aux logiciels payants, avec un prompt pour les installer.",
-  "donnees": "En ligne",
-  "interet": 3,
-  "categorie": "Recherche",
-  "videos": [
-   "CItBUagS0-w"
-  ]
- },
- {
-  "nom": "Hugging Face",
-  "quoi": "Plateforme qui héberge et distribue des modèles et jeux de données ouverts, téléchargeables pour un usage local.",
-  "donnees": "Variable",
-  "interet": 3,
-  "categorie": "IA locale",
-  "videos": [
-   "_qE83NMTR9E"
-  ]
- },
- {
-  "nom": "LM Studio",
-  "quoi": "Tester des modèles locaux sans terminal ; indique avant téléchargement si un modèle tient dans la machine.",
-  "donnees": "Local",
-  "interet": 3,
-  "categorie": "IA locale",
-  "videos": [
-   "MNFZoZUExSQ",
-   "mPMEolH63BM"
-  ]
- },
- {
-  "nom": "Microsoft 365 Copilot",
-  "quoi": "Assistant IA intégré à Word, Excel, Teams et Outlook, critiqué dans la vidéo pour son coût et sa faible utilisation.",
-  "donnees": "En ligne",
-  "interet": 3,
-  "categorie": "Microsoft 365",
-  "videos": [
-   "oulRMU5apxg"
-  ]
- },
- {
-  "nom": "NotebookLM",
-  "quoi": "Résume un PDF, un lien ou une vidéo en courte vidéo avec voix off.",
-  "donnees": "En ligne",
-  "interet": 3,
-  "categorie": "Pédagogie",
-  "videos": [
-   "MilSgMyGITU",
-   "F1qWG0T3aXI"
-  ]
- },
- {
-  "nom": "Ollama",
-  "quoi": "Fait tourner des modèles sur sa propre machine et les met à disposition des autres logiciels (API compatible OpenAI).",
-  "donnees": "Local",
-  "interet": 3,
-  "categorie": "IA locale",
-  "videos": [
-   "MNFZoZUExSQ"
-  ]
- },
- {
-  "nom": "OpenRouter",
-  "quoi": "Accès à des centaines de modèles en ligne, pour tester un modèle sur une vraie tâche avant d'investir dans du matériel.",
-  "donnees": "En ligne",
-  "interet": 3,
-  "categorie": "Modèles & accès",
-  "videos": [
-   "MNFZoZUExSQ",
-   "SeQXCpZhbjc"
-  ]
- },
- {
-  "nom": "OSV-Scanner",
-  "quoi": "Cherche les failles connues dans les dépendances d'un projet à partir de la base OSV.",
-  "donnees": "Variable",
-  "interet": 3,
-  "categorie": "Sécurité",
-  "videos": [
-   "wpcMuC090N4"
-  ]
- },
- {
-  "nom": "Syft",
-  "quoi": "Produit la nomenclature logicielle (SBOM) d'un projet, c'est-à-dire la liste de ses composants (transcrit « SIFT » ou « Shift »).",
-  "donnees": "Local",
-  "interet": 3,
-  "categorie": "Sécurité",
-  "videos": [
-   "wpcMuC090N4"
-  ]
- },
- {
-  "nom": "WeKnora",
-  "quoi": "Plateforme de Tencent qui transforme des documents en base de connaissances interrogeable (RAG), auto-hébergeable. Licence à vérifier.",
-  "donnees": "Local",
-  "interet": 3,
-  "categorie": "IA locale",
-  "videos": [
-   "post-8-repos"
-  ]
- },
- {
-  "nom": "Agent Standup",
-  "quoi": "Visualise des agents de code comme un appel visio, avec suivi des tokens et des erreurs.",
-  "donnees": "Local",
-  "interet": 2,
-  "categorie": "Développement",
-  "videos": [
-   "cY-qguglUa4"
-  ]
- },
- {
-  "nom": "BambooAI",
-  "quoi": "Analyse de données en Python qui affiche le code produit et permet de rejouer les calculs.",
-  "donnees": "Variable",
-  "interet": 2,
-  "categorie": "Développement",
-  "videos": [
-   "post-8-repos"
-  ]
- },
- {
-  "nom": "Claude Code",
-  "quoi": "Agent de code en terminal qui lit un fichier de consignes CLAUDE.md à chaque session.",
-  "donnees": "En ligne",
-  "interet": 2,
-  "categorie": "Développement",
-  "videos": [
-   "8ZJI4uCp6bA",
-   "Vv1eXHqOZlI",
-   "F1qWG0T3aXI",
-   "MdHZW40zLJE",
-   "GaYppkDHRMQ",
-   "8UrUiW3gV-g"
-  ]
- },
- {
-  "nom": "Copilot Cowork",
-  "quoi": "Agent Microsoft qui automatise des tâches dans Excel, PowerPoint et Outlook.",
-  "donnees": "En ligne",
-  "interet": 2,
-  "categorie": "Microsoft 365",
-  "videos": [
-   "x7ZVkvNfxk4"
-  ]
- },
- {
-  "nom": "Copilot Studio",
-  "quoi": "Outil Microsoft de création d'agents, facturé en crédits à l'usage pour les tâches autonomes selon la vidéo.",
-  "donnees": "En ligne",
-  "interet": 2,
-  "categorie": "Microsoft 365",
-  "videos": [
-   "xYE9SLTtq2A"
-  ]
- },
- {
-  "nom": "Dependency-Track",
-  "quoi": "Suit dans le temps les composants et leurs failles à partir des nomenclatures logicielles.",
-  "donnees": "Local",
-  "interet": 2,
-  "categorie": "Sécurité",
-  "videos": [
-   "wpcMuC090N4"
-  ]
- },
- {
-  "nom": "git worktree",
-  "quoi": "Copie de travail isolée par tâche pour que plusieurs agents ne modifient pas les mêmes fichiers.",
-  "donnees": "Local",
-  "interet": 2,
-  "categorie": "Développement",
-  "videos": [
-   "8ZJI4uCp6bA"
-  ]
- },
- {
-  "nom": "Hermes Agent",
-  "quoi": "Harnais d'agent open source avec mémoire, tâches planifiées et compétences, piloté par messagerie.",
-  "donnees": "Variable",
-  "interet": 2,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "dl-7TX31xO8",
-   "ADJj3VMFWmM"
-  ]
- },
- {
-  "nom": "Jeev (TypeSafe AI)",
-  "quoi": "Modèle qui renvoie des décisions typées avec probabilités, sans texte, via API.",
-  "donnees": "En ligne",
-  "interet": 2,
-  "categorie": "Modèles & accès",
-  "videos": [
-   "P3uJjhA4oxE"
-  ]
- },
- {
-  "nom": "Kiwix",
-  "quoi": "Wikipédia et d'autres contenus de référence consultables hors ligne.",
-  "donnees": "Local",
-  "interet": 2,
-  "categorie": "IA locale",
-  "videos": [
-   "cc2wQNXmna4"
-  ]
- },
- {
-  "nom": "Letta",
-  "quoi": "Donne une mémoire persistante à un agent.",
-  "donnees": "Variable",
-  "interet": 2,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "lVSYNa4dKQg"
-  ]
- },
- {
-  "nom": "LM Arena",
-  "quoi": "Comparer gratuitement les réponses de plusieurs modèles côte à côte.",
-  "donnees": "En ligne",
-  "interet": 2,
-  "categorie": "Modèles & accès",
-  "videos": [
-   "_gF4IHgZqBA"
-  ],
-  "alias": "LMArena"
- },
- {
-  "nom": "n8n",
-  "quoi": "Automatise des enchaînements de tâches ; peut appeler un modèle local comme agent.",
-  "donnees": "Variable",
-  "interet": 2,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "CItBUagS0-w",
-   "MNFZoZUExSQ",
-   "Vv1eXHqOZlI"
-  ]
- },
- {
-  "nom": "Open Code",
-  "quoi": "Agent de code cité comme alternative à Claude Code pour utiliser un modèle local.",
-  "donnees": "Variable",
-  "interet": 2,
-  "categorie": "Développement",
-  "videos": [
-   "LoGyVMxqrUw"
-  ]
- },
- {
-  "nom": "Project NOMAD",
-  "quoi": "Ordinateur autonome hors ligne : Wikipédia, guides, cartes et IA locale.",
-  "donnees": "Local",
-  "interet": 2,
-  "categorie": "IA locale",
-  "videos": [
-   "m76PejDDzJA"
-  ]
- },
- {
-  "nom": "Skill Conseil (llm-council)",
-  "quoi": "Fait débattre cinq agents avant un verdict, pour éviter les réponses complaisantes.",
-  "donnees": "Variable",
-  "interet": 2,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "lH3RS69kf8c"
-  ]
- },
- {
-  "nom": "Skill d'audit de Cloudflare",
-  "quoi": "Des agents cherchent les failles d'une application, un agent sceptique confirme ou écarte chacune.",
-  "donnees": "Variable",
-  "interet": 2,
-  "categorie": "Sécurité",
-  "videos": [
-   "hyoonDrL1LU"
-  ]
- },
- {
-  "nom": "Tailscale et Caddy",
-  "quoi": "Accéder à distance à un serveur d'IA sans ouvrir de port, derrière une clé d'accès.",
-  "donnees": "Local",
-  "interet": 2,
-  "categorie": "Sécurité",
-  "videos": [
-   "MNFZoZUExSQ"
-  ]
- },
- {
-  "nom": "vLLM",
-  "quoi": "Moteur d'inférence optimisé pour servir beaucoup de requêtes en parallèle.",
-  "donnees": "Local",
-  "interet": 2,
-  "categorie": "IA locale",
-  "videos": [
-   "rVC-86vbVpk"
-  ]
- },
- {
-  "nom": "Agent Reach",
-  "quoi": "Donne à un agent de code un accès en lecture à 14 plateformes (Reddit, GitHub, LinkedIn…).",
-  "donnees": "Variable",
-  "interet": 1,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "FpC4SVVjlsw"
-  ]
- },
- {
-  "nom": "ArtCraft",
-  "quoi": "Équivalents gratuits d'Adobe, Word, Excel et AutoCAD recréés avec l'IA, et outil de mise en scène 3D pour guider la génération d'images.",
-  "donnees": "Variable",
-  "interet": 1,
-  "categorie": "Image & vidéo",
-  "videos": [
-   "olbLO9ZTAq4",
-   "post-8-repos"
-  ]
- },
- {
-  "nom": "Blocks",
-  "quoi": "Génère une application mobile à partir d'un prompt.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Développement",
-  "videos": [
-   "0FqWt98KD-4"
-  ]
- },
- {
-  "nom": "Claude Code Security",
-  "quoi": "Outil d'Anthropic en aperçu de recherche qui analyse le code source, signale des failles et propose des correctifs.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Sécurité",
-  "videos": [
-   "l0IKxKpJ968"
-  ]
- },
- {
-  "nom": "Codex (OpenAI)",
-  "quoi": "Espace de travail agentique d'OpenAI capable de piloter un navigateur ou macOS, testé par l'auteur.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Développement",
-  "videos": [
-   "LoGyVMxqrUw"
-  ]
- },
- {
-  "nom": "Design Arena et Google Labs",
-  "quoi": "Essayer gratuitement des outils de génération de visuels, de musique ou de mini-applications.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Image & vidéo",
-  "videos": [
-   "_gF4IHgZqBA"
-  ]
- },
- {
-  "nom": "Docker Desktop",
-  "quoi": "Fait tourner des conteneurs de développement ; l'auteur conseille de baisser la mémoire qu'il réserve par défaut.",
-  "donnees": "Local",
-  "interet": 1,
-  "categorie": "Développement",
-  "videos": [
-   "IHs3jiBz6yU"
-  ]
- },
- {
-  "nom": "ElevenLabs et Hume",
-  "quoi": "Voix de synthèse pour faire parler un assistant.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Audio & voix",
-  "videos": [
-   "lVSYNa4dKQg"
-  ],
-  "alias": "ElevenLabs"
- },
- {
-  "nom": "Founder Skill",
-  "quoi": "11 skills Claude pour éprouver une idée de business avant de la lancer.",
-  "donnees": "Variable",
-  "interet": 1,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "post-8-repos"
-  ]
- },
- {
-  "nom": "Google Playground AI",
-  "quoi": "Créer des jeux vidéo à partir d'un prompt ; réservé aux États-Unis.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Développement",
-  "videos": [
-   "lIU-9o_-4OM"
-  ]
- },
- {
-  "nom": "Higgsfield",
-  "quoi": "Génère des vidéos et des images, y compris des avatars à partir d'une vidéo réelle.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Image & vidéo",
-  "videos": [
-   "x7ZVkvNfxk4",
-   "KwEmkBM-RQo"
-  ]
- },
- {
-  "nom": "Image Blaster",
-  "quoi": "Skills Claude qui transforment une image en environnement 3D explorable.",
-  "donnees": "Variable",
-  "interet": 1,
-  "categorie": "Image & vidéo",
-  "videos": [
-   "post-8-repos"
-  ]
- },
- {
-  "nom": "Laya",
-  "quoi": "Petit modèle local qui classe ou oriente des demandes en choisissant dans une liste.",
-  "donnees": "Local",
-  "interet": 1,
-  "categorie": "IA locale",
-  "videos": [
-   "45ZrbWRQ5K0"
-  ]
- },
- {
-  "nom": "Le Chat",
-  "quoi": "Assistant conversationnel de Mistral AI, l'auteur dit ne pas l'utiliser lui-même.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Texte & assistants",
-  "videos": [
-   "10xnIMsViSg"
-  ],
-  "alias": "Mistral AI (Le Chat)"
- },
- {
-  "nom": "Lean",
-  "quoi": "Langage et assistant de preuve qui vérifie automatiquement chaque étape d'une démonstration mathématique.",
-  "donnees": "Local",
-  "interet": 1,
-  "categorie": "Recherche",
-  "videos": [
-   "QzgsvzV7c8Y"
-  ]
- },
- {
-  "nom": "LinkedIn Agent",
-  "quoi": "Onze skills pour préparer posts, commentaires et calendrier LinkedIn.",
-  "donnees": "Variable",
-  "interet": 1,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "u_GgarcLN60"
-  ]
- },
- {
-  "nom": "Maestro",
-  "quoi": "Studio local d'images, de vidéo et de musique, installé via Pinokio. Demande une grosse carte graphique.",
-  "donnees": "Local",
-  "interet": 1,
-  "categorie": "Image & vidéo",
-  "videos": [
-   "post-8-repos"
-  ]
- },
- {
-  "nom": "Mammouth AI",
-  "quoi": "Interface payante donnant accès à plusieurs modèles d'IA, y compris via OpenCode dans le terminal (sponsor de la vidéo).",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Modèles & accès",
-  "videos": [
-   "rYUItp5ykvg",
-   "AiytemqB_F0"
-  ]
- },
- {
-  "nom": "Mistral Code",
-  "quoi": "Assistant de développement intégré aux éditeurs de code, vendu aux équipes en entreprise.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Développement",
-  "videos": [
-   "10xnIMsViSg"
-  ]
- },
- {
-  "nom": "Mistral Forge",
-  "quoi": "Plateforme pour entraîner un modèle complet sur les données internes d'une entreprise.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Modèles & accès",
-  "videos": [
-   "10xnIMsViSg"
-  ]
- },
- {
-  "nom": "Nexos",
-  "quoi": "Service d'accès à plusieurs modèles (Claude, GPT) par crédits, utilisé comme moteur dans la démo.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Modèles & accès",
-  "videos": [
-   "dl-7TX31xO8"
-  ]
- },
- {
-  "nom": "OpenChatCut",
-  "quoi": "Montage vidéo piloté par conversation, en local (licence AGPL-3.0).",
-  "donnees": "Variable",
-  "interet": 1,
-  "categorie": "Image & vidéo",
-  "videos": [
-   "post-8-repos"
-  ]
- },
- {
-  "nom": "OpenClaw",
-  "quoi": "Framework open source pour faire tourner des agents personnels autour d'un modèle de langage.",
-  "donnees": "Variable",
-  "interet": 1,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "1l6-lOKL5l0",
-   "l0IKxKpJ968"
-  ]
- },
- {
-  "nom": "Origin (Cursor)",
-  "quoi": "Hébergeur de code compatible Git annoncé par Cursor, pensé pour de nombreux agents travaillant en parallèle.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Développement",
-  "videos": [
-   "n8NtmXLJoX0"
-  ]
- },
- {
-  "nom": "PocketPal",
-  "quoi": "Fait tourner un petit modèle open source sur un téléphone, sans connexion.",
-  "donnees": "Local",
-  "interet": 1,
-  "categorie": "IA locale",
-  "videos": [
-   "cc2wQNXmna4"
-  ]
- },
- {
-  "nom": "Scrapy",
-  "quoi": "Framework Python open source pour collecter et extraire des données de sites web.",
-  "donnees": "Local",
-  "interet": 1,
-  "categorie": "Développement",
-  "videos": [
-   "rYUItp5ykvg"
-  ]
- },
- {
-  "nom": "Skill Replica",
-  "quoi": "Clone une application à partir de son adresse web.",
-  "donnees": "Variable",
-  "interet": 1,
-  "categorie": "Développement",
-  "videos": [
-   "L3JZ5gYERN0"
-  ]
- },
- {
-  "nom": "Tailscale",
-  "quoi": "Relie deux machines par un réseau privé virtuel pour déporter les agents sur un ancien ordinateur sans ouvrir de ports.",
-  "donnees": "Variable",
-  "interet": 1,
-  "categorie": "Sécurité",
-  "videos": [
-   "IHs3jiBz6yU"
-  ],
-  "alias": "Tailscale et Caddy"
- },
- {
-  "nom": "Video Shotcraft",
-  "quoi": "Skill pour Claude Code et Codex qui génère des vidéos promotionnelles avec Remotion.",
-  "donnees": "Variable",
-  "interet": 1,
-  "categorie": "Image & vidéo",
-  "videos": [
-   "post-8-repos"
-  ]
- },
- {
-  "nom": "Windsurf",
-  "quoi": "Éditeur de code avec assistant IA, utilisé ici pour analyser du code d'anti-bot avec un modèle Claude.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Développement",
-  "videos": [
-   "rYUItp5ykvg"
-  ]
- },
- {
-  "nom": "youmind.com",
-  "quoi": "Bibliothèque de prompts pour générer images et vidéos.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Image & vidéo",
-  "videos": [
-   "ecb4io3GAGE"
-  ]
- },
- {
-  "nom": "Recraft",
-  "quoi": "Outil en ligne de création et retouche d'images qui permet de choisir le modèle de génération (mockups, variantes, vectorisation).",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Image & vidéo",
-  "videos": [
-   "Vv1eXHqOZlI"
-  ]
- },
- {
-  "nom": "Claude Cowork (tâches planifiées)",
-  "quoi": "Tâches planifiées créées en dialoguant avec Claude, qui lisent des connecteurs et envoient un rapport par e-mail ou notification, en ligne ou sur l'ordinateur.",
-  "donnees": "En ligne",
-  "interet": 2,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "Vv1eXHqOZlI"
-  ]
- },
- {
-  "nom": "Hostinger (déploiement Hermes)",
-  "quoi": "Hébergeur qui propose des serveurs virtuels avec installation en un clic d'Hermes Agent, choix du pays du serveur.",
-  "donnees": "En ligne",
-  "interet": 1,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "ADJj3VMFWmM"
-  ]
- },
- {
-  "nom": "Testcontainers",
-  "quoi": "Lance de vraies bases de données ou API dans des conteneurs pendant les tests d'intégration, pour vérifier qu'un programme communique bien avec l'extérieur.",
-  "donnees": "Local",
-  "interet": 1,
-  "categorie": "Développement",
-  "videos": [
-   "AiytemqB_F0"
-  ]
- },
- {
-  "nom": "MVT (Mobile Verification Toolkit)",
-  "quoi": "Outil open source d'Amnesty International qui recherche des traces de logiciels espions connus sur un téléphone.",
-  "donnees": "Local",
-  "interet": 2,
-  "categorie": "Sécurité",
-  "videos": [
-   "F1qWG0T3aXI"
-  ]
- },
- {
-  "nom": "Anatomy",
-  "quoi": "Skill Claude Code qui explique une idée sous forme de petite machine animée, livrée en page web.",
-  "donnees": "En ligne",
-  "interet": 2,
-  "categorie": "Pédagogie",
-  "videos": [
-   "D112Wo-vDUU"
-  ]
- },
- {
-  "nom": "Agent Desktop (Vercel)",
-  "quoi": "Permet à un agent comme Claude Code d'utiliser les applications de l'ordinateur en lisant l'arbre d'accessibilité, sans captures d'écran.",
-  "donnees": "Variable",
-  "interet": 2,
-  "categorie": "Agents & automatisation",
-  "videos": [
-   "II89r7Y-qBI"
-  ]
- }
-];
-
-window.VEILLE_SYNTHESE = {
- "essentiel": [
-  "**89 fiches** : 88 vidéos et un post. Seule une quinzaine a un intérêt direct pour la structure ; le reste éclaire le contexte ou relève surtout de la promotion.",
-  "**Sources très concentrées :** 48 des 56 fiches ajoutées le 10 novembre viennent d'une seule chaîne (« IA et Stratégie »). C'est du commentaire stratégique, souvent sans source, qui renvoie à un abonnement payant. À diversifier.",
-  "**Pour la séance 1 :** le vocabulaire de l'IA en 30 notions, l'AI Act vu du côté de l'utilisateur, l'agent qui annule la réservation d'un inconnu (pourquoi on valide les actions irréversibles).",
-  "**Pour la séance 2 :** la critique de Copilot sert surtout de liste de questions (usage réel, documents auxquels Copilot accède, permissions OneDrive et SharePoint). Elle ne parle pas de Copilot Chat.",
-  "**Pour la séance 3 :** la masterclass sur les agents en local, le choix d'une machine (mémoire, bande passante, achat ou location), les patterns de RAG, et la question de l'alignement des modèles ouverts.",
-  "**Pour les stagiaires en reconversion :** la lecture des offres d'emploi en IA, la raréfaction des postes de débutants, l'évaluation des systèmes comme compétence recherchée."
- ],
- "tendances": [
-  "**Les agents passent à l'action :** ils prennent la souris, travaillent en équipe, achètent pour le client. La question devient ce qu'on les autorise à faire, et qui peut les arrêter.",
-  "**La sécurité des agents :** injection de prompt, mémoire contaminée, API sans contrôle d'autorisation, agents installés sans l'accord de l'informatique.",
-  "**Les modèles ouverts chinois rattrapent les américains** (Kimi, GLM, DeepSeek, Qwen) à bas coût, avec des garde-fous fragiles et un alignement politique à tester.",
-  "**Souveraineté et dépendance aux fournisseurs :** Mistral, Hugging Face, contrôle des exportations américain, changements de tarifs. Conseil récurrent : rester capable de changer de modèle.",
-  "**L'IA locale devient crédible** grâce aux petits modèles et à des machines bien dimensionnées, à condition de tester sur ses propres tâches avant d'acheter.",
-  "**Emploi :** moins de postes de débutants, des métiers d'intermédiation fragilisés, une forte demande sur l'évaluation des systèmes et l'intégration. Les causes restent discutées.",
-  "**Les skills et les harnais d'agents** deviennent le format standard pour partager une méthode de travail entre outils."
- ],
- "vigilance": [
-  "**Rapporté, pas validé :** les noms de modèles, dates, chiffres et incidents viennent des vidéos. Plusieurs se contredisent (le rachat de Hugging Face est présenté comme fait dans une vidéo et comme non confirmé dans une autre).",
-  "**Données qui sortent de la structure :** un agent qui contrôle l'écran envoie des captures en continu à l'éditeur. NotebookLM, LM Arena et les services en ligne traitent les documents sur des serveurs externes.",
-  "**Modèles « non censurés » :** des tutoriels expliquent comment retirer les refus d'un modèle. Cela ne rend pas ses réponses plus justes, et cela supprime les garde-fous.",
-  "**Un modèle local n'est pas neutre :** l'héberger règle la question des données, pas celle de ses biais ou de son alignement.",
-  "**Shadow AI :** certains commentateurs encouragent à utiliser des outils dans le dos de l'employeur. C'est contraire aux règles de protection des données ; proposer un outil encadré limite ce phénomène.",
-  "**AI Act :** la structure est « déployeur ». Obligation de former les équipes, niveau de risque selon l'usage (le tri de candidatures ou l'éducation relèvent du haut risque). Les dates citées dans les vidéos sont à vérifier sur le texte officiel ou auprès de la DPO.",
-  "**Agents et actions irréversibles :** droits limités et validation humaine avant toute action qu'on ne peut pas annuler.",
-  "**Gratuit ne veut pas dire sans coût :** un outil libre auto-hébergé demande installation, mises à jour et sécurité. Le local n'est pas forcément moins cher ; son argument est la confidentialité.",
-  "**Sources promotionnelles :** beaucoup de vidéos renvoient vers une formation payante, un abonnement ou un sponsor. Chiffres et promesses sont à recouper avant d'être relayés."
- ]
-};
-
-window.METHODE = [
- {
-  "titre": "Deux sources",
-  "points": [
-   "**Les formations suivies** par le référent IA. Pour qu'on ne puisse pas les identifier, les noms des organismes et des intervenants, les dates précises, les titres et les programmes officiels ont été retirés. Les notes sont reformulées.",
-   "**Une veille sur des vidéos YouTube**, choisies par le référent dans une playlist dédiée. Chaque vidéo a une fiche : résumé, points clés, avis pour la structure, outils cités."
-  ]
- },
- {
-  "titre": "Comment les fiches de veille sont rédigées",
-  "points": [
-   "Les fiches sont rédigées **par une IA (Claude)** à partir des sous-titres automatiques de YouTube, lus en entier, puis relues par le référent IA. Les fiches ajoutées le 10 novembre 2026 ont été rédigées par plusieurs agents IA suivant une même consigne ; seule une partie a été relue en détail.",
-   "La consigne demande de **rapporter sans valider** : « selon la vidéo », chiffres non sourcés signalés, sponsors et contenus payants mentionnés.",
-   "Les sous-titres automatiques déforment les noms propres. Ils sont corrigés quand le sens est évident, et signalés sinon.",
-   "Les noms de modèles et les événements cités (sorties, rachats, incidents) n'ont pas été vérifiés de façon indépendante."
-  ]
- },
- {
-  "titre": "Comment lire les indications",
-  "points": [
-   "**Intérêt élevé** : utile directement à la structure ou aux formations. **Moyen** : bon éclairage de contexte. **Faible** : peu utile ou surtout promotionnel.",
-   "**Local** : les données restent sur la machine. **Variable** : dépend de la configuration ou du modèle branché. **En ligne** : les données partent chez un prestataire.",
-   "Avant d'utiliser un outil avec des données de personnes accompagnées ou de collègues : vérifier avec le DPO."
-  ]
- },
- {
-  "titre": "Limites connues",
-  "points": [
-   "Sources concentrées : une majorité de fiches vient d'une seule chaîne de commentaire stratégique.",
-   "Les fiches résument des vidéos ; elles ne remplacent ni les textes officiels ni la documentation des éditeurs."
-  ]
- }
-];
+]);

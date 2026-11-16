@@ -9,7 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/views/accueil.css">
+  <link rel="stylesheet" href="assets/css/views/formation.css">
+  <link rel="stylesheet" href="assets/css/views/outils.css">
+  <link rel="stylesheet" href="assets/css/views/veille.css">
+  <link rel="stylesheet" href="assets/css/views/animer.css">
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
@@ -47,9 +54,32 @@
     </div>
   </footer>
 
-  <script src="data/formations.js"></script>
-  <script src="data/veille.js"></script>
+  <!-- Données : un fichier par sujet ; un fichier par lot de veille (data/veille/fiches/AAAA-MM-JJ.js) -->
+  <script src="data/formations/formations.js"></script>
+  <script src="data/formations/outils.js"></script>
+  <script src="data/veille/fiches/2026-10-19.js"></script>
+  <script src="data/veille/fiches/2026-11-09.js"></script>
+  <script src="data/veille/fiches/2026-11-10.js"></script>
+  <script src="data/veille/fiches/2026-11-16.js"></script>
+  <script src="data/veille/outils.js"></script>
+  <script src="data/veille/synthese.js"></script>
+  <script src="data/veille/methode.js"></script>
   <script src="data/animations.js"></script>
-  <script src="assets/js/app.js"></script>
+  <!-- Application : cœur, vues, en-tête, puis démarrage (ordre important) -->
+  <script src="assets/js/core/utils.js"></script>
+  <script src="assets/js/core/data.js"></script>
+  <script src="assets/js/core/router.js"></script>
+  <script src="assets/js/views/accueil.js"></script>
+  <script src="assets/js/views/outils.js"></script>
+  <script src="assets/js/views/formation.js"></script>
+  <script src="assets/js/views/veille/model.js"></script>
+  <script src="assets/js/views/veille/fiche.js"></script>
+  <script src="assets/js/views/veille/panel.js"></script>
+  <script src="assets/js/views/veille/index.js"></script>
+  <script src="assets/js/views/animer/contenu.js"></script>
+  <script src="assets/js/views/animer/index.js"></script>
+  <script src="assets/js/views/methode.js"></script>
+  <script src="assets/js/ui/header.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

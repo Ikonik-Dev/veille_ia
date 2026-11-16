@@ -1,0 +1,11 @@
+/* Page d'accueil */
+.hero { margin-bottom: 36px; max-width: 70ch; }
+.hero p { color: var(--ink-soft); font-size: 1.1rem; }
+.section-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 8px 0 16px; flex-wrap: wrap; }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.formation-card { display: grid; gap: 10px; position: relative; transition: transform .15s, border-color .15s; }
+.formation-card:hover { transform: translateY(-2px); border-color: var(--brand); }
+.formation-card h3 { font-size: 1.35rem; margin: 0; }
+.formation-card h3 a { color: var(--ink); text-decoration: none; }
+.formation-card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.formation-card .sub { color: var(--ink-soft); margin: 0; }
