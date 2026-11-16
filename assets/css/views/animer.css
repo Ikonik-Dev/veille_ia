@@ -1,0 +1,36 @@
+/* Animer : guide de séance (second écran) */
+.seance-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; align-items: flex-start; margin: 8px 0 18px; }
+.seance-head h1 { margin: 0 0 4px; font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.clock { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.clock #clk { font-family: var(--font-head); font-size: 2rem; font-weight: 700; line-height: 1; color: var(--ink); }
+.drift.ok { color: var(--brand); }
+.drift.warn { color: #9A5F06; font-weight: 600; }
+.drift.late { color: #B3261E; font-weight: 700; }
+.guide { display: grid; grid-template-columns: minmax(200px, 280px) 1fr; gap: 20px; align-items: start; }
+.steps { display: flex; flex-direction: column; gap: 4px; position: sticky; top: 84px; }
+.stepbtn { text-align: left; font: inherit; font-size: .92rem; background: transparent; border: 1px solid transparent; border-radius: 10px; padding: 8px 10px; color: var(--ink-soft); cursor: pointer; }
+.stepbtn b { color: var(--muted); font-weight: 600; margin-right: 4px; }
+.stepbtn:hover { background: var(--surface-2); }
+.stepbtn.on { background: var(--surface); border-color: var(--brand); color: var(--ink); font-weight: 600; }
+.step h2 { margin: 4px 0 8px; }
+.step-meta { color: var(--muted); font-size: .9rem; margin: 0; }
+.step .key { font-size: 1.15rem; font-weight: 600; color: var(--brand); border-left: 4px solid var(--accent); padding-left: 12px; margin: 8px 0 14px; }
+.demo { background: var(--surface-2); border-radius: 12px; padding: 14px 16px; margin: 14px 0; }
+.demo h4 { margin: 0 0 8px; font-size: 1rem; }
+.prompt { display: flex; gap: 10px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 6px 0; }
+.prompt p { margin: 0; flex: 1; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92rem; }
+.observe { margin: 8px 0 0; font-size: .95rem; }
+.stepnav { display: flex; justify-content: space-between; gap: 10px; margin-top: 18px; }
+.stepnav .chip[disabled] { opacity: .4; cursor: default; }
+.next { color: var(--muted); margin: 10px 0 0; font-size: .92rem; }
+.qtheme h3 { margin: 22px 0 8px; }
+.qa { margin: 8px 0; padding: 12px 16px; }
+.qa summary { cursor: pointer; font-weight: 600; }
+.qa p { margin: 8px 0 0; }
+.glossary { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.glossary div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.glossary dt { font-weight: 700; }
+.glossary dd { margin: 4px 0 0; color: var(--ink-soft); }
+main.big { font-size: 1.22rem; }
+main.big .step .key { font-size: 1.45rem; }
+@media (max-width: 760px) { .guide { grid-template-columns: 1fr; } .steps { position: static; flex-direction: row; overflow-x: auto; } .stepbtn { white-space: nowrap; } .clock { align-items: flex-start; } }
