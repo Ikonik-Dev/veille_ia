@@ -48,10 +48,13 @@ Dans `data/veille.js`, ajouter un objet au tableau `window.VEILLE` :
   "duree": 600,               // en secondes ; 0 pour un post
   "lot": "2026-11-10",        // date d'ajout
   "categorie": "Analyse",     // Actualité, Analyse, Business, Outil, Ressource, Technique, Témoignage
-  "interet": 2,               // 3 élevé, 2 moyen, 1 faible
+  "interet": 2,               // utilité pour la structure : 3 élevé, 2 moyen, 1 faible
+  "dev": 2,                   // intérêt pour le développeur : 3 à tester, 2 utile, 1 marginal, 0 hors dev
+  "usages": ["local", "dev"], // 1 ou 2, le principal d'abord : fondamentaux, copilot, local, metiers, dev
   "resume": "…",
   "points": ["…"],
   "avis": "Ce que ça apporte à la structure, et les réserves.",
+  "avisDev": "Une phrase : ce que ça apporte au développeur (seulement si dev >= 2).",
   "tags": ["…"]
 }
 ```

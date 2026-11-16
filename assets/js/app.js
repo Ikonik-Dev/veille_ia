@@ -233,42 +233,80 @@
   }
 
   /* ---------- Veille ---------- */
-  function ficheHtml(v, open) {
+  // Deux lectures d'une même fiche : utilité pour la structure (interet) et pour le développeur (dev).
+  var USAGES = [
+    { k: "fondamentaux", label: "Fondamentaux et sécurité", sub: "Comprendre l'IA, vérifier, protéger les données" },
+    { k: "copilot", label: "Copilot", sub: "Microsoft 365 et Copilot Chat" },
+    { k: "local", label: "IA locale et RAG", sub: "Modèles sur nos machines, documents internes" },
+    { k: "metiers", label: "Métiers et compétences", sub: "Évolution du travail, compétences à acquérir" },
+    { k: "dev", label: "Développement", sub: "Agents de code, outils et techniques" }
+  ];
+  var LENS = {
+    structure: { label: "Pour la structure", score: function (v) { return v.interet || 0; },
+      niveaux: { 3: "À voir", 2: "Contexte", 1: "Faible", 0: "Faible" },
+      groupes: { 3: "À voir en priorité", 2: "Bon éclairage de contexte", 1: "Moins prioritaires" } },
+    dev: { label: "Pour mon dev", score: function (v) { return v.dev || 0; },
+      niveaux: { 3: "À tester", 2: "Utile", 1: "Marginal", 0: "Hors dev" },
+      groupes: { 3: "À tester ou à approfondir", 2: "Bon éclairage technique", 1: "Peu ou pas technique" } }
+  };
+  function usageLabel(k) {
+    for (var i = 0; i < USAGES.length; i++) if (USAGES[i].k === k) return USAGES[i].label;
+    return k;
+  }
+  function lastLot() {
+    return VEILLE.reduce(function (m, v) { return v.lot > m ? v.lot : m; }, "");
+  }
+  function scoreBadge(lensKey, s) {
+    var l = LENS[lensKey];
+    return '<span class="badge i' + Math.max(1, s) + '" title="' + esc(l.label) + '">' +
+      (lensKey === "dev" ? "Dev : " : "") + esc(l.niveaux[s]) + "</span>";
+  }
+
+  function ficheDetail(v) {
     var outils = OUTILS.filter(function (o) { return o.videos.indexOf(v.id) !== -1; });
-    return '<li><details class="card vfiche" id="v-' + esc(v.id) + '"' + (open ? " open" : "") + ">" +
-      "<summary>" +
-        '<span class="vtitle">' + esc(v.titre) + "</span>" +
-        badge(v.interet) +
-        '<span class="vmeta">' + esc(v.chaine) + " · " + esc(duree(v.duree)) + " · " + esc(v.categorie) + " · ajoutée en " + esc(formatDate(v.lot.slice(0, 7))) + "</span>" +
-        '<span class="vresume">' + esc(v.resume) + "</span>" +
-      "</summary>" +
-      '<div class="vbody prose">' +
+    return '<header class="vp-head">' +
+        '<p class="vmeta">' + esc(v.chaine) + " · " + esc(duree(v.duree)) + " · " + esc(v.categorie) + " · ajoutée le " + esc(formatDate(v.lot)) + "</p>" +
+        '<h2 id="vp-title">' + esc(v.titre) + "</h2>" +
+        '<p class="vp-badges">' + scoreBadge("structure", v.interet || 0) + " " + scoreBadge("dev", v.dev || 0) +
+          (v.usages || []).map(function (u) { return ' <span class="tag">' + esc(usageLabel(u)) + "</span>"; }).join("") + "</p>" +
+      "</header>" +
+      '<div class="prose">' +
+        '<p class="vp-resume">' + esc(v.resume) + "</p>" +
         "<h3>Points clés</h3>" + list(v.points) +
         '<div class="callout"><strong>Pour la structure :</strong> ' + esc(v.avis) + "</div>" +
+        (v.avisDev ? '<div class="callout dev"><strong>Pour le dev :</strong> ' + esc(v.avisDev) + "</div>" : "") +
         (outils.length ? '<p class="vtools"><strong>Outils cités :</strong> ' + outils.map(function (o) { return '<a href="#/outils/' + esc(slug(o.nom)) + '">' + esc(o.nom) + "</a>"; }).join(", ") + "</p>" : "") +
         tags(v.tags) +
         '<p><a class="watch" href="' + esc(videoUrl(v)) + '" target="_blank" rel="noopener">' + (v.url ? "Voir le post sur YouTube" : "Voir la vidéo sur YouTube") + "</a></p>" +
-      "</div></details></li>";
+      "</div>";
   }
 
   function viewVeille(openId) {
     setNav("veille");
     document.title = "Veille vidéo — Veille IA";
-    var cats = [], chaines = {}, lots = [];
+    var chaines = {}, lots = [];
     VEILLE.forEach(function (v) {
-      if (cats.indexOf(v.categorie) === -1) cats.push(v.categorie);
       chaines[v.chaine] = (chaines[v.chaine] || 0) + 1;
       if (lots.indexOf(v.lot) === -1) lots.push(v.lot);
     });
-    cats.sort(function (a, b) { return a.localeCompare(b, "fr"); });
     lots.sort().reverse();
+    var dernier = lots[0] || "";
     var chaineList = Object.keys(chaines).sort(function (a, b) { return chaines[b] - chaines[a] || a.localeCompare(b, "fr"); });
-    var state = { q: "", i: "", cat: "", ch: "", lot: "", tri: "interet" };
+    var lens = store("veille:lens") === "dev" ? "dev" : "structure";
+    var state = { q: "", u: "", ch: "", lot: "", court: false, tri: "score" };
+
+    var nbDernier = VEILLE.filter(function (v) { return v.lot === dernier; }).length;
+    var stats = '<ul class="stats">' +
+      "<li><b>" + VEILLE.length + "</b><span>fiches</span></li>" +
+      "<li><b>" + VEILLE.filter(function (v) { return v.interet === 3; }).length + "</b><span>à voir pour la structure</span></li>" +
+      "<li><b>" + VEILLE.filter(function (v) { return v.dev === 3; }).length + "</b><span>à tester pour le dev</span></li>" +
+      (dernier ? "<li><b>" + nbDernier + "</b><span>ajoutées le " + esc(formatDate(dernier)) + "</span></li>" : "") +
+      "</ul>";
 
     var synth = "";
     if (SYNTHESE) {
       synth = '<section class="synthese">' +
-        '<details class="card"' + (openId ? "" : " open") + "><summary><h2>L'essentiel</h2></summary>" + list(SYNTHESE.essentiel) + "</details>" +
+        '<details class="card"><summary><h2>L\'essentiel</h2></summary>' + list(SYNTHESE.essentiel) + "</details>" +
         '<details class="card"><summary><h2>Tendances</h2></summary>' + list(SYNTHESE.tendances) + "</details>" +
         '<details class="card"><summary><h2>Points de vigilance</h2></summary>' + list(SYNTHESE.vigilance) + "</details>" +
       "</section>";
@@ -280,60 +318,140 @@
     }
 
     main.innerHTML =
-      '<section class="hero"><h1>Veille vidéo</h1><p>Des vidéos YouTube sur l\'IA, résumées à partir de leurs sous-titres, avec un avis sur leur utilité pour la structure. Les affirmations des vidéos sont rapportées, pas validées : chiffres et promesses sont à vérifier avant d\'être relayés.</p></section>' +
-      synth +
+      '<section class="hero"><h1>Veille vidéo</h1><p>Des vidéos YouTube sur l\'IA, résumées à partir de leurs sous-titres. Chaque fiche a deux avis : son utilité pour la structure et son intérêt pour le développeur. Les affirmations des vidéos sont rapportées, pas validées.</p>' + stats + "</section>" +
+      '<div class="lens" role="group" aria-label="Lecture des notes">' +
+        Object.keys(LENS).map(function (k) { return '<button class="lens-btn" data-lens="' + k + '" aria-pressed="' + (k === lens) + '">' + esc(LENS[k].label) + "</button>"; }).join("") +
+      "</div>" +
+      '<ul class="usages" id="usages"></ul>' +
       '<div class="toolbar">' +
         '<input class="search" type="search" placeholder="Rechercher un sujet, un outil, une chaîne…" aria-label="Rechercher dans la veille">' +
-        '<div class="chips" role="group" aria-label="Filtrer par intérêt">' +
-          '<button class="chip" aria-pressed="true" data-i="">Tous</button>' +
-          [3, 2, 1].map(function (i) { return '<button class="chip" aria-pressed="false" data-i="' + i + '">' + INTERET[i] + "</button>"; }).join("") +
-        "</div>" +
         '<div class="selects">' +
-          select("f-cat", "Catégorie", cats.map(function (c) { return [c, c]; })) +
           select("f-ch", "Chaîne", chaineList.map(function (c) { return [c, c + " (" + chaines[c] + ")"]; })) +
           select("f-lot", "Ajout", lots.map(function (l) { return [l, formatDate(l)]; })) +
-          '<label class="sel"><span>Tri</span><select id="f-tri"><option value="interet">Par intérêt</option><option value="recent">Ajouts récents</option><option value="duree">Plus courtes</option><option value="titre">Titre</option></select></label>' +
+          '<label class="sel"><span>Tri</span><select id="f-tri"><option value="score">Par intérêt</option><option value="recent">Ajouts récents</option><option value="duree">Plus courtes</option><option value="titre">Titre</option></select></label>' +
+          '<label class="check"><input type="checkbox" id="f-court"> Vidéos courtes seulement</label>' +
         "</div>" +
       "</div>" +
       '<p class="count" id="vcount" aria-live="polite"></p>' +
-      '<ul class="vlist" id="vlist"></ul>';
+      '<div id="vlist"></div>' +
+      synth +
+      '<div class="vp-backdrop" id="vp-backdrop" hidden></div>' +
+      '<aside class="vpanel" id="vpanel" role="dialog" aria-modal="false" aria-labelledby="vp-title" hidden>' +
+        '<button class="vp-close" id="vp-close" aria-label="Fermer la fiche">×</button><div id="vp-body"></div>' +
+      "</aside>";
 
     var out = document.getElementById("vlist");
-    function render() {
+    var panel = document.getElementById("vpanel"), backdrop = document.getElementById("vp-backdrop");
+    var lastRow = null;
+
+    function filtre(ignoreUsage) {
       var q = norm(state.q);
-      var arr = VEILLE.filter(function (v) {
-        if (state.i && String(v.interet) !== state.i) return false;
-        if (state.cat && v.categorie !== state.cat) return false;
+      return VEILLE.filter(function (v) {
+        if (!ignoreUsage && state.u && (v.usages || []).indexOf(state.u) === -1) return false;
         if (state.ch && v.chaine !== state.ch) return false;
         if (state.lot && v.lot !== state.lot) return false;
+        if (state.court && !(v.duree && v.duree < 180)) return false;
         if (!q) return true;
-        return norm([v.titre, v.chaine, v.resume, v.avis, (v.points || []).join(" "), (v.tags || []).join(" ")].join(" ")).indexOf(q) !== -1;
+        return norm([v.titre, v.chaine, v.resume, v.avis, v.avisDev || "", (v.points || []).join(" "), (v.tags || []).join(" ")].join(" ")).indexOf(q) !== -1;
       });
+    }
+
+    function renderUsages() {
+      var base = filtre(true), sc = LENS[lens].score;
+      document.getElementById("usages").innerHTML = USAGES.map(function (u) {
+        var arr = base.filter(function (v) { return (v.usages || []).indexOf(u.k) !== -1; });
+        var top = arr.filter(function (v) { return sc(v) === 3; }).length;
+        return '<li><button class="usage" data-u="' + u.k + '" aria-pressed="' + (state.u === u.k) + '">' +
+          '<span class="u-label">' + esc(u.label) + "</span>" +
+          '<span class="u-sub">' + esc(u.sub) + "</span>" +
+          '<span class="u-count"><b>' + arr.length + "</b> fiche" + (arr.length > 1 ? "s" : "") +
+          (top ? ' · <b class="u-top">' + top + "</b> " + (lens === "dev" ? "à tester" : "à voir") : "") + "</span>" +
+        "</button></li>";
+      }).join("");
+      main.querySelectorAll("[data-u]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var k = b.getAttribute("data-u");
+          state.u = state.u === k ? "" : k;
+          render();
+        });
+      });
+    }
+
+    function row(v) {
+      var s = LENS[lens].score(v);
+      var flags = (v.duree && v.duree < 180 ? '<span class="flag">Court</span>' : "") +
+        (v.lot === dernier ? '<span class="flag new">Nouveau</span>' : "");
+      return '<li><button class="vrow s' + s + '" data-id="' + esc(v.id) + '" aria-haspopup="dialog">' +
+        '<span class="pip p' + s + '" aria-hidden="true"></span>' +
+        '<span class="vr-main"><span class="vr-title">' + esc(v.titre) + "</span>" +
+        '<span class="vmeta">' + esc(v.chaine) + " · " + esc(duree(v.duree)) + " · " + esc((v.usages || []).map(usageLabel).join(", ")) + "</span></span>" +
+        '<span class="vr-side">' + flags + scoreBadge(lens, s) + "</span>" +
+      "</button></li>";
+    }
+
+    function render() {
+      var sc = LENS[lens].score;
+      var arr = filtre(false);
       arr.sort(function (a, b) {
-        if (state.tri === "recent") return b.lot.localeCompare(a.lot) || b.interet - a.interet;
+        if (state.tri === "recent") return b.lot.localeCompare(a.lot) || sc(b) - sc(a);
         if (state.tri === "duree") return (a.duree || 0) - (b.duree || 0);
         if (state.tri === "titre") return a.titre.localeCompare(b.titre, "fr");
-        return b.interet - a.interet || b.lot.localeCompare(a.lot) || a.titre.localeCompare(b.titre, "fr");
+        return sc(b) - sc(a) || b.lot.localeCompare(a.lot) || a.titre.localeCompare(b.titre, "fr");
       });
-      document.getElementById("vcount").textContent = arr.length === VEILLE.length ? VEILLE.length + " fiches" : arr.length + " fiche" + (arr.length > 1 ? "s" : "") + " sur " + VEILLE.length;
-      out.innerHTML = arr.length ? arr.map(function (v) { return ficheHtml(v, v.id === openId); }).join("") : '<li class="empty">Aucune fiche ne correspond.</li>';
+      document.getElementById("vcount").textContent = (arr.length === VEILLE.length ? VEILLE.length + " fiches" : arr.length + " fiche" + (arr.length > 1 ? "s" : "") + " sur " + VEILLE.length) +
+        (state.u ? " · " + usageLabel(state.u) : "") + " · classées « " + LENS[lens].label.toLowerCase() + " »";
+      if (!arr.length) { out.innerHTML = '<p class="empty">Aucune fiche ne correspond.</p>'; }
+      else if (state.tri === "score") {
+        var g = { 3: [], 2: [], 1: [] };
+        arr.forEach(function (v) { g[Math.max(1, sc(v))].push(v); });
+        out.innerHTML = [3, 2, 1].filter(function (k) { return g[k].length; }).map(function (k) {
+          return '<section class="vgroup g' + k + '"><h2 class="vg-title">' + esc(LENS[lens].groupes[k]) + ' <span class="vmeta">' + g[k].length + "</span></h2>" +
+            '<ul class="vrows">' + g[k].map(row).join("") + "</ul></section>";
+        }).join("");
+      } else {
+        out.innerHTML = '<ul class="vrows">' + arr.map(row).join("") + "</ul>";
+      }
+      out.querySelectorAll("[data-id]").forEach(function (b) {
+        b.addEventListener("click", function () { lastRow = b; open(b.getAttribute("data-id"), true); });
+      });
+      renderUsages();
     }
+
+    function open(id, push) {
+      var v = findFiche(id);
+      if (!v) return;
+      document.getElementById("vp-body").innerHTML = ficheDetail(v);
+      panel.hidden = false; backdrop.hidden = false;
+      document.body.classList.add("vp-open");
+      panel.scrollTop = 0;
+      if (push) history.replaceState(null, "", "#/veille/" + id);
+      document.getElementById("vp-close").focus();
+    }
+    function close() {
+      panel.hidden = true; backdrop.hidden = true;
+      document.body.classList.remove("vp-open");
+      history.replaceState(null, "", "#/veille");
+      if (lastRow && document.body.contains(lastRow)) lastRow.focus();
+    }
+    document.getElementById("vp-close").addEventListener("click", close);
+    backdrop.addEventListener("click", close);
+    document.onkeydown = function (ev) { if (ev.key === "Escape" && !panel.hidden) close(); };
+
     main.querySelector(".search").addEventListener("input", function (e) { state.q = e.target.value; render(); });
-    main.querySelectorAll("[data-i]").forEach(function (b) {
+    main.querySelectorAll("[data-lens]").forEach(function (b) {
       b.addEventListener("click", function () {
-        state.i = b.getAttribute("data-i");
-        main.querySelectorAll("[data-i]").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+        lens = b.getAttribute("data-lens");
+        store("veille:lens", lens);
+        main.querySelectorAll("[data-lens]").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
         render();
       });
     });
-    [["f-cat", "cat"], ["f-ch", "ch"], ["f-lot", "lot"], ["f-tri", "tri"]].forEach(function (p) {
+    [["f-ch", "ch"], ["f-lot", "lot"], ["f-tri", "tri"]].forEach(function (p) {
       document.getElementById(p[0]).addEventListener("change", function (e) { state[p[1]] = e.target.value; render(); });
     });
+    document.getElementById("f-court").addEventListener("change", function (e) { state.court = e.target.checked; render(); });
     render();
-    if (openId) {
-      var el = document.getElementById("v-" + openId);
-      if (el) { el.scrollIntoView({ block: "start" }); return true; }
-    }
+    if (openId) open(openId, false);
     return false;
   }
 
@@ -624,6 +742,7 @@
     var parts = (location.hash.replace(/^#\/?/, "") || "").split("/");
     var anchor = null, scrolled = false;
     main.classList.remove("big");
+    document.body.classList.remove("vp-open");
     document.onkeydown = null;
     if (parts[0] === "") viewAccueil();
     else if (parts[0] === "veille") scrolled = viewVeille(parts[1]);
