@@ -38,7 +38,8 @@ window.OUTILS_VEILLE = [
   "categorie": "IA locale",
   "videos": [
    "MNFZoZUExSQ",
-   "mPMEolH63BM"
+   "mPMEolH63BM",
+   "FMTUqd1J_Pg"
   ]
  },
  {
@@ -145,7 +146,8 @@ window.OUTILS_VEILLE = [
    "F1qWG0T3aXI",
    "MdHZW40zLJE",
    "GaYppkDHRMQ",
-   "8UrUiW3gV-g"
+   "8UrUiW3gV-g",
+   "T3LBqy8SnFU"
   ]
  },
  {
@@ -401,7 +403,8 @@ window.OUTILS_VEILLE = [
   "interet": 1,
   "categorie": "Agents & automatisation",
   "videos": [
-   "post-8-repos"
+   "post-8-repos",
+   "TQ36-U2r_FM"
   ]
  },
  {
@@ -697,6 +700,76 @@ window.OUTILS_VEILLE = [
   "categorie": "Agents & automatisation",
   "videos": [
    "II89r7Y-qBI"
+  ]
+ },
+ {
+  "nom": "Remotion",
+  "quoi": "Transforme en vidéo MP4 du code écrit par un modèle ; s'installe dans Claude Code ou Codex.",
+  "donnees": "Local",
+  "interet": 1,
+  "categorie": "Image & vidéo",
+  "videos": [
+   "DBQqB8eqpFI"
+  ]
+ },
+ {
+  "nom": "HyperFrames",
+  "quoi": "Outil gratuit édité par HeyGen qui rend en vidéo du code d'animation produit par Claude ou ChatGPT.",
+  "donnees": "Local",
+  "interet": 1,
+  "categorie": "Image & vidéo",
+  "videos": [
+   "DBQqB8eqpFI"
+  ]
+ },
+ {
+  "nom": "Have I Been Pwned",
+  "quoi": "Indique si une adresse mail ou un mot de passe figure dans des fuites de données connues.",
+  "donnees": "En ligne",
+  "interet": 3,
+  "categorie": "Sécurité",
+  "videos": [
+   "yABJeawdhWo"
+  ]
+ },
+ {
+  "nom": "OpenJarvis",
+  "quoi": "Assistant open source présenté comme local, relié aux mails et à l'agenda pour un tri quotidien.",
+  "donnees": "Variable",
+  "interet": 1,
+  "categorie": "Agents & automatisation",
+  "videos": [
+   "2Ti48KW51Gg"
+  ]
+ },
+ {
+  "nom": "OpenCut",
+  "quoi": "Éditeur vidéo open source et gratuit inspiré de CapCut ; serveur MCP annoncé.",
+  "donnees": "Variable",
+  "interet": 1,
+  "categorie": "Image & vidéo",
+  "videos": [
+   "S9Ljiesp1o8"
+  ]
+ },
+ {
+  "nom": "claude-video-effects",
+  "quoi": "Skill Claude Code qui ajoute des effets visuels à une vidéo par des commandes.",
+  "donnees": "Local",
+  "interet": 1,
+  "categorie": "Image & vidéo",
+  "videos": [
+   "9jgNw6gi7G8"
+  ]
+ },
+ {
+  "nom": "ECC",
+  "quoi": "Dépôt de plugins pour Claude Code : agents et skills pour planifier, coder, sécuriser et tester (chiffres non vérifiés).",
+  "donnees": "Variable",
+  "interet": 2,
+  "categorie": "Développement",
+  "videos": [
+   "PBydIj_m5n8"
   ]
  }
 ];
